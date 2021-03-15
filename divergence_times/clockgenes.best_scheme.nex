@@ -1,0 +1,20 @@
+#nexus
+begin sets;
+  charset OG0002110.raln.fa = clockgenes/OG0002110.raln.fa: ;
+  charset OG0002445.raln.fa = clockgenes/OG0002445.raln.fa: ;
+  charset OG0002953.raln.fa = clockgenes/OG0002953.raln.fa: ;
+  charset OG0003093.raln.fa = clockgenes/OG0003093.raln.fa: ;
+  charset OG0003508.raln.fa = clockgenes/OG0003508.raln.fa: ;
+  charset OG0003971.raln.fa = clockgenes/OG0003971.raln.fa: ;
+  charset OG0004555.raln.fa = clockgenes/OG0004555.raln.fa: ;
+  charset OG0006132.raln.fa = clockgenes/OG0006132.raln.fa: ;
+  charpartition mymodels =
+    LG+G4: OG0002110.raln.fa,
+    JTT+G4: OG0002445.raln.fa,
+    LG+G4: OG0002953.raln.fa,
+    JTT+R3: OG0003093.raln.fa,
+    LG+G4: OG0003508.raln.fa,
+    LG+G4: OG0003971.raln.fa,
+    JTT+G4: OG0004555.raln.fa,
+    JTT+G4: OG0006132.raln.fa;
+end;

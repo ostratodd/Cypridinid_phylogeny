@@ -1,0 +1,541 @@
+IQ-TREE multicore version 2.0.3 for Mac OS X 64-bit built Dec 19 2020
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    eemb-micro-room.eemb.ucsb.edu (AVX2, FMA3, 64 GB RAM)
+Command: iqtree -p clockgenes --date dates_file.txt --date-tip 0 -o Dstev_ENA --redo
+Seed:    690497 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Mar 15 11:14:45 2021
+Kernel:  AVX+FMA - 1 threads (4 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 4 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading 8 alignment files in directory clockgenes
+Reading alignment file clockgenes/OG0002110.raln.fa ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 45 sequences with 253 columns, 194 distinct patterns
+96 parsimony-informative, 50 singleton sites, 107 constant sites
+                      Gap/Ambiguity  Composition  p-value
+   1  JaWTF_S54              46.25%    passed    100.00%
+   2  JaWLU_S67              34.39%    passed     67.32%
+   3  JaAU_S56               54.15%    passed    100.00%
+   4  BothJaLSZZ             45.85%    passed     99.76%
+   5  BothJaVAD              46.25%    passed     99.87%
+   6  BothJaOBD              45.85%    passed     99.56%
+   7  AllRoRD                55.34%    passed    100.00%
+   8  AllRoDU                55.34%    passed    100.00%
+   9  BothSVD                55.34%    passed    100.00%
+  10  BothJaSVD              45.85%    passed     99.98%
+  11  AllBzVAD               52.17%    passed    100.00%
+  12  Vhilg                  55.73%    passed    100.00%
+  13  BothVhilg_shim         54.94%    passed     99.99%
+  14  LIRSCyp2               45.06%    passed     99.55%
+  15  LIRSCyp1               55.73%    passed     99.97%
+  16  BothGPH                54.94%    passed     99.98%
+  17  SFM_Niko               41.50%    passed     99.83%
+  18  NOL_Niko               54.55%    passed     99.95%
+  19  Gruber_Pannecohenae    53.36%    passed     99.97%
+  20  BothPmorini            48.62%    passed     99.95%
+  21  ROWLU_2018             45.06%    passed     99.39%
+  22  Allmacelroy            49.01%    passed     99.97%
+  23  AllBzSVU               43.87%    passed     99.94%
+  24  RO-AG_S10              55.34%    passed    100.00%
+  25  RoIR_S66               55.34%    passed    100.00%
+  26  BothRoODH              52.96%    passed    100.00%
+  27  Vtsu                   42.29%    passed     96.54%
+  28  PMMFU                  56.92%    passed     99.45%
+  29  curacao                54.94%    passed    100.00%
+  30  BothRoCMU              54.55%    passed     99.99%
+  31  Korn_hast_c            45.45%    passed    100.00%
+  32  jpcyp2b                54.94%    passed     86.46%
+  33  Jp_Melavar22           52.96%    passed     96.96%
+  34  WhiteVanessaLIRS       41.90%    passed     84.47%
+  35  FatWhiteEye            43.08%    passed     89.66%
+  36  LongWhiteEye           56.13%    passed     92.68%
+  37  GlovSkog               56.13%    passed     98.44%
+  38  PSKO                   54.15%    passed     92.36%
+  39  Gigantocypris          49.41%    passed     81.54%
+  40  Euph_microasciformis   51.38%    passed     81.03%
+  41  Harb_slatteryi         55.73%    passed     90.79%
+  42  Chlorica               50.99%    passed     85.19%
+  43  AltLiz                 51.38%    passed     83.93%
+  44  Cylindroleberidinae    50.59%    passed     93.06%
+  45  Dstev_ENA              12.65%    failed      0.62%
+WARNING: 27 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                  49.74%  1 sequences failed composition chi2 test (p-value<5%; df=19)
+Reading alignment file clockgenes/OG0002445.raln.fa ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 37 sequences with 457 columns, 391 distinct patterns
+208 parsimony-informative, 87 singleton sites, 162 constant sites
+                     Gap/Ambiguity  Composition  p-value
+   1  AllRoDU               19.91%    passed     99.90%
+   2  AllRoRD               19.47%    passed     99.96%
+   3  BothJaOBD             20.57%    passed     99.83%
+   4  BothJaSVD             20.35%    passed     99.99%
+   5  JaWTF_S54             19.47%    passed    100.00%
+   6  JaWLU_S67             19.47%    passed    100.00%
+   7  AllBzVAD              45.51%    passed     52.05%
+   8  BothSVD               20.35%    passed     99.98%
+   9  JaAU_S56              19.47%    passed    100.00%
+  10  BothJaVAD             19.47%    passed    100.00%
+  11  BothJaLSZZ            71.99%    passed     19.43%
+  12  BothRoODH             52.30%    passed     93.14%
+  13  RO-AG_S10             69.80%    passed     64.37%
+  14  RoIR_S66              20.13%    passed    100.00%
+  15  AllBzSVU              44.86%    passed     92.50%
+  16  Vtsu                  21.88%    passed     99.99%
+  17  PMMFU                 65.21%    passed     69.40%
+  18  SFM_Niko              56.89%    passed     98.43%
+  19  EGD_Niko              70.46%    passed     81.52%
+  20  NOL_Niko              23.19%    passed     99.89%
+  21  Gruber_Pannecohenae   33.04%    passed     99.73%
+  22  ROWLU_2018            56.02%    passed     99.40%
+  23  curacao               14.44%    passed     39.41%
+  24  BothRoCMU             19.91%    passed     95.33%
+  25  Korn_hast_c           27.79%    passed     90.16%
+  26  LIRSCyp2              72.65%    passed     37.23%
+  27  BothVhilg_shim        76.15%    passed     60.87%
+  28  Vhilg                 19.26%    passed     97.61%
+  29  LIRSCyp1              60.39%    passed     99.24%
+  30  Gigantocypris         21.44%    passed     98.77%
+  31  LongWhiteEye          20.35%    passed     45.15%
+  32  WhiteVanessaLIRS      20.35%    passed     65.68%
+  33  FatWhiteEye           25.38%    passed     46.30%
+  34  BothPara_w            78.12%    passed     34.01%
+  35  PSKO                  53.39%    passed     80.98%
+  36  AltLiz                73.74%    passed     19.85%
+  37  Dstev_ENA             50.33%    passed     47.85%
+WARNING: 14 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                 39.01%  0 sequences failed composition chi2 test (p-value<5%; df=19)
+Reading alignment file clockgenes/OG0002953.raln.fa ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 44 sequences with 414 columns, 303 distinct patterns
+132 parsimony-informative, 78 singleton sites, 204 constant sites
+                      Gap/Ambiguity  Composition  p-value
+   1  BothRoODH               7.25%    passed    100.00%
+   2  AllBzVAD                7.73%    passed    100.00%
+   3  BothSVD                 7.73%    passed    100.00%
+   4  JaWLU_S67               7.73%    passed    100.00%
+   5  JaWTF_S54               7.73%    passed    100.00%
+   6  BothJaSVD               7.73%    passed    100.00%
+   7  BothJaLSZZ              4.35%    passed    100.00%
+   8  JaAU_S56                7.73%    passed    100.00%
+   9  BothJaVAD               7.73%    passed    100.00%
+  10  BothJaOBD               7.73%    passed    100.00%
+  11  AllRoRD                 7.73%    passed    100.00%
+  12  AllRoDU                 7.73%    passed    100.00%
+  13  AllBzSVU                7.73%    passed    100.00%
+  14  RoIR_S66                7.73%    passed    100.00%
+  15  RO-AG_S10               7.73%    passed    100.00%
+  16  Vtsu                    7.73%    passed    100.00%
+  17  PMMFU                   7.73%    passed    100.00%
+  18  curacao                 7.73%    passed    100.00%
+  19  Korn_hast_c             7.73%    passed    100.00%
+  20  BothRoCMU               7.73%    passed    100.00%
+  21  Allmacelroy            60.39%    passed     84.62%
+  22  BothPmorini            34.06%    passed     98.29%
+  23  Gruber_Pannecohenae     7.73%    passed    100.00%
+  24  NOL_Niko                7.73%    passed    100.00%
+  25  EGD_Niko                7.73%    passed    100.00%
+  26  SFM_Niko                7.73%    passed    100.00%
+  27  BothGPH                 7.73%    passed    100.00%
+  28  Vhilg                   3.38%    passed    100.00%
+  29  BothVhilg_shim          4.35%    passed    100.00%
+  30  LIRSCyp1               53.62%    passed     97.81%
+  31  LIRSCyp2                7.73%    passed    100.00%
+  32  Gigantocypris           7.73%    passed    100.00%
+  33  jpcyp2b                27.54%    passed     99.92%
+  34  PSKO                    7.73%    passed    100.00%
+  35  GlovSkog               37.20%    passed     99.94%
+  36  WhiteVanessaLIRS        7.73%    passed     99.92%
+  37  FatWhiteEye             7.73%    passed     99.96%
+  38  LongWhiteEye            7.73%    passed    100.00%
+  39  AltLiz                  2.90%    passed     99.94%
+  40  Chlorica               29.23%    passed     69.96%
+  41  Euph_microasciformis    7.49%    passed    100.00%
+  42  Harb_slatteryi          7.49%    passed    100.00%
+  43  Cylindroleberidinae     7.73%    passed     99.90%
+  44  Dstev_ENA               7.49%    passed     93.57%
+WARNING: 2 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                  11.79%  0 sequences failed composition chi2 test (p-value<5%; df=19)
+Reading alignment file clockgenes/OG0003093.raln.fa ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 33 sequences with 433 columns, 336 distinct patterns
+50 parsimony-informative, 153 singleton sites, 229 constant sites
+                     Gap/Ambiguity  Composition  p-value
+   1  BothJaOBD             13.63%    passed     99.99%
+   2  BothRoODH             17.55%    passed    100.00%
+   3  AllRoDU               18.01%    passed    100.00%
+   4  AllRoRD               18.01%    passed    100.00%
+   5  JaWLU_S67             15.70%    passed    100.00%
+   6  JaWTF_S54             20.32%    passed    100.00%
+   7  AllBzVAD              55.20%    passed     96.82%
+   8  BothSVD               42.96%    passed     99.99%
+   9  BothJaSVD             17.55%    passed    100.00%
+  10  BothJaVAD             17.55%    passed    100.00%
+  11  JaAU_S56              17.55%    passed    100.00%
+  12  BothJaLSZZ            42.96%    passed    100.00%
+  13  RO-AG_S10             35.10%    passed     99.99%
+  14  AllBzSVU              32.79%    passed     99.99%
+  15  RoIR_S66              14.32%    passed    100.00%
+  16  Vtsu                  42.96%    passed    100.00%
+  17  PMMFU                 16.17%    passed    100.00%
+  18  NOL_Niko              34.64%    passed    100.00%
+  19  Gruber_Pannecohenae   20.32%    passed    100.00%
+  20  SFM_Niko              45.96%    passed     98.66%
+  21  EGD_Niko              62.12%    passed     99.36%
+  22  Korn_hast_c           20.32%    passed    100.00%
+  23  BothRoCMU             20.32%    passed    100.00%
+  24  K_marleyi             59.58%    passed     98.61%
+  25  curacao               25.17%    passed     99.10%
+  26  Vhilg                 34.87%    passed     94.60%
+  27  BothVhilg_shim        54.27%    passed     99.93%
+  28  LIRSCyp1              42.73%    passed    100.00%
+  29  WhiteVanessaLIRS      42.96%    passed     99.99%
+  30  FatWhiteEye           17.09%    passed    100.00%
+  31  PSKO                  49.42%    passed     98.65%
+  32  GlovSkog              74.13%    passed     25.18%
+  33  Dstev_ENA             11.09%    passed     41.36%
+WARNING: 5 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                 31.92%  0 sequences failed composition chi2 test (p-value<5%; df=19)
+Reading alignment file clockgenes/OG0003508.raln.fa ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 43 sequences with 365 columns, 282 distinct patterns
+126 parsimony-informative, 95 singleton sites, 144 constant sites
+                     Gap/Ambiguity  Composition  p-value
+   1  BothSVD               27.95%    passed    100.00%
+   2  AllBzVAD              26.85%    passed    100.00%
+   3  AllRoRD               27.95%    passed    100.00%
+   4  AllRoDU               27.95%    passed    100.00%
+   5  BothJaOBD             27.95%    passed    100.00%
+   6  BothJaSVD             27.95%    passed    100.00%
+   7  JaWTF_S54             27.95%    passed    100.00%
+   8  JaWLU_S67             27.95%    passed    100.00%
+   9  BothRoODH             27.95%    passed    100.00%
+  10  JaAU_S56              27.95%    passed    100.00%
+  11  BothJaVAD             27.95%    passed    100.00%
+  12  BothJaLSZZ            41.37%    passed    100.00%
+  13  AllBzSVU              27.95%    passed    100.00%
+  14  RoIR_S66              27.95%    passed    100.00%
+  15  RO-AG_S10             27.95%    passed    100.00%
+  16  Vtsu                  27.95%    passed     99.99%
+  17  PMMFU                 28.22%    passed     99.98%
+  18  Korn_hast_c           28.77%    passed    100.00%
+  19  BothRoCMU             28.77%    passed    100.00%
+  20  curacao               27.95%    passed    100.00%
+  21  EGD_Niko              28.77%    passed     99.98%
+  22  NOL_Niko              28.77%    passed     99.97%
+  23  BothGPH               52.33%    passed     96.52%
+  24  SFM_Niko              28.77%    passed     99.96%
+  25  Gruber_Pannecohenae   28.77%    passed     99.96%
+  26  BothPmorini           53.97%    passed     62.02%
+  27  LIRSCyp1              55.07%    passed     76.93%
+  28  Vhilg                 27.95%    passed     99.96%
+  29  BothVhilg_shim        27.95%    passed     99.96%
+  30  LIRSCyp2              27.95%    passed     99.52%
+  31  jpcyp2b               26.30%    passed     98.58%
+  32  Gigantocypris         32.60%    passed     92.23%
+  33  Cylindroleberidinae   31.51%    passed     80.37%
+  34  Jp_Melavar22          52.33%    passed     94.76%
+  35  BothPara_w            28.49%    passed     99.14%
+  36  GlovSkog              68.77%    passed     15.75%
+  37  PSKO                  24.11%    passed     99.80%
+  38  LongWhiteEye          28.49%    passed     91.30%
+  39  WhiteVanessaLIRS      28.49%    passed     99.45%
+  40  FatWhiteEye           28.49%    passed     99.45%
+  41  AltLiz                32.60%    passed     99.56%
+  42  Chlorica              31.78%    passed     99.34%
+  43  Dstev_ENA              7.12%    failed      3.63%
+WARNING: 5 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                 31.50%  1 sequences failed composition chi2 test (p-value<5%; df=19)
+Reading alignment file clockgenes/OG0003971.raln.fa ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 42 sequences with 675 columns, 533 distinct patterns
+254 parsimony-informative, 151 singleton sites, 270 constant sites
+                     Gap/Ambiguity  Composition  p-value
+   1  JaAU_S56              23.11%    passed    100.00%
+   2  BothJaLSZZ            23.11%    passed    100.00%
+   3  BothJaVAD             23.11%    passed    100.00%
+   4  BothRoODH             23.11%    passed    100.00%
+   5  BothJaSVD             23.11%    passed    100.00%
+   6  JaWTF_S54             23.11%    passed    100.00%
+   7  JaWLU_S67             23.11%    passed    100.00%
+   8  AllBzVAD              23.11%    passed    100.00%
+   9  BothSVD               21.19%    passed    100.00%
+  10  AllRoDU               49.04%    passed     98.36%
+  11  AllRoRD               23.11%    passed    100.00%
+  12  BothJaOBD             23.11%    passed    100.00%
+  13  RoIR_S66              21.19%    passed    100.00%
+  14  RO-AG_S10             21.19%    passed    100.00%
+  15  AllBzSVU              23.11%    passed    100.00%
+  16  PMMFU                 22.07%    passed    100.00%
+  17  Vtsu                  23.11%    passed     99.98%
+  18  BothRoCMU             23.11%    passed     99.99%
+  19  Korn_hast_c           23.11%    passed     99.98%
+  20  curacao               27.26%    passed    100.00%
+  21  Gruber_Pannecohenae   23.11%    passed     99.86%
+  22  EGD_Niko              23.11%    passed     99.88%
+  23  NOL_Niko              23.11%    passed     99.88%
+  24  SFM_Niko              23.11%    passed     99.96%
+  25  BothGPH               23.11%    passed     99.90%
+  26  BothPmorini           33.19%    passed     99.82%
+  27  Allmacelroy           59.56%    passed     97.11%
+  28  Vhilg                 43.26%    passed     99.87%
+  29  BothVhilg_shim        59.26%    passed     62.29%
+  30  LIRSCyp1              32.89%    passed     99.93%
+  31  LIRSCyp2              73.78%    passed     30.93%
+  32  Jp_Melavar22          66.52%    passed     83.39%
+  33  GlovSkog              23.56%    passed     98.64%
+  34  PSKO                  14.22%    passed     96.13%
+  35  FatWhiteEye           23.11%    passed     92.43%
+  36  WhiteVanessaLIRS      23.11%    passed     95.40%
+  37  LongWhiteEye          18.96%    passed     95.15%
+  38  jpcyp2b               24.74%    passed     99.96%
+  39  Chlorica              68.89%    passed     22.45%
+  40  AltLiz                22.96%    passed     97.84%
+  41  Cylindroleberidinae   45.63%    passed     77.05%
+  42  Dstev_ENA             14.52%    passed     77.81%
+WARNING: 5 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                 29.74%  0 sequences failed composition chi2 test (p-value<5%; df=19)
+Reading alignment file clockgenes/OG0004555.raln.fa ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 39 sequences with 510 columns, 470 distinct patterns
+239 parsimony-informative, 106 singleton sites, 165 constant sites
+                     Gap/Ambiguity  Composition  p-value
+   1  AllRoRD               14.51%    passed    100.00%
+   2  AllRoDU               14.51%    passed    100.00%
+   3  BothJaOBD             14.51%    passed    100.00%
+   4  AllBzVAD              31.96%    passed     99.99%
+   5  BothSVD               14.51%    passed    100.00%
+   6  JaWLU_S67             14.51%    passed    100.00%
+   7  JaWTF_S54             14.51%    passed    100.00%
+   8  BothJaSVD             14.12%    passed    100.00%
+   9  BothRoODH             14.51%    passed    100.00%
+  10  BothJaLSZZ            80.20%    passed     99.46%
+  11  BothJaVAD             14.51%    passed    100.00%
+  12  JaAU_S56              14.51%    passed    100.00%
+  13  RO-AG_S10             12.55%    passed    100.00%
+  14  AllBzSVU              56.67%    passed     93.30%
+  15  RoIR_S66              12.55%    passed    100.00%
+  16  PMMFU                 12.16%    passed     99.96%
+  17  Vtsu                  12.75%    passed     99.80%
+  18  Korn_hast_c           11.18%    passed     99.99%
+  19  BothRoCMU             11.18%    passed     99.95%
+  20  curacao               17.06%    passed     99.94%
+  21  SFM_Niko              12.35%    passed     99.81%
+  22  NOL_Niko              14.71%    passed     99.96%
+  23  EGD_Niko              14.71%    passed     99.96%
+  24  BothGPH               75.69%    passed     99.03%
+  25  Gruber_Pannecohenae   12.55%    passed     99.91%
+  26  BothPmorini           40.59%    passed     98.10%
+  27  Cylindroleberidinae   37.25%    passed     99.94%
+  28  AltLiz                45.49%    passed     62.10%
+  29  GlovSkog              76.27%    passed     98.48%
+  30  PSKO                  20.00%    passed     81.10%
+  31  FatWhiteEye           13.14%    passed     99.99%
+  32  WhiteVanessaLIRS      78.82%    passed     89.70%
+  33  LongWhiteEye          13.33%    passed     97.14%
+  34  Gigantocypris          8.82%    passed     99.73%
+  35  jpcyp2b               47.25%    passed     72.86%
+  36  LIRSCyp2              51.76%    passed     40.77%
+  37  Vhilg                 22.16%    passed     98.48%
+  38  BothVhilg_shim        15.49%    passed     99.31%
+  39  Dstev_ENA             47.25%    passed     39.91%
+WARNING: 6 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                 26.94%  0 sequences failed composition chi2 test (p-value<5%; df=19)
+Reading alignment file clockgenes/OG0006132.raln.fa ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 34 sequences with 317 columns, 284 distinct patterns
+143 parsimony-informative, 70 singleton sites, 104 constant sites
+                     Gap/Ambiguity  Composition  p-value
+   1  AllRoDU               41.64%    passed     99.94%
+   2  AllRoRD               29.65%    passed    100.00%
+   3  BothJaOBD             29.65%    passed    100.00%
+   4  BothRoODH             29.65%    passed    100.00%
+   5  BothJaSVD             29.65%    passed    100.00%
+   6  JaWLU_S67             29.65%    passed    100.00%
+   7  JaWTF_S54             29.65%    passed    100.00%
+   8  AllBzVAD              29.65%    passed    100.00%
+   9  BothSVD               29.65%    passed    100.00%
+  10  BothJaLSZZ            52.37%    passed     82.58%
+  11  BothJaVAD             29.65%    passed    100.00%
+  12  JaAU_S56              29.65%    passed    100.00%
+  13  RO-AG_S10             63.72%    passed     92.52%
+  14  RoIR_S66              29.65%    passed    100.00%
+  15  AllBzSVU              57.10%    passed     82.17%
+  16  PMMFU                 59.94%    passed     66.79%
+  17  BothRoCMU             23.66%    passed     98.79%
+  18  Korn_hast_c           26.50%    passed     99.17%
+  19  curacao               27.76%    passed     99.04%
+  20  SFM_Niko              23.66%    passed     99.99%
+  21  EGD_Niko              48.90%    passed     93.76%
+  22  Gruber_Pannecohenae   23.66%    passed     99.88%
+  23  ROWLU_2018            32.18%    passed     97.91%
+  24  NOL_Niko              23.66%    passed     99.93%
+  25  LIRSCyp2              35.33%    passed     55.92%
+  26  LIRSCyp1              66.88%    passed     32.66%
+  27  AltLiz                51.10%    passed     52.43%
+  28  Chlorica              64.35%    passed     87.19%
+  29  LongWhiteEye          23.66%    passed     49.79%
+  30  FatWhiteEye           23.34%    passed     37.87%
+  31  WhiteVanessaLIRS      63.41%    passed     42.29%
+  32  PSKO                  54.26%    passed      9.85%
+  33  BothPara_w            65.93%    passed     31.53%
+  34  Dstev_ENA             33.12%    passed      6.44%
+WARNING: 10 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                 38.60%  0 sequences failed composition chi2 test (p-value<5%; df=19)
+Subset	Type	Seqs	Sites	Infor	Invar	Model	Name
+1		45	253	96	107		OG0002110.raln.fa
+2		37	457	208	162		OG0002445.raln.fa
+3		44	414	132	204		OG0002953.raln.fa
+4		33	433	50	230		OG0003093.raln.fa
+5		43	365	126	144		OG0003508.raln.fa
+6		42	675	254	270		OG0003971.raln.fa
+7		39	510	239	165		OG0004555.raln.fa
+8		34	317	143	104		OG0006132.raln.fa
+Degree of missing data: 0.175
+Info: multi-threading strategy over partitions
+
+
+NOTE: Restoring information from model checkpoint file clockgenes.model.gz
+
+CHECKPOINT: Initial tree restored
+Perform fast likelihood tree search using LG+I+G model...
+CHECKPOINT: Tree restored, LogL: -42450.215
+NOTE: ModelFinder requires 36 MB RAM!
+Selecting individual models for 8 charsets using BIC...
+ No. Model        Score       TreeLen     Charset
+   1 LG+G4        6665.014    12.656      OG0002110.raln.fa
+   2 JTT+G4       11789.727   5.417       OG0002445.raln.fa
+   3 LG+G4        9104.234    2.426       OG0002953.raln.fa
+   4 JTT+R3       5972.688    2.734       OG0003093.raln.fa
+   5 LG+G4        10039.585   5.123       OG0003508.raln.fa
+   6 LG+G4        17106.168   4.492       OG0003971.raln.fa
+   7 JTT+G4       15413.386   6.749       OG0004555.raln.fa
+   8 JTT+G4       8559.964    8.014       OG0006132.raln.fa
+Full partition model BIC score: 85439.610 (LnL: -42268.115  df:111)
+Partition information was printed to clockgenes.best_scheme.nex
+Partition information in Raxml format was printed to clockgenes.best_scheme
+
+All model information printed to clockgenes.model.gz
+CPU time for ModelFinder: 0.245 seconds (0h:0m:0s)
+Wall-clock time for ModelFinder: 0.265 seconds (0h:0m:0s)
+
+NOTE: 70 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -42321.979
+Current log-likelihood at step 1: -42275.250
+Current log-likelihood at step 2: -42270.314
+Current log-likelihood at step 3: -42269.738
+Current log-likelihood at step 4: -42268.999
+Current log-likelihood at step 5: -42268.628
+Current log-likelihood at step 6: -42268.191
+Current log-likelihood at step 7: -42267.962
+Current log-likelihood at step 8: -42267.697
+Current log-likelihood at step 9: -42267.555
+Current log-likelihood at step 10: -42267.382
+Current log-likelihood at step 11: -42267.284
+Partition-specific rates:  1.959 1.127 0.385 0.757 0.804 0.742 1.226 1.598
+Parameters optimization took 10 rounds (7.039 sec)
+
+Computing ML distances based on estimated model parameters... 0.979 sec
+WARNING: Some pairwise ML distances are too long (saturated)
+Computing BIONJ tree...
+0.002 seconds
+Log-likelihood of BIONJ tree: -42824.491
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 2.974 second
+Computing log-likelihood of 98 initial trees ... 15.670 seconds
+Current best score: -42267.284
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -42267.284
+Current log-likelihood at step 1: -42267.188
+Parameters optimization took 0 rounds (0.565 sec)
+
+BETTER TREE FOUND at iteration 1: -42267.188
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -42255.623
+Current log-likelihood at step 1: -42255.563
+Parameters optimization took 0 rounds (0.580 sec)
+
+BETTER TREE FOUND at iteration 2: -42255.563
+BETTER TREE FOUND at iteration 3: -42255.563
+Iteration 10 / LogL: -42255.563 / Time: 0h:1m:2s
+Iteration 20 / LogL: -42256.259 / Time: 0h:1m:39s
+Finish initializing candidate tree set (5)
+Current best tree score: -42255.563 / CPU time: 90.182
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+UPDATE BEST LOG-LIKELIHOOD: -42255.563
+UPDATE BEST LOG-LIKELIHOOD: -42255.563
+Iteration 30 / LogL: -42255.563 / Time: 0h:2m:18s (0h:5m:49s left)
+Iteration 40 / LogL: -42255.563 / Time: 0h:2m:59s (0h:4m:49s left)
+UPDATE BEST LOG-LIKELIHOOD: -42255.563
+Iteration 50 / LogL: -42267.230 / Time: 0h:3m:42s (0h:4m:0s left)
+Iteration 60 / LogL: -42255.563 / Time: 0h:4m:18s (0h:3m:8s left)
+UPDATE BEST LOG-LIKELIHOOD: -42255.563
+UPDATE BEST LOG-LIKELIHOOD: -42255.563
+Iteration 70 / LogL: -42255.563 / Time: 0h:5m:2s (0h:2m:24s left)
+Iteration 80 / LogL: -42255.567 / Time: 0h:5m:44s (0h:1m:40s left)
+Iteration 90 / LogL: -42255.563 / Time: 0h:6m:23s (0h:0m:55s left)
+Iteration 100 / LogL: -42255.567 / Time: 0h:7m:3s (0h:0m:12s left)
+TREE SEARCH COMPLETED AFTER 104 ITERATIONS / Time: 0h:7m:17s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+Initial log-likelihood: -42255.563
+Current log-likelihood at step 1: -42255.556
+Partition-specific rates:  2.000 1.122 0.388 0.761 0.795 0.737 1.223 1.589
+Parameters optimization took 0 rounds (0.566 sec)
+
+Partition information was printed to clockgenes.best_model.nex
+BEST SCORE FOUND : -42255.556
+Total tree length: 6.578
+
+Total number of iterations: 104
+CPU time used for tree search: 427.868 sec (0h:7m:7s)
+Wall-clock time used for tree search: 428.687 sec (0h:7m:8s)
+Total CPU time used: 437.592 sec (0h:7m:17s)
+Total wall-clock time used: 438.433 sec (0h:7m:18s)
+
+Analysis results written to: 
+  IQ-TREE report:                clockgenes.iqtree
+  Maximum-likelihood tree:       clockgenes.treefile
+  Likelihood distances:          clockgenes.mldist
+  Screen log file:               clockgenes.log
+
+Reading date file dates_file.txt ...
+49 dates extracted
+Building time tree by least-square dating (LSD) with command:
+lsd -i clockgenes.timetree.subst -s 3424 -c -o clockgenes.timetree -g clockgenes.timetree.outgroup -d clockgenes.timetree.date 
+Removing outgroups of tree 1 ...
+
+TREE 1
+*PROCESSING:
+Reading the tree ... 
+Collapse 1 (over 46) internal branches having branch length <= 0.000 (settable via option -l)
+Minimum branch length of time scaled tree (settable via option -u and -U): 0.256, rounded to 0.260 (26.000/100.000) using factor 100.000 (settable via option -R)
+Dating under temporal constraints mode ...
+*WARNINGS:
+- There are some nodes in the input date file that are not present in the input tree.
+*RESULTS:
+- Dating results:
+ rate 0.00125653, tMRCA -443.8, objective function 186.144
+
+TOTAL ELAPSED TIME: 0.002 seconds
+LSD results written to:
+  LSD report:                  clockgenes.timetree.lsd
+  Time tree in nexus format:   clockgenes.timetree.nex
+  Time tree in newick format:  clockgenes.timetree.nwk
+
+Date and Time: Mon Mar 15 11:22:04 2021

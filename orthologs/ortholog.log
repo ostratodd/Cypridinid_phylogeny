@@ -1,0 +1,424 @@
+Use of uninitialized value $count in numeric gt (>) at ./download_data.pl line 17, <FH> line 1.
+Downloading...
+From: https://drive.google.com/uc?id=1nu_lkEnIYWe33IZCOWh1eBbNvtjUyjwk
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Australia_Alternochelata_lizardensis__AltLiz.fa
+0.00B [00:00, ?B/s]3.36MB [00:00, 45.3MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1prM7ON0_5bQNq2-bCdGkXQ7I6nfSS64W
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Australia_Chelicopia_lorica__Chlorica.fa
+0.00B [00:00, ?B/s]5.24MB [00:00, 51.7MB/s]6.98MB [00:00, 59.8MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1x7OlXV0uWDqdLYnyvVXJPldSuQ2YJlGW
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Australia_Euphilomedes_microasciformis__Euph_microasciformis.fa
+0.00B [00:00, ?B/s]6.29MB [00:00, 62.5MB/s]13.1MB [00:00, 65.2MB/s]14.4MB [00:00, 67.5MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=12_4e3f1QUiLwqcECgE-gKVsv1N4gKUPV
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Australia_CYPRIDINIDAE__FatWhiteEye.fa
+0.00B [00:00, ?B/s]4.72MB [00:00, 44.3MB/s]13.5MB [00:00, 74.3MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1AyI2o4hwmfkqj_MucCXshgpv9gOZCwsB
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/California_Gigantocypris_sp__Gigantocypris.fa
+0.00B [00:00, ?B/s]5.48MB [00:00, 76.1MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1EtY35gSP801A2MT8KtgB7yX8XUZEZegR
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Belize-Glovers_Skogsbergia_sp__GlovSkog.fa
+0.00B [00:00, ?B/s]2.95MB [00:00, 93.0MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1gxJsDcAEFLnhAGW3F_H9ha5P8duu0xHF
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Australia_Harbansus_slatteryi__Harb_slatteryi.fa
+0.00B [00:00, ?B/s]4.72MB [00:00, 11.2MB/s]9.05MB [00:00, 19.8MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1_2F48xDlicbwkDqGYpXhLobbjTLIerFg
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Jamaica_Maristella_AU__JaAU_S56.fa
+0.00B [00:00, ?B/s]5.77MB [00:00, 56.1MB/s]13.8MB [00:00, 79.1MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1ww3FESgytJkTRSQ_eJe4ERVEIkL2m2mM
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Jamaica_Maristella_WLU__JaWLU_S67.fa
+0.00B [00:00, ?B/s]7.86MB [00:00, 54.5MB/s]14.7MB [00:00, 60.7MB/s]18.7MB [00:00, 59.7MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1kbioHhzf8q9xLEhhPa5PdpkWXpCES_nr
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Jamaica_Maristella_WTF__JaWTF_S54.fa
+0.00B [00:00, ?B/s]6.29MB [00:00, 62.1MB/s]12.6MB [00:00, 81.9MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1QeiFLZS2h_gNDZV6GH85EftImQ4jxAvx
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Jamaica_Kornickeria_marleyi_unknown__K_marleyi.fa
+  0%|          | 0.00/960k [00:00<?, ?B/s]100%|██████████| 960k/960k [00:00<00:00, 68.9MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1WPUBATp-SDZ55bnwL7aEVOVvXUg3JuiB
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Australia_CYPRIDINIDAE2__LIRSCyp2.fa
+0.00B [00:00, ?B/s]4.72MB [00:00, 17.1MB/s]8.91MB [00:00, 17.1MB/s]11.0MB [00:00, 13.0MB/s]13.1MB [00:01, 9.40MB/s]17.3MB [00:01, 10.2MB/s]21.7MB [00:01, 13.8MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1UsjBvF5rfYdQfn7EdGJpOehqtGseQjbs
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Australia_CYPRIDINIDAE1__LongWhiteEye.fa
+0.00B [00:00, ?B/s]6.29MB [00:00, 61.9MB/s]7.64MB [00:00, 59.9MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1tsqxuJbHs9-amEM3wpW2oHZy4AQvSafx
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Roatan_Maristella_IR__RoIR_S66.fa
+0.00B [00:00, ?B/s]5.24MB [00:00, 51.0MB/s]8.18MB [00:00, 63.9MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=16N451hGi1PgXVetcdzSMAZ8uNjY90IvR
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Japan_Vargula_hilgendorfii__Vhilg.fa
+0.00B [00:00, ?B/s]3.42MB [00:00, 85.2MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1qHqjsbPIat6z3qvAuJyP9exQR8x0eGG1
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/California_Vargula_tsujii__Vtsu.fa
+0.00B [00:00, ?B/s]6.82MB [00:00, 67.7MB/s]9.04MB [00:00, 75.6MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1OsBqhMoFAAoqUXfaxdfRyo2VNu4kphiH
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Australia_Cypridinodes_Cypridinid5__WhiteVanessaLIRS.fa
+0.00B [00:00, ?B/s]7.86MB [00:00, 74.3MB/s]9.48MB [00:00, 82.5MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=14L6s_-ZCnzP-X63hN21L0Mh_K91BYfZT
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Japan_Cypridinid6__jpcyp2b.fa
+0.00B [00:00, ?B/s]6.82MB [00:00, 63.8MB/s]9.83MB [00:00, 72.7MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1GlN7D-v089uQOPb0RRe8BrdnSBvvNl1s
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Japan_Melavargula_japonica__Jp_Melavar22.fa
+  0%|          | 0.00/1.83M [00:00<?, ?B/s]100%|██████████| 1.83M/1.83M [00:00<00:00, 84.0MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1Jd65CI3yw-DuYMLzle3r0GgBrbgAtMzL
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Puerto_Rico_Kornickeria_LMH__PRLMH.fa
+  0%|          | 0.00/727k [00:00<?, ?B/s]100%|██████████| 727k/727k [00:00<00:00, 50.2MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=16a3PGf0ufBgpED9sC2KQGG5wPYRY9Dkp
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Roatan_Maristella_AG__RO-AG_S10.fa
+0.00B [00:00, ?B/s]6.29MB [00:00, 60.9MB/s]12.4MB [00:00, 59.5MB/s]20.3MB [00:00, 68.5MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1WDeMTA7R_ynZP7DD-vh0mYrv4DXG4-2N
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Belize_Photeros_annecohenae__Gruber_Pannecohenae.fa
+0.00B [00:00, ?B/s]4.72MB [00:00, 31.4MB/s]10.5MB [00:00, 43.6MB/s]15.2MB [00:00, 34.5MB/s]24.0MB [00:00, 47.5MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1i5-0u8asEpELtukJOngECrqjMuQSv09K
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Harvard_Cylindroleberidinae__Cylindroleberidinae.fa
+0.00B [00:00, ?B/s]4.72MB [00:00, 18.9MB/s]8.91MB [00:00, 25.2MB/s]17.3MB [00:00, 26.3MB/s]29.4MB [00:00, 46.5MB/s]32.0MB [00:00, 39.6MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1wF3UeYaPTLLVX_lmHMcQkxRr6nKJgIUU
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Belize_Kornickeria_hastingsi_carriebowae__Korn_hast_c.fa
+0.00B [00:00, ?B/s]3.67MB [00:00, 19.4MB/s]6.82MB [00:00, 19.1MB/s]10.0MB [00:00, 25.9MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1-E4cZXsVVm632DM_QvkOeuolU2QV4b0y
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Curacao_Curacao_Kornickeria__curacao.fa
+0.00B [00:00, ?B/s]4.72MB [00:00, 26.6MB/s]7.30MB [00:00, 36.6MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=19afHWJQNNTnFT1pDJh-euLl5C_d6MeuH
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Panama_Panama_ZGroup__PMMFU.fa
+0.00B [00:00, ?B/s]4.72MB [00:00, 38.5MB/s]7.01MB [00:00, 49.4MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1rIWArIIW2NECV9z3-qVbJAm3szbuHvtB
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Panama_Panama_Skogsbergia__PSKO.fa
+0.00B [00:00, ?B/s]5.24MB [00:00, 51.2MB/s]11.8MB [00:00, 74.4MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1O9B4MlBa37jwsZOOaeiJM88PYyNpKxc9
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Jamaica_Photeros_macelroy__Allmacelroy.fa
+0.00B [00:00, ?B/s]4.24MB [00:00, 96.3MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1eQpcC-YNLPKJVOdmAze4U6hIl0f6G_dO
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Belize_Photeros_morini__BothPmorini.fa
+0.00B [00:00, ?B/s]3.78MB [00:00, 99.6MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=17QwuyPG-y3svSnR4txF2Y8BSzjlO_l-P
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Roatan_Photeros_GPH__BothGPH.fa
+0.00B [00:00, ?B/s]6.29MB [00:00, 60.4MB/s]11.8MB [00:00, 62.5MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1K8txEbCzxyn2PQcs1GoQ6xxFHmzf5YVD
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Jamaica_Maristella_OBD__BothJaOBD.fa
+0.00B [00:00, ?B/s]5.24MB [00:00, 50.9MB/s]13.4MB [00:00, 77.5MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1610rTEvTNQEx-2yIa-ucVpWfwDrp8PFu
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Jamaica_Maristella_SVD__BothJaSVD.fa
+0.00B [00:00, ?B/s]4.72MB [00:00, 19.3MB/s]8.91MB [00:00, 18.8MB/s]15.8MB [00:00, 29.8MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1s8Qi2KFqBMlGHpO1BVxoa5ZLUOWe-8os
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Japan_Paravargula_maculosa__BothPara_w.fa
+0.00B [00:00, ?B/s]4.18MB [00:00, 99.1MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=18n2jMETM4ayuXxX-Bp3wqz5j7EMzlw7f
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Roatan_Maristella_ODH__BothRoODH.fa
+0.00B [00:00, ?B/s]4.72MB [00:00, 13.9MB/s]8.91MB [00:00, 14.6MB/s]16.0MB [00:00, 23.7MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1JVZ2cIUosn7ZEo_IgjbAnwxsDFjFey_9
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Belize_Maristella_VAD__AllBzVAD.fa
+0.00B [00:00, ?B/s]8.39MB [00:00, 83.5MB/s]13.9MB [00:00, 84.4MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1mNJA_3Q_NwEMz1leNnHOWzKAMfmW9_rv
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Roatan_Maristella_DU__AllRoDU.fa
+0.00B [00:00, ?B/s]11.3MB [00:00, 111MB/s]17.6MB [00:00, 113MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=13cjyarER9OBxvk1vfBbUI-IoSalLJHsc
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Roatan_Maristella_CMU__BothRoCMU.fa
+0.00B [00:00, ?B/s]11.5MB [00:00, 111MB/s]19.7MB [00:00, 113MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=11kPnQElJlOX52y3RZXXGREgslruJAOol
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Jamaica_Maristella_VAD__BothJaVAD.fa
+0.00B [00:00, ?B/s]7.86MB [00:00, 77.2MB/s]12.4MB [00:00, 85.5MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1OUU7OFLY5fS23T2wnQ_9uxBG1xqGV9D7
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Belize_Maristella_SVU__AllBzSVU.fa
+0.00B [00:00, ?B/s]6.21MB [00:00, 103MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1m4H_LiQ0xOFJy0tZ2svJyQKbWIeoYfrF
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Roatan_Maristella_RD__AllRoRD.fa
+0.00B [00:00, ?B/s]11.0MB [00:00, 109MB/s]17.1MB [00:00, 109MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1dxedgn1Z6-6k2NzZ22RknDA7drftZwxi
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Belize_Maristella_SVD__BothSVD.fa
+0.00B [00:00, ?B/s]6.58MB [00:00, 83.8MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1M1QWSQWpp61RmxPyeqXgH0H7qFxYakJk
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Jamaica_Maristella_LSZZ__BothJaLSZZ.fa
+0.00B [00:00, ?B/s]8.12MB [00:00, 87.2MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1ELbHm83YF0YHQ5TDRsH-FPazIo_jtzPb
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Japan_Vargula_hilgendorfii_shimoda__BothVhilg_shim.fa
+0.00B [00:00, ?B/s]2.95MB [00:00, 90.7MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1NKywruO5Hjlmd6dbKPw9jlKX8ec4Hwkk
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Jamaica_Photeros_jamescasei__BothJamescasei.fa
+  0%|          | 0.00/159k [00:00<?, ?B/s]100%|██████████| 159k/159k [00:00<00:00, 39.6MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=18OuoZcCa111UhMUedodJz2BQBlv8x_gt
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Jamaica_Jimmorinia_gunnari__BothJaJimGun.fa
+  0%|          | 0.00/1.09M [00:00<?, ?B/s]100%|██████████| 1.09M/1.09M [00:00<00:00, 64.2MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1RPAfiJS_fnolkJs35WdDOLDr3PWtmcbX
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Roatan_Photeros_WLU__ROWLU_2018.fa
+0.00B [00:00, ?B/s]11.0MB [00:00, 110MB/s]19.7MB [00:00, 113MB/s]
+Downloading...
+From: https://drive.google.com/uc?id=1ZdENPNrNDg30XI0NTkQ8PZM-cQjkuZyi
+To: /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Australia_CYPRIDINIDAE3__LIRSCyp1.fa
+0.00B [00:00, ?B/s]3.32MB [00:00, 100MB/s]
+
+OrthoFinder version 2.5.2 Copyright (C) 2014 David Emms
+
+2021-02-27 18:18:38 : Starting OrthoFinder 2.5.2
+4 thread(s) for highly parallel tasks (BLAST searches etc.)
+1 thread(s) for OrthoFinder algorithm
+
+Checking required programs are installed
+----------------------------------------
+Test can run "mcl -h" - ok
+Test can run "mafft /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/OrthoFinder/Results_Feb27_1/WorkingDirectory//_dependencies_check/SimpleTest.fa" - ok
+Test can run "FastTree /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/OrthoFinder/Results_Feb27_1/WorkingDirectory//_dependencies_check/SimpleTest.fa" - ok
+
+Dividing up work for BLAST for parallel processing
+--------------------------------------------------
+2021-02-27 18:18:46 : Creating diamond database 1 of 55
+2021-02-27 18:18:46 : Creating diamond database 2 of 55
+2021-02-27 18:18:46 : Creating diamond database 3 of 55
+2021-02-27 18:18:46 : Creating diamond database 4 of 55
+2021-02-27 18:18:46 : Creating diamond database 5 of 55
+2021-02-27 18:18:46 : Creating diamond database 6 of 55
+2021-02-27 18:18:47 : Creating diamond database 7 of 55
+2021-02-27 18:18:47 : Creating diamond database 8 of 55
+2021-02-27 18:18:47 : Creating diamond database 9 of 55
+2021-02-27 18:18:47 : Creating diamond database 10 of 55
+2021-02-27 18:18:47 : Creating diamond database 11 of 55
+2021-02-27 18:18:47 : Creating diamond database 12 of 55
+2021-02-27 18:18:47 : Creating diamond database 13 of 55
+2021-02-27 18:18:47 : Creating diamond database 14 of 55
+2021-02-27 18:18:48 : Creating diamond database 15 of 55
+2021-02-27 18:18:48 : Creating diamond database 16 of 55
+2021-02-27 18:18:48 : Creating diamond database 17 of 55
+2021-02-27 18:18:48 : Creating diamond database 18 of 55
+2021-02-27 18:18:48 : Creating diamond database 19 of 55
+2021-02-27 18:18:48 : Creating diamond database 20 of 55
+2021-02-27 18:18:48 : Creating diamond database 21 of 55
+2021-02-27 18:18:49 : Creating diamond database 22 of 55
+2021-02-27 18:18:49 : Creating diamond database 23 of 55
+2021-02-27 18:18:49 : Creating diamond database 24 of 55
+2021-02-27 18:18:49 : Creating diamond database 25 of 55
+2021-02-27 18:18:49 : Creating diamond database 26 of 55
+2021-02-27 18:18:49 : Creating diamond database 27 of 55
+2021-02-27 18:18:49 : Creating diamond database 28 of 55
+2021-02-27 18:18:50 : Creating diamond database 29 of 55
+2021-02-27 18:18:50 : Creating diamond database 30 of 55
+2021-02-27 18:18:50 : Creating diamond database 31 of 55
+2021-02-27 18:18:50 : Creating diamond database 32 of 55
+2021-02-27 18:18:50 : Creating diamond database 33 of 55
+2021-02-27 18:18:50 : Creating diamond database 34 of 55
+2021-02-27 18:18:50 : Creating diamond database 35 of 55
+2021-02-27 18:18:51 : Creating diamond database 36 of 55
+2021-02-27 18:18:51 : Creating diamond database 37 of 55
+2021-02-27 18:18:51 : Creating diamond database 38 of 55
+2021-02-27 18:18:51 : Creating diamond database 39 of 55
+2021-02-27 18:18:51 : Creating diamond database 40 of 55
+2021-02-27 18:18:51 : Creating diamond database 41 of 55
+2021-02-27 18:18:51 : Creating diamond database 42 of 55
+2021-02-27 18:18:51 : Creating diamond database 43 of 55
+2021-02-27 18:18:52 : Creating diamond database 44 of 55
+2021-02-27 18:18:52 : Creating diamond database 45 of 55
+2021-02-27 18:18:52 : Creating diamond database 46 of 55
+2021-02-27 18:18:52 : Creating diamond database 47 of 55
+2021-02-27 18:18:52 : Creating diamond database 48 of 55
+2021-02-27 18:18:53 : Creating diamond database 49 of 55
+2021-02-27 18:18:53 : Creating diamond database 50 of 55
+2021-02-27 18:18:53 : Creating diamond database 51 of 55
+2021-02-27 18:18:53 : Creating diamond database 52 of 55
+2021-02-27 18:18:53 : Creating diamond database 53 of 55
+2021-02-27 18:18:54 : Creating diamond database 54 of 55
+2021-02-27 18:18:54 : Creating diamond database 55 of 55
+
+Running diamond all-versus-all
+------------------------------
+Using 4 thread(s)
+2021-02-27 18:18:54 : This may take some time....
+2021-02-28 00:07:37 : Done 1000 of 3025
+2021-02-27 18:18:54 : Done 0 of 3025
+2021-02-28 03:56:41 : Done 3000 of 3025
+2021-02-28 02:52:16 : Done 2000 of 3025
+2021-02-28 03:56:54 : Done all-versus-all sequence search
+
+Running OrthoFinder algorithm
+-----------------------------
+2021-02-28 03:56:57 : Initial processing of each species
+2021-02-28 03:57:25 : Initial processing of species 0 complete
+2021-02-28 03:58:22 : Initial processing of species 1 complete
+2021-02-28 04:01:16 : Initial processing of species 2 complete
+2021-02-28 04:01:46 : Initial processing of species 3 complete
+2021-02-28 04:03:23 : Initial processing of species 4 complete
+2021-02-28 04:04:11 : Initial processing of species 5 complete
+2021-02-28 04:05:21 : Initial processing of species 6 complete
+2021-02-28 04:06:59 : Initial processing of species 7 complete
+2021-02-28 04:08:00 : Initial processing of species 8 complete
+2021-02-28 04:08:28 : Initial processing of species 9 complete
+2021-02-28 04:09:47 : Initial processing of species 10 complete
+2021-02-28 04:10:50 : Initial processing of species 11 complete
+2021-02-28 04:11:44 : Initial processing of species 12 complete
+2021-02-28 04:13:38 : Initial processing of species 13 complete
+2021-02-28 04:16:14 : Initial processing of species 14 complete
+2021-02-28 04:16:49 : Initial processing of species 15 complete
+2021-02-28 04:17:32 : Initial processing of species 16 complete
+2021-02-28 04:18:36 : Initial processing of species 17 complete
+2021-02-28 04:19:40 : Initial processing of species 18 complete
+2021-02-28 04:20:31 : Initial processing of species 19 complete
+2021-02-28 04:21:23 : Initial processing of species 20 complete
+2021-02-28 04:24:58 : Initial processing of species 21 complete
+2021-02-28 04:25:09 : Initial processing of species 22 complete
+2021-02-28 04:25:19 : Initial processing of species 23 complete
+2021-02-28 04:27:06 : Initial processing of species 24 complete
+2021-02-28 04:28:15 : Initial processing of species 25 complete
+2021-02-28 04:29:59 : Initial processing of species 26 complete
+2021-02-28 04:32:03 : Initial processing of species 27 complete
+2021-02-28 04:33:45 : Initial processing of species 28 complete
+2021-02-28 04:36:00 : Initial processing of species 29 complete
+2021-02-28 04:37:40 : Initial processing of species 30 complete
+2021-02-28 04:37:43 : Initial processing of species 31 complete
+2021-02-28 04:38:21 : Initial processing of species 32 complete
+2021-02-28 04:39:30 : Initial processing of species 33 complete
+2021-02-28 04:39:44 : Initial processing of species 34 complete
+2021-02-28 04:40:29 : Initial processing of species 35 complete
+2021-02-28 04:40:57 : Initial processing of species 36 complete
+2021-02-28 04:41:27 : Initial processing of species 37 complete
+2021-02-28 04:42:55 : Initial processing of species 38 complete
+2021-02-28 04:43:55 : Initial processing of species 39 complete
+2021-02-28 04:46:18 : Initial processing of species 40 complete
+2021-02-28 04:48:40 : Initial processing of species 41 complete
+2021-02-28 04:50:26 : Initial processing of species 42 complete
+2021-02-28 04:52:12 : Initial processing of species 43 complete
+2021-02-28 04:54:17 : Initial processing of species 44 complete
+2021-02-28 04:56:22 : Initial processing of species 45 complete
+2021-02-28 04:56:28 : Initial processing of species 46 complete
+2021-02-28 04:58:39 : Initial processing of species 47 complete
+2021-02-28 05:00:54 : Initial processing of species 48 complete
+2021-02-28 05:03:11 : Initial processing of species 49 complete
+2021-02-28 05:04:20 : Initial processing of species 50 complete
+2021-02-28 05:06:24 : Initial processing of species 51 complete
+2021-02-28 05:08:37 : Initial processing of species 52 complete
+2021-02-28 05:10:13 : Initial processing of species 53 complete
+2021-02-28 05:12:25 : Initial processing of species 54 complete
+2021-02-28 05:18:53 : Connected putative homologues
+2021-02-28 05:19:01 : Written final scores for species 0 to graph file
+2021-02-28 05:19:18 : Written final scores for species 1 to graph file
+2021-02-28 05:20:03 : Written final scores for species 2 to graph file
+2021-02-28 05:20:11 : Written final scores for species 3 to graph file
+2021-02-28 05:20:39 : Written final scores for species 4 to graph file
+2021-02-28 05:20:54 : Written final scores for species 5 to graph file
+2021-02-28 05:21:14 : Written final scores for species 6 to graph file
+2021-02-28 05:21:42 : Written final scores for species 7 to graph file
+2021-02-28 05:22:01 : Written final scores for species 8 to graph file
+2021-02-28 05:22:08 : Written final scores for species 9 to graph file
+2021-02-28 05:22:28 : Written final scores for species 10 to graph file
+2021-02-28 05:22:43 : Written final scores for species 11 to graph file
+2021-02-28 05:22:57 : Written final scores for species 12 to graph file
+2021-02-28 05:23:26 : Written final scores for species 13 to graph file
+2021-02-28 05:24:10 : Written final scores for species 14 to graph file
+2021-02-28 05:24:20 : Written final scores for species 15 to graph file
+2021-02-28 05:24:30 : Written final scores for species 16 to graph file
+2021-02-28 05:24:49 : Written final scores for species 17 to graph file
+2021-02-28 05:25:05 : Written final scores for species 18 to graph file
+2021-02-28 05:25:18 : Written final scores for species 19 to graph file
+2021-02-28 05:25:32 : Written final scores for species 20 to graph file
+2021-02-28 05:26:36 : Written final scores for species 21 to graph file
+2021-02-28 05:26:39 : Written final scores for species 22 to graph file
+2021-02-28 05:26:41 : Written final scores for species 23 to graph file
+2021-02-28 05:27:08 : Written final scores for species 24 to graph file
+2021-02-28 05:27:26 : Written final scores for species 25 to graph file
+2021-02-28 05:27:52 : Written final scores for species 26 to graph file
+2021-02-28 05:28:24 : Written final scores for species 27 to graph file
+2021-02-28 05:28:49 : Written final scores for species 28 to graph file
+2021-02-28 05:29:22 : Written final scores for species 29 to graph file
+2021-02-28 05:29:47 : Written final scores for species 30 to graph file
+2021-02-28 05:29:47 : Written final scores for species 31 to graph file
+2021-02-28 05:29:57 : Written final scores for species 32 to graph file
+2021-02-28 05:30:17 : Written final scores for species 33 to graph file
+2021-02-28 05:30:22 : Written final scores for species 34 to graph file
+2021-02-28 05:30:32 : Written final scores for species 35 to graph file
+2021-02-28 05:30:40 : Written final scores for species 36 to graph file
+2021-02-28 05:30:47 : Written final scores for species 37 to graph file
+2021-02-28 05:31:13 : Written final scores for species 38 to graph file
+2021-02-28 05:31:28 : Written final scores for species 39 to graph file
+2021-02-28 05:32:08 : Written final scores for species 40 to graph file
+2021-02-28 05:32:47 : Written final scores for species 41 to graph file
+2021-02-28 05:33:15 : Written final scores for species 42 to graph file
+2021-02-28 05:33:43 : Written final scores for species 43 to graph file
+2021-02-28 05:34:18 : Written final scores for species 44 to graph file
+2021-02-28 05:34:53 : Written final scores for species 45 to graph file
+2021-02-28 05:34:55 : Written final scores for species 46 to graph file
+2021-02-28 05:35:29 : Written final scores for species 47 to graph file
+2021-02-28 05:36:04 : Written final scores for species 48 to graph file
+2021-02-28 05:36:39 : Written final scores for species 49 to graph file
+2021-02-28 05:36:56 : Written final scores for species 50 to graph file
+2021-02-28 05:37:26 : Written final scores for species 51 to graph file
+2021-02-28 05:37:59 : Written final scores for species 52 to graph file
+2021-02-28 05:38:24 : Written final scores for species 53 to graph file
+2021-02-28 05:38:58 : Written final scores for species 54 to graph file
+
+WARNING: program called by OrthoFinder produced output to stderr
+
+Command: mcl /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/OrthoFinder/Results_Feb27_1/WorkingDirectory/OrthoFinder_graph.txt -I 2.1 -o /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/OrthoFinder/Results_Feb27_1/WorkingDirectory/clusters_OrthoFinder_I2.1.txt -te 1 -V all
+
+stdout
+------
+b''
+stderr
+------
+b'[mcl] cut <5> instances of overlap\n'
+2021-02-28 06:25:09 : Ran MCL
+
+Writing orthogroups to file
+---------------------------
+OrthoFinder assigned 1297090 genes (95.9% of total) to 92317 orthogroups. Fifty percent of all genes were in orthogroups with 64 or more genes (G50 was 64) and were contained in the largest 5000 orthogroups (O50 was 5000). There were 4 orthogroups with all species present and 0 of these consisted entirely of single-copy genes.
+
+2021-02-28 06:26:24 : Done orthogroups
+
+Analysing Orthogroups
+=====================
+2021-02-28 06:26:26 : Starting MSA/Trees
+Species tree: Using 1345 orthogroups with minimum of 21.8% of species having single-copy genes in any orthogroup
+
+Inferring multiple sequence alignments for species tree
+-------------------------------------------------------
+2021-02-28 06:27:07 : Done 0 of 1345
+2021-02-28 06:33:11 : Done 700 of 1345
+2021-02-28 06:33:47 : Done 800 of 1345
+2021-02-28 06:34:22 : Done 900 of 1345
+2021-02-28 06:34:55 : Done 1000 of 1345
+2021-02-28 06:35:23 : Done 1100 of 1345
+2021-02-28 06:28:02 : Done 100 of 1345
+2021-02-28 06:30:02 : Done 300 of 1345
+2021-02-28 06:32:25 : Done 600 of 1345
+2021-02-28 06:35:49 : Done 1200 of 1345
+2021-02-28 06:36:12 : Done 1300 of 1345
+2021-02-28 06:28:58 : Done 200 of 1345
+2021-02-28 06:30:51 : Done 400 of 1345
+2021-02-28 06:31:38 : Done 500 of 1345

@@ -1,0 +1,447 @@
+nohup: 1_DownloadNorth: No such file or directory
+
+OrthoFinder version 2.5.2 Copyright (C) 2014 David Emms
+
+2021-02-26 23:39:40 : Starting OrthoFinder 2.5.2
+4 thread(s) for highly parallel tasks (BLAST searches etc.)
+1 thread(s) for OrthoFinder algorithm
+
+Checking required programs are installed
+----------------------------------------
+Test can run "mcl -h" - ok
+Test can run "mafft ./ORTH228/Results_Feb26/WorkingDirectory//_dependencies_check/SimpleTest.fa" - ok
+Test can run "FastTree ./ORTH228/Results_Feb26/WorkingDirectory//_dependencies_check/SimpleTest.fa" - ok
+
+Dividing up work for BLAST for parallel processing
+--------------------------------------------------
+2021-02-26 23:39:49 : Creating diamond database 1 of 56
+2021-02-26 23:39:49 : Creating diamond database 2 of 56
+2021-02-26 23:39:49 : Creating diamond database 3 of 56
+2021-02-26 23:39:49 : Creating diamond database 4 of 56
+2021-02-26 23:39:49 : Creating diamond database 5 of 56
+2021-02-26 23:39:49 : Creating diamond database 6 of 56
+2021-02-26 23:39:49 : Creating diamond database 7 of 56
+2021-02-26 23:39:50 : Creating diamond database 8 of 56
+2021-02-26 23:39:50 : Creating diamond database 9 of 56
+2021-02-26 23:39:50 : Creating diamond database 10 of 56
+2021-02-26 23:39:50 : Creating diamond database 11 of 56
+2021-02-26 23:39:50 : Creating diamond database 12 of 56
+2021-02-26 23:39:50 : Creating diamond database 13 of 56
+2021-02-26 23:39:50 : Creating diamond database 14 of 56
+2021-02-26 23:39:50 : Creating diamond database 15 of 56
+2021-02-26 23:39:51 : Creating diamond database 16 of 56
+2021-02-26 23:39:51 : Creating diamond database 17 of 56
+2021-02-26 23:39:51 : Creating diamond database 18 of 56
+2021-02-26 23:39:51 : Creating diamond database 19 of 56
+2021-02-26 23:39:51 : Creating diamond database 20 of 56
+2021-02-26 23:39:51 : Creating diamond database 21 of 56
+2021-02-26 23:39:51 : Creating diamond database 22 of 56
+2021-02-26 23:39:52 : Creating diamond database 23 of 56
+2021-02-26 23:39:52 : Creating diamond database 24 of 56
+2021-02-26 23:39:52 : Creating diamond database 25 of 56
+2021-02-26 23:39:52 : Creating diamond database 26 of 56
+2021-02-26 23:39:52 : Creating diamond database 27 of 56
+2021-02-26 23:39:52 : Creating diamond database 28 of 56
+2021-02-26 23:39:53 : Creating diamond database 29 of 56
+2021-02-26 23:39:53 : Creating diamond database 30 of 56
+2021-02-26 23:39:53 : Creating diamond database 31 of 56
+2021-02-26 23:39:53 : Creating diamond database 32 of 56
+2021-02-26 23:39:53 : Creating diamond database 33 of 56
+2021-02-26 23:39:53 : Creating diamond database 34 of 56
+2021-02-26 23:39:54 : Creating diamond database 35 of 56
+2021-02-26 23:39:54 : Creating diamond database 36 of 56
+2021-02-26 23:39:54 : Creating diamond database 37 of 56
+2021-02-26 23:39:54 : Creating diamond database 38 of 56
+2021-02-26 23:39:54 : Creating diamond database 39 of 56
+2021-02-26 23:39:54 : Creating diamond database 40 of 56
+2021-02-26 23:39:54 : Creating diamond database 41 of 56
+2021-02-26 23:39:54 : Creating diamond database 42 of 56
+2021-02-26 23:39:54 : Creating diamond database 43 of 56
+2021-02-26 23:39:55 : Creating diamond database 44 of 56
+2021-02-26 23:39:55 : Creating diamond database 45 of 56
+2021-02-26 23:39:55 : Creating diamond database 46 of 56
+2021-02-26 23:39:55 : Creating diamond database 47 of 56
+2021-02-26 23:39:56 : Creating diamond database 48 of 56
+2021-02-26 23:39:56 : Creating diamond database 49 of 56
+2021-02-26 23:39:56 : Creating diamond database 50 of 56
+2021-02-26 23:39:56 : Creating diamond database 51 of 56
+2021-02-26 23:39:56 : Creating diamond database 52 of 56
+2021-02-26 23:39:57 : Creating diamond database 53 of 56
+2021-02-26 23:39:57 : Creating diamond database 54 of 56
+2021-02-26 23:39:57 : Creating diamond database 55 of 56
+2021-02-26 23:39:57 : Creating diamond database 56 of 56
+
+Running diamond all-versus-all
+------------------------------
+Using 4 thread(s)
+2021-02-26 23:39:58 : This may take some time....
+Traceback (most recent call last):
+  File "/Users/oakley/anaconda3/envs/phylogeny/bin/orthofinder", line 7, in <module>
+    main(args)
+  File "/Users/oakley/anaconda3/envs/phylogeny/bin/scripts_of/__main__.py", line 1760, in main
+    RunSearch(options, speciesInfoObj, seqsInfo, prog_caller)
+  File "/Users/oakley/anaconda3/envs/phylogeny/bin/scripts_of/__main__.py", line 1506, in RunSearch
+    proc.join()
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/multiprocessing/process.py", line 149, in join
+Process Process-1:
+    res = self._popen.wait(timeout)
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/multiprocessing/popen_fork.py", line 43, in wait
+    return self.poll(os.WNOHANG if timeout == 0.0 else 0)
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/multiprocessing/popen_fork.py", line 27, in poll
+Traceback (most recent call last):
+  File "/Users/oakley/anaconda3/envs/phylogeny/bin/scripts_of/parallel_task_manager.py", line 309, in _I_Spawn_Processes
+    message = message_to_spawner.get(timeout=.1)
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/multiprocessing/queues.py", line 114, in get
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/oakley/anaconda3/envs/phylogeny/bin/scripts_of/parallel_task_manager.py", line 329, in _I_Spawn_Processes
+    time.sleep(1) # there wasn't anything this time, sleep then try again
+KeyboardInterrupt
+    pid, sts = os.waitpid(self.pid, flag)
+KeyboardInterrupt
+Process Process-5:
+Traceback (most recent call last):
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/oakley/anaconda3/envs/phylogeny/bin/scripts_of/parallel_task_manager.py", line 175, in Worker_RunCommand
+    RunCommand(command, qPrintOnError=qPrintOnError, qPrintStderr=qPrintStderr)
+  File "/Users/oakley/anaconda3/envs/phylogeny/bin/scripts_of/parallel_task_manager.py", line 127, in RunCommand
+    stdout, stderr = popen.communicate()
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/subprocess.py", line 1130, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/subprocess.py", line 1977, in _communicate
+    ready = selector.select(timeout)
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/selectors.py", line 416, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt
+Process Process-4:
+Traceback (most recent call last):
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/oakley/anaconda3/envs/phylogeny/bin/scripts_of/parallel_task_manager.py", line 175, in Worker_RunCommand
+    RunCommand(command, qPrintOnError=qPrintOnError, qPrintStderr=qPrintStderr)
+  File "/Users/oakley/anaconda3/envs/phylogeny/bin/scripts_of/parallel_task_manager.py", line 127, in RunCommand
+    stdout, stderr = popen.communicate()
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/subprocess.py", line 1130, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/subprocess.py", line 1977, in _communicate
+    ready = selector.select(timeout)
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/selectors.py", line 416, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt
+Process Process-2:
+Traceback (most recent call last):
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/oakley/anaconda3/envs/phylogeny/bin/scripts_of/parallel_task_manager.py", line 175, in Worker_RunCommand
+    RunCommand(command, qPrintOnError=qPrintOnError, qPrintStderr=qPrintStderr)
+  File "/Users/oakley/anaconda3/envs/phylogeny/bin/scripts_of/parallel_task_manager.py", line 127, in RunCommand
+    stdout, stderr = popen.communicate()
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/subprocess.py", line 1130, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/subprocess.py", line 1977, in _communicate
+    ready = selector.select(timeout)
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/selectors.py", line 416, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt
+Process Process-3:
+Traceback (most recent call last):
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/oakley/anaconda3/envs/phylogeny/bin/scripts_of/parallel_task_manager.py", line 175, in Worker_RunCommand
+    RunCommand(command, qPrintOnError=qPrintOnError, qPrintStderr=qPrintStderr)
+  File "/Users/oakley/anaconda3/envs/phylogeny/bin/scripts_of/parallel_task_manager.py", line 127, in RunCommand
+    stdout, stderr = popen.communicate()
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/subprocess.py", line 1130, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/subprocess.py", line 1977, in _communicate
+    ready = selector.select(timeout)
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/selectors.py", line 416, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt
+2021-02-26 23:39:58 : Done 0 of 3136
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/multiprocessing/queues.py", line 201, in _finalize_join
+    thread.join()
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/threading.py", line 1033, in join
+    self._wait_for_tstate_lock()
+  File "/Users/oakley/anaconda3/envs/phylogeny/lib/python3.9/threading.py", line 1049, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+./1_DownloadNorth: line 19: orthofinder: command not found
+
+OrthoFinder version 2.5.2 Copyright (C) 2014 David Emms
+
+2021-02-26 23:43:52 : Starting OrthoFinder 2.5.2
+4 thread(s) for highly parallel tasks (BLAST searches etc.)
+1 thread(s) for OrthoFinder algorithm
+
+Checking required programs are installed
+----------------------------------------
+Test can run "mcl -h" - ok
+Test can run "mafft ./ORTH228/Results_Feb26/WorkingDirectory//_dependencies_check/SimpleTest.fa" - ok
+Test can run "FastTree ./ORTH228/Results_Feb26/WorkingDirectory//_dependencies_check/SimpleTest.fa" - ok
+
+ERROR: The system limits on the number of files a process can open is too low. For 52 species OrthoFinder needs to be able to open at least r=2804 files. Please increase the limit and restart OrthoFinder
+1. Check the hard and soft limits on the number of open files for your system:
+    $ ulimit -Hn
+    $ ulimit -Sn
+2. If hard limit, h > r already, then you just need to increase the soft limit:
+    $ ulimit -n 2804
+3. Alternatively, if h < r then you need to edit the file '/etc/security/limits.conf', this requires root privileges. To increase the limit to 2804 for user  called 'emms' add the lines:
+    emms hard nofile 2804
+    emms soft nofile 2804
+    (edit these lines to match your username)
+4. Check the limit has now been updated (if you changed the hard limit you'll need to open a new session and confirm it's updated):
+    $ ulimit -Sn
+5. Once the limit is updated restart OrthoFinder with the original command
+
+For full details see: https://github.com/davidemms/OrthoFinder/issues/384
+
+ERROR: An error occurred, ***please review the error messages*** they may contain useful information about the problem.
+
+OrthoFinder version 2.5.2 Copyright (C) 2014 David Emms
+
+2021-02-26 23:49:22 : Starting OrthoFinder 2.5.2
+4 thread(s) for highly parallel tasks (BLAST searches etc.)
+1 thread(s) for OrthoFinder algorithm
+
+Checking required programs are installed
+----------------------------------------
+Test can run "mcl -h" - ok
+Test can run "mafft ./ORTH228/Results_Feb26/WorkingDirectory//_dependencies_check/SimpleTest.fa" - ok
+Test can run "FastTree ./ORTH228/Results_Feb26/WorkingDirectory//_dependencies_check/SimpleTest.fa" - ok
+
+Dividing up work for BLAST for parallel processing
+--------------------------------------------------
+2021-02-26 23:49:29 : Creating diamond database 1 of 52
+2021-02-26 23:49:30 : Creating diamond database 2 of 52
+2021-02-26 23:49:30 : Creating diamond database 3 of 52
+2021-02-26 23:49:30 : Creating diamond database 4 of 52
+2021-02-26 23:49:30 : Creating diamond database 5 of 52
+2021-02-26 23:49:30 : Creating diamond database 6 of 52
+2021-02-26 23:49:30 : Creating diamond database 7 of 52
+2021-02-26 23:49:30 : Creating diamond database 8 of 52
+2021-02-26 23:49:31 : Creating diamond database 9 of 52
+2021-02-26 23:49:31 : Creating diamond database 10 of 52
+2021-02-26 23:49:31 : Creating diamond database 11 of 52
+2021-02-26 23:49:31 : Creating diamond database 12 of 52
+2021-02-26 23:49:31 : Creating diamond database 13 of 52
+2021-02-26 23:49:31 : Creating diamond database 14 of 52
+2021-02-26 23:49:31 : Creating diamond database 15 of 52
+2021-02-26 23:49:32 : Creating diamond database 16 of 52
+2021-02-26 23:49:32 : Creating diamond database 17 of 52
+2021-02-26 23:49:32 : Creating diamond database 18 of 52
+2021-02-26 23:49:32 : Creating diamond database 19 of 52
+2021-02-26 23:49:32 : Creating diamond database 20 of 52
+2021-02-26 23:49:32 : Creating diamond database 21 of 52
+2021-02-26 23:49:33 : Creating diamond database 22 of 52
+2021-02-26 23:49:33 : Creating diamond database 23 of 52
+2021-02-26 23:49:33 : Creating diamond database 24 of 52
+2021-02-26 23:49:33 : Creating diamond database 25 of 52
+2021-02-26 23:49:33 : Creating diamond database 26 of 52
+2021-02-26 23:49:33 : Creating diamond database 27 of 52
+2021-02-26 23:49:33 : Creating diamond database 28 of 52
+2021-02-26 23:49:34 : Creating diamond database 29 of 52
+2021-02-26 23:49:34 : Creating diamond database 30 of 52
+2021-02-26 23:49:34 : Creating diamond database 31 of 52
+2021-02-26 23:49:34 : Creating diamond database 32 of 52
+2021-02-26 23:49:34 : Creating diamond database 33 of 52
+2021-02-26 23:49:34 : Creating diamond database 34 of 52
+2021-02-26 23:49:34 : Creating diamond database 35 of 52
+2021-02-26 23:49:34 : Creating diamond database 36 of 52
+2021-02-26 23:49:34 : Creating diamond database 37 of 52
+2021-02-26 23:49:34 : Creating diamond database 38 of 52
+2021-02-26 23:49:35 : Creating diamond database 39 of 52
+2021-02-26 23:49:35 : Creating diamond database 40 of 52
+2021-02-26 23:49:35 : Creating diamond database 41 of 52
+2021-02-26 23:49:35 : Creating diamond database 42 of 52
+2021-02-26 23:49:35 : Creating diamond database 43 of 52
+2021-02-26 23:49:36 : Creating diamond database 44 of 52
+2021-02-26 23:49:36 : Creating diamond database 45 of 52
+2021-02-26 23:49:36 : Creating diamond database 46 of 52
+2021-02-26 23:49:36 : Creating diamond database 47 of 52
+2021-02-26 23:49:37 : Creating diamond database 48 of 52
+2021-02-26 23:49:37 : Creating diamond database 49 of 52
+2021-02-26 23:49:37 : Creating diamond database 50 of 52
+2021-02-26 23:49:37 : Creating diamond database 51 of 52
+2021-02-26 23:49:37 : Creating diamond database 52 of 52
+
+Running diamond all-versus-all
+------------------------------
+Using 4 thread(s)
+2021-02-26 23:49:38 : This may take some time....
+2021-02-26 23:49:38 : Done 0 of 2704
+2021-02-27 06:10:24 : Done 1000 of 2704
+2021-02-27 08:36:27 : Done 2000 of 2704
+2021-02-27 09:12:32 : Done all-versus-all sequence search
+
+Running OrthoFinder algorithm
+-----------------------------
+2021-02-27 09:12:35 : Initial processing of each species
+2021-02-27 09:13:03 : Initial processing of species 0 complete
+2021-02-27 09:13:59 : Initial processing of species 1 complete
+2021-02-27 09:16:48 : Initial processing of species 2 complete
+2021-02-27 09:17:17 : Initial processing of species 3 complete
+2021-02-27 09:18:51 : Initial processing of species 4 complete
+2021-02-27 09:19:39 : Initial processing of species 5 complete
+2021-02-27 09:20:47 : Initial processing of species 6 complete
+2021-02-27 09:22:22 : Initial processing of species 7 complete
+2021-02-27 09:23:21 : Initial processing of species 8 complete
+2021-02-27 09:23:49 : Initial processing of species 9 complete
+2021-02-27 09:25:04 : Initial processing of species 10 complete
+2021-02-27 09:26:05 : Initial processing of species 11 complete
+2021-02-27 09:26:58 : Initial processing of species 12 complete
+2021-02-27 09:28:49 : Initial processing of species 13 complete
+2021-02-27 09:31:21 : Initial processing of species 14 complete
+2021-02-27 09:31:55 : Initial processing of species 15 complete
+2021-02-27 09:32:37 : Initial processing of species 16 complete
+2021-02-27 09:33:38 : Initial processing of species 17 complete
+2021-02-27 09:34:55 : Initial processing of species 18 complete
+2021-02-27 09:36:24 : Initial processing of species 19 complete
+2021-02-27 09:42:34 : Initial processing of species 20 complete
+2021-02-27 09:42:53 : Initial processing of species 21 complete
+2021-02-27 09:43:09 : Initial processing of species 22 complete
+2021-02-27 09:46:15 : Initial processing of species 23 complete
+2021-02-27 09:47:37 : Initial processing of species 24 complete
+2021-02-27 09:49:19 : Initial processing of species 25 complete
+2021-02-27 09:51:19 : Initial processing of species 26 complete
+2021-02-27 09:52:58 : Initial processing of species 27 complete
+2021-02-27 09:55:09 : Initial processing of species 28 complete
+2021-02-27 09:56:47 : Initial processing of species 29 complete
+2021-02-27 09:56:50 : Initial processing of species 30 complete
+2021-02-27 09:57:26 : Initial processing of species 31 complete
+2021-02-27 09:58:35 : Initial processing of species 32 complete
+2021-02-27 09:58:49 : Initial processing of species 33 complete
+2021-02-27 09:59:01 : Initial processing of species 34 complete
+2021-02-27 09:59:45 : Initial processing of species 35 complete
+2021-02-27 10:00:13 : Initial processing of species 36 complete
+2021-02-27 10:00:41 : Initial processing of species 37 complete
+2021-02-27 10:02:07 : Initial processing of species 38 complete
+2021-02-27 10:03:05 : Initial processing of species 39 complete
+2021-02-27 10:05:22 : Initial processing of species 40 complete
+2021-02-27 10:07:04 : Initial processing of species 41 complete
+2021-02-27 10:09:04 : Initial processing of species 42 complete
+2021-02-27 10:09:10 : Initial processing of species 43 complete
+2021-02-27 10:11:28 : Initial processing of species 44 complete
+2021-02-27 10:13:54 : Initial processing of species 45 complete
+2021-02-27 10:16:20 : Initial processing of species 46 complete
+2021-02-27 10:17:35 : Initial processing of species 47 complete
+2021-02-27 10:19:49 : Initial processing of species 48 complete
+2021-02-27 10:22:13 : Initial processing of species 49 complete
+2021-02-27 10:23:56 : Initial processing of species 50 complete
+2021-02-27 10:26:10 : Initial processing of species 51 complete
+2021-02-27 10:31:53 : Connected putative homologues
+2021-02-27 10:32:00 : Written final scores for species 0 to graph file
+2021-02-27 10:32:17 : Written final scores for species 1 to graph file
+2021-02-27 10:33:01 : Written final scores for species 2 to graph file
+2021-02-27 10:33:09 : Written final scores for species 3 to graph file
+2021-02-27 10:33:37 : Written final scores for species 4 to graph file
+2021-02-27 10:33:51 : Written final scores for species 5 to graph file
+2021-02-27 10:34:11 : Written final scores for species 6 to graph file
+2021-02-27 10:34:39 : Written final scores for species 7 to graph file
+2021-02-27 10:34:56 : Written final scores for species 8 to graph file
+2021-02-27 10:35:04 : Written final scores for species 9 to graph file
+2021-02-27 10:35:23 : Written final scores for species 10 to graph file
+2021-02-27 10:35:37 : Written final scores for species 11 to graph file
+2021-02-27 10:35:51 : Written final scores for species 12 to graph file
+2021-02-27 10:36:20 : Written final scores for species 13 to graph file
+2021-02-27 10:37:02 : Written final scores for species 14 to graph file
+2021-02-27 10:37:11 : Written final scores for species 15 to graph file
+2021-02-27 10:37:22 : Written final scores for species 16 to graph file
+2021-02-27 10:37:40 : Written final scores for species 17 to graph file
+2021-02-27 10:37:56 : Written final scores for species 18 to graph file
+2021-02-27 10:38:09 : Written final scores for species 19 to graph file
+2021-02-27 10:39:12 : Written final scores for species 20 to graph file
+2021-02-27 10:39:15 : Written final scores for species 21 to graph file
+2021-02-27 10:39:17 : Written final scores for species 22 to graph file
+2021-02-27 10:39:43 : Written final scores for species 23 to graph file
+2021-02-27 10:40:01 : Written final scores for species 24 to graph file
+2021-02-27 10:40:26 : Written final scores for species 25 to graph file
+2021-02-27 10:40:57 : Written final scores for species 26 to graph file
+2021-02-27 10:41:22 : Written final scores for species 27 to graph file
+2021-02-27 10:41:54 : Written final scores for species 28 to graph file
+2021-02-27 10:42:18 : Written final scores for species 29 to graph file
+2021-02-27 10:42:19 : Written final scores for species 30 to graph file
+2021-02-27 10:42:28 : Written final scores for species 31 to graph file
+2021-02-27 10:42:48 : Written final scores for species 32 to graph file
+2021-02-27 10:42:52 : Written final scores for species 33 to graph file
+2021-02-27 10:42:56 : Written final scores for species 34 to graph file
+2021-02-27 10:43:06 : Written final scores for species 35 to graph file
+2021-02-27 10:43:14 : Written final scores for species 36 to graph file
+2021-02-27 10:43:20 : Written final scores for species 37 to graph file
+2021-02-27 10:43:46 : Written final scores for species 38 to graph file
+2021-02-27 10:44:01 : Written final scores for species 39 to graph file
+2021-02-27 10:44:39 : Written final scores for species 40 to graph file
+2021-02-27 10:45:07 : Written final scores for species 41 to graph file
+2021-02-27 10:45:41 : Written final scores for species 42 to graph file
+2021-02-27 10:45:43 : Written final scores for species 43 to graph file
+2021-02-27 10:46:16 : Written final scores for species 44 to graph file
+2021-02-27 10:46:51 : Written final scores for species 45 to graph file
+2021-02-27 10:47:25 : Written final scores for species 46 to graph file
+2021-02-27 10:47:42 : Written final scores for species 47 to graph file
+2021-02-27 10:48:12 : Written final scores for species 48 to graph file
+2021-02-27 10:48:44 : Written final scores for species 49 to graph file
+2021-02-27 10:49:08 : Written final scores for species 50 to graph file
+2021-02-27 10:49:41 : Written final scores for species 51 to graph file
+
+WARNING: program called by OrthoFinder produced output to stderr
+
+Command: mcl ./ORTH228/Results_Feb26/WorkingDirectory/OrthoFinder_graph.txt -I 2.1 -o ./ORTH228/Results_Feb26/WorkingDirectory/clusters_OrthoFinder_I2.1.txt -te 1 -V all
+
+stdout
+------
+b''
+stderr
+------
+b'[mcl] cut <1> instances of overlap\n'
+2021-02-27 11:30:30 : Ran MCL
+
+Writing orthogroups to file
+---------------------------
+OrthoFinder assigned 1158796 genes (94.5% of total) to 70957 orthogroups. Fifty percent of all genes were in orthogroups with 61 or more genes (G50 was 61) and were contained in the largest 4783 orthogroups (O50 was 4783). There were 4 orthogroups with all species present and 0 of these consisted entirely of single-copy genes.
+
+2021-02-27 11:31:36 : Done orthogroups
+
+Analysing Orthogroups
+=====================
+2021-02-27 11:31:37 : Starting MSA/Trees
+Species tree: Using 1385 orthogroups with minimum of 21.2% of species having single-copy genes in any orthogroup
+
+Inferring multiple sequence alignments for species tree
+-------------------------------------------------------
+2021-02-27 11:36:17 : Done 400 of 1385
+2021-02-27 11:37:51 : Done 600 of 1385
+2021-02-27 11:38:41 : Done 700 of 1385
+2021-02-27 11:40:05 : Done 900 of 1385
+2021-02-27 11:40:45 : Done 1000 of 1385
+2021-02-27 11:41:45 : Done 1200 of 1385
+2021-02-27 11:42:11 : Done 1300 of 1385
+2021-02-27 11:34:22 : Done 200 of 1385
+2021-02-27 11:37:09 : Done 500 of 1385
+2021-02-27 11:39:26 : Done 800 of 1385
+2021-02-27 11:32:17 : Done 0 of 1385
+2021-02-27 11:33:24 : Done 100 of 1385
+2021-02-27 11:35:26 : Done 300 of 1385
+2021-02-27 11:41:16 : Done 1100 of 1385

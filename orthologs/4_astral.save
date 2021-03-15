@@ -1,0 +1,52 @@
+#!/bin/bash
+
+#Put all genetrees and maps into a single file each after removing old file
+rm combined_ft_astral.treefile 
+
+for FILENAME in genetrees/*.treefile
+do
+     echo "combining $FILENAME"
+     cat $FILENAME >> combined_ft_astral.treefile
+done
+
+echo "combined all treefiles now converting to ..."
+
+#this removes OG and Gene ID from treefile to have multi-mapped genetrees (only species names remain)
+perl -p -i -e 's/\_OG\d\d\d\d\d\d\d\_DN[0-9]+//g' combined_ft_astral.treefile
+#Darwinula genome has different gene numbers that are not DN  #OG0000001_CADxxxxxx
+perl -p -i -e 's/\_OG\d\d\d\d\d\d\d\_CAD[0-9]+//g' combined_ft_astral.treefile
+
+##DANGER DANGER -- THIS IS FOR DEBUGGING -- NOT ENOUGH DATA FOR JAMESCASEI SO ARBITRARILY SWAP TO PHOTEROS
+##This is for early in gene tree calculation
+#perl -p -i -e 's/BothJamescasei/Gruber_Pannecohenae/g' combined_ft_astral.treefile;
+#perl -p -i -e 's/Jp_Melavar22/PSKO/g' combined_ft_astral.treefile;
+
+
+#astral call for not using map file (requires perl command above to remove unique gene names and only have spp names)
+java -D"java.library.path=/Users/oakley/Documents/GitHub/A-pro/ASTRAL-MP/lib/" -jar /Users/oakley/Documents/GitHub/A-pro/ASTRAL-MP/astral.1.1.5.jar -i combined_ft_astral.treefile -a combined_ft_astral.map -o astral.tre 2>astral.log
+
+
+
+
+
+
+#!/bin/bash
+
+echo "uses bioperl which is only in base conda"
+
+echo "previous runs found gene trees with all paralogs. Then ppp pruned to find only orthologs"
+echo "this script re-aligns and re-estimates gene trees for those"
+
+
+for FILENAME in /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/phylopydir/phylopypruner_output/output_alignments/*.aln_pruned.fa
+do
+  #assumes path and filename are all same length which is reasonable assumption
+  path="${FILENAME:0:114}"
+  orthogroup="${FILENAME:114:9}"
+
+  mafft $FILENAME > $path$orthogroup.raln.fa
+
+  fasttree $path$orthogroup.raln.fa > $path$orthogroup.pppft.treefile
+#  iqtree -s genetrees/$line.iq.fa -nt 4 --redo
+
+done

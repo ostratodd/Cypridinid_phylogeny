@@ -1,0 +1,95 @@
+
+================== ASTRAL-Pro ===================== 
+
+This is ASTRAL-Pro (A-Pro) version 1.1.5
+Using native AVX batch computing.
+Gene trees are treated as unrooted
+There are 4 threads used to run.
+The number of input tree read is 8256
+97987 trees read from combined_ft_astral.treefile
+61553 extra trees.
+All output trees will be *arbitrarily* rooted at BothJaOBD
+
+======== Running the main analysis
+Number of taxa: 51 (51 species)
+Taxa: [BothJaOBD, LIRSCyp2, AllBzVAD, NOL_Niko, JaWTF_S54, JaAU_S56, AllRoDU, WhiteVanessaLIRS, BothPara_w, jpcyp2b, RoIR_S66, BothRoCMU, Vtsu, BothJaVAD, EGD_Niko, curacao, PMMFU, BothPmorini, SFM_Niko, Gruber_Pannecohenae, BothJaSVD, AllBzSVU, LongWhiteEye, FatWhiteEye, BothGPH, ROWLU_2018, BothJaLSZZ, AllRoRD, BothRoODH, BothSVD, JaWLU_S67, RO-AG_S10, K_marleyi, Korn_hast_c, LIRSCyp1, Vhilg, Allmacelroy, BothJamescasei, Jp_Melavar22, GlovSkog, PSKO, PRLMH, AltLiz, Cylindroleberidinae, Chlorica, BothVhilg_shim, Gigantocypris, BothJaJimGun, Harb_slatteryi, Euph_microasciformis, Dstev_ENA]
+Taxon occupancy: {PSKO=38391, ROWLU_2018=20026, Harb_slatteryi=26130, AllRoRD=47424, AllBzSVU=25060, Chlorica=23846, K_marleyi=7126, BothJaVAD=42930, JaWLU_S67=48084, Dstev_ENA=24198, PRLMH=4502, BothVhilg_shim=15610, NOL_Niko=38556, curacao=34598, PMMFU=30187, BothJaJimGun=3254, jpcyp2b=33945, AltLiz=15757, EGD_Niko=47876, LIRSCyp2=48280, RO-AG_S10=44221, FatWhiteEye=36644, LIRSCyp1=21307, BothJaOBD=44457, LongWhiteEye=29036, BothJaLSZZ=27101, AllBzVAD=41336, Korn_hast_c=39920, BothJamescasei=394, JaAU_S56=45516, BothSVD=30184, GlovSkog=11504, BothJaSVD=51637, BothRoODH=48662, Allmacelroy=12250, BothPara_w=18793, Cylindroleberidinae=41578, BothRoCMU=47659, BothGPH=31549, Vtsu=37112, Jp_Melavar22=6357, BothPmorini=16219, RoIR_S66=34729, Euph_microasciformis=28726, JaWTF_S54=43147, Gigantocypris=23483, AllRoDU=49367, Gruber_Pannecohenae=44430, WhiteVanessaLIRS=25738, SFM_Niko=42697, Vhilg=20824}
+Using polytree-based weight calculation.
+Number of gene trees: 97987
+97987 trees have missing taxa
+Calculating distance matrix (for completion of X) ....with 4 distance matrices in parallel
+Species tree distances calculated ...
+
+Will attempt to complete bipartitions from X before adding using a distance matrix.
+Building set of clusters (X) from gene trees 
+------------------------------
+Number of Clusters after addition by distance: 57071
+Adding to X using resolutions of greedy consensus ...
+
+Computing greedy consensus  took 3 seconds
+Limit for sigma of degrees:1325
+
+polytomy size limit : > 3
+ []
+discarded polytomies: 
+Threshold 0.0:
+Threshold 0.01:
+Threshold 0.02:
+Threshold 0.05:
+Threshold 0.1:
+Threshold 0.2:
+Threshold 0.3333333333333333:
+Number of Clusters after addition by greedy: 57071
+calculating extra bipartitions from extra input trees ...
+Number of Clusters after additions from extra trees: 87639
+partitions formed in 76.278 secs
+Dynamic Programming starting after 76.278 secs
+Polytree max score: 251375766
+Polytree building time: 1.334 seconds.
+Number of quartet trees in the gene trees: 251375766
+Computing hash values took 0 seconds
+Size of largest cluster: 51
+Size of largest cluster: 51
+Calculated 100000 weights; time (seconds): 159
+100032 weights calculated 159.384
+Calculated 200000 weights; time (seconds): 161
+200064 weights calculated 161.991
+300032 weights calculated 159.832
+Calculated 300000 weights; time (seconds): 159
+400064 weights calculated 159.72
+Calculated 400000 weights; time (seconds): 159
+500032 weights calculated 160.988
+Calculated 500000 weights; time (seconds): 160
+Calculated 600000 weights; time (seconds): 160
+600064 weights calculated 160.195
+Calculated 700000 weights; time (seconds): 160
+700032 weights calculated 160.01
+Calculated 800000 weights; time (seconds): 160
+800128 weights calculated 160.906
+Calculated 900000 weights; time (seconds): 159
+900032 weights calculated 159.168
+Calculated 1000000 weights; time (seconds): 160
+1000064 weights calculated 160.743
+Calculated 1100000 weights; time (seconds): 159
+1100032 weights calculated 159.87
+Calculated 1200000 weights; time (seconds): 159
+1200128 weights calculated 159.387
+Calculated 1300000 weights; time (seconds): 160
+1300032 weights calculated 159.838
+Calculated 1400000 weights; time (seconds): 160
+1400192 weights calculated 160.789
+Calculated 1500000 weights; time (seconds): 159
+1500032 weights calculated 159.371
+Total Number of elements: 1528262
+Final optimization score: 0
+1528263 1528000 1528262
+Total Number of elements: 1528262
+Normalized score (portion of input quartet trees satisfied before correcting for multiple individuals): 0.8330587165669741
+Final optimization score: 209410773
+Optimal tree inferred in 2528.701 secs.
+Weight calculation cumulatively took 9691.817913627 secs
+(BothJaOBD,((AllRoDU,AllRoRD),(BothRoODH,(((AllBzVAD,BothSVD),(BothJaSVD,(JaWTF_S54,JaWLU_S67))),((BothJaLSZZ,(JaAU_S56,BothJaVAD)),((AllBzSVU,(RoIR_S66,RO-AG_S10)),((Vtsu,PMMFU),((((LIRSCyp2,(LIRSCyp1,(Vhilg,BothVhilg_shim))),(BothJaJimGun,(jpcyp2b,((Dstev_ENA,(Cylindroleberidinae,(AltLiz,(Chlorica,(Harb_slatteryi,Euph_microasciformis))))),(Gigantocypris,((LongWhiteEye,(WhiteVanessaLIRS,FatWhiteEye)),((GlovSkog,PSKO),(BothPara_w,Jp_Melavar22)))))))),(curacao,(PRLMH,(K_marleyi,(BothRoCMU,Korn_hast_c))))),(Allmacelroy,((BothJamescasei,(BothPmorini,ROWLU_2018)),(BothGPH,(Gruber_Pannecohenae,(NOL_Niko,(EGD_Niko,SFM_Niko))))))))))))));
+Final quartet score is: 209410773
+Final normalized quartet score is: 0.8330587165669741
+(BothJaOBD,((AllRoDU,AllRoRD)1:0.41427197531807824,(BothRoODH,(((AllBzVAD,BothSVD)1:0.2851000559970479,(BothJaSVD,(JaWTF_S54,JaWLU_S67)1:0.8790118292675777)1:0.6755494398262283)1:0.05188566805316809,((BothJaLSZZ,(JaAU_S56,BothJaVAD)1:0.7383338066685964)1:0.4118127740212907,((AllBzSVU,(RoIR_S66,RO-AG_S10)1:1.1416404027650884)1:0.9838411187180033,((Vtsu,PMMFU)1:0.7660157734190151,((((LIRSCyp2,(LIRSCyp1,(Vhilg,BothVhilg_shim)1:1.7411616002732901)1:0.9417262675517201)1:1.0047581881179053,(BothJaJimGun,(jpcyp2b,((Dstev_ENA,(Cylindroleberidinae,(AltLiz,(Chlorica,(Harb_slatteryi,Euph_microasciformis)1:2.5348930796710514)1:1.0352507499860886)1:1.2603650760159029)1:0.17798670453562285)1:1.1806496507890727,(Gigantocypris,((LongWhiteEye,(WhiteVanessaLIRS,FatWhiteEye)1:1.7381510006193068)1:0.9167031926544256,((GlovSkog,PSKO)1:0.7564361106271773,(BothPara_w,Jp_Melavar22)1:0.1950112255489913)1:0.18530898288848516)1:2.0042435254336195)0.65:0.06410948891067035)1:0.3264828622544187)1:0.5946446854958154)1:0.7993856610538381)1:1.245197603343958,(curacao,(PRLMH,(K_marleyi,(BothRoCMU,Korn_hast_c)1:0.6497528044881574)1:1.4520880546893256)1:1.1415062902495545)1:0.9943008620260141)1:0.15842690952572278,(Allmacelroy,((BothJamescasei,(BothPmorini,ROWLU_2018)0.8:0.17111695778109148)1:0.39323769102701484,(BothGPH,(Gruber_Pannecohenae,(NOL_Niko,(EGD_Niko,SFM_Niko)0.98:0.033282899809882686)1:0.2627975445737467)1:0.10495979296983293)1:0.1974827168131445)0.44:0.01296328102334026)1:2.058763196572844)1:1.6102319710725703)1:1.1971338439181864)1:1.0580795898920698)1:0.10500169929765359)0.95:0.02884518675174736)1:0.6363468080493283));
+ASTRAL-Pro finished in 2543.573 secs
