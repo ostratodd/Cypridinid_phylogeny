@@ -1,14 +1,14 @@
-IQ-TREE multicore version 2.0.3 for Mac OS X 64-bit built Dec 19 2020
-Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
-Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+IQ-TREE multicore version 2.1.2 COVID-edition for Linux 64-bit built Oct 22 2020
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
 
-Host:    eemb-micro-room.eemb.ucsb.edu (AVX2, FMA3, 64 GB RAM)
-Command: iqtree -p clockgenes --date dates_file.txt --date-tip 0 -o Dstev_ENA --redo
-Seed:    690497 (Using SPRNG - Scalable Parallel Random Number Generator)
-Time:    Mon Mar 15 11:14:45 2021
-Kernel:  AVX+FMA - 1 threads (4 CPU cores detected)
+Host:    osiris (AVX, 62 GB RAM)
+Command: iqtree2 -p clockgenes --date dates_file.txt --date-ci 100 --date-tip 0 -redo
+Seed:    985346 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Mar 15 16:29:24 2021
+Kernel:  AVX - 1 threads (16 CPU cores detected)
 
-HINT: Use -nt option to specify number of threads because your CPU has 4 cores!
+HINT: Use -nt option to specify number of threads because your CPU has 16 cores!
 HINT: -nt AUTO will automatically determine the best number of threads to use.
 
 Reading 8 alignment files in directory clockgenes
@@ -398,115 +398,139 @@ Degree of missing data: 0.175
 Info: multi-threading strategy over partitions
 
 
-NOTE: Restoring information from model checkpoint file clockgenes.model.gz
 
-CHECKPOINT: Initial tree restored
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.062 seconds
 Perform fast likelihood tree search using LG+I+G model...
-CHECKPOINT: Tree restored, LogL: -42450.215
+Estimate model parameters (epsilon = 5.000)
+Initial log-likelihood: -43806.842
+Current log-likelihood at step 1: -42526.531
+Current log-likelihood at step 2: -42467.897
+Current log-likelihood at step 3: -42465.507
+Parameters optimization took 2 rounds (7.264 sec)
+
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+Initial log-likelihood: -42454.192
+Current log-likelihood at step 1: -42452.346
+Current log-likelihood at step 2: -42451.118
+Current log-likelihood at step 3: -42450.227
+Partition-specific rates:  1.993 1.205 0.400 0.423 0.824 0.756 1.326 1.682
+Parameters optimization took 2 rounds (4.156 sec)
+
+Time for fast ML tree search: 14.301 seconds
+
 NOTE: ModelFinder requires 36 MB RAM!
 Selecting individual models for 8 charsets using BIC...
  No. Model        Score       TreeLen     Charset
-   1 LG+G4        6665.014    12.656      OG0002110.raln.fa
-   2 JTT+G4       11789.727   5.417       OG0002445.raln.fa
-   3 LG+G4        9104.234    2.426       OG0002953.raln.fa
-   4 JTT+R3       5972.688    2.734       OG0003093.raln.fa
-   5 LG+G4        10039.585   5.123       OG0003508.raln.fa
-   6 LG+G4        17106.168   4.492       OG0003971.raln.fa
+   1 LG+G4        6665.012    12.656      OG0002110.raln.fa
+   2 JTT+G4       11789.723   5.417       OG0002445.raln.fa
+   3 LG+G4        9104.235    2.426       OG0002953.raln.fa
+WARNING: Log-likelihood -2985.15 of VT+R4 worse than VT+R3 -2976.43
+WARNING: Log-likelihood -2985.77 of VT+F+R4 worse than VT+F+R3 -2977.16
+WARNING: Log-likelihood -3007.27 of PMB+R4 worse than PMB+R3 -2998.83
+WARNING: Log-likelihood -3009.7 of Blosum62+R4 worse than Blosum62+R3 -3001.08
+WARNING: Log-likelihood -3006.37 of Blosum62+F+R4 worse than Blosum62+F+R3 -2997.73
+WARNING: Log-likelihood -3097.53 of mtREV+R4 worse than mtREV+R3 -3094.06
+WARNING: Log-likelihood -3116.5 of mtMet+R4 worse than mtMet+R3 -3091.67
+WARNING: Log-likelihood -3117.25 of mtInv+R4 worse than mtInv+R3 -3112.77
+WARNING: Log-likelihood -2989.51 of rtREV+F+R4 worse than rtREV+F+R3 -2979.02
+   4 JTT+R3       5972.773    2.729       OG0003093.raln.fa
+   5 LG+G4        10039.594   5.123       OG0003508.raln.fa
+   6 LG+G4        17106.163   4.492       OG0003971.raln.fa
    7 JTT+G4       15413.386   6.749       OG0004555.raln.fa
-   8 JTT+G4       8559.964    8.014       OG0006132.raln.fa
-Full partition model BIC score: 85439.610 (LnL: -42268.115  df:111)
+   8 JTT+G4       8559.965    8.014       OG0006132.raln.fa
+Full partition model BIC score: 85439.694 (LnL: -42268.157  df:111)
 Partition information was printed to clockgenes.best_scheme.nex
 Partition information in Raxml format was printed to clockgenes.best_scheme
 
 All model information printed to clockgenes.model.gz
-CPU time for ModelFinder: 0.245 seconds (0h:0m:0s)
-Wall-clock time for ModelFinder: 0.265 seconds (0h:0m:0s)
+CPU time for ModelFinder: 619.080 seconds (0h:10m:19s)
+Wall-clock time for ModelFinder: 619.528 seconds (0h:10m:19s)
 
 NOTE: 70 MB RAM (0 GB) is required!
 Estimate model parameters (epsilon = 0.100)
-Initial log-likelihood: -42321.979
-Current log-likelihood at step 1: -42275.250
-Current log-likelihood at step 2: -42270.314
-Current log-likelihood at step 3: -42269.738
+Initial log-likelihood: -42322.016
+Current log-likelihood at step 1: -42275.230
+Current log-likelihood at step 2: -42270.315
+Current log-likelihood at step 3: -42269.764
 Current log-likelihood at step 4: -42268.999
-Current log-likelihood at step 5: -42268.628
-Current log-likelihood at step 6: -42268.191
-Current log-likelihood at step 7: -42267.962
-Current log-likelihood at step 8: -42267.697
-Current log-likelihood at step 9: -42267.555
-Current log-likelihood at step 10: -42267.382
-Current log-likelihood at step 11: -42267.284
-Partition-specific rates:  1.959 1.127 0.385 0.757 0.804 0.742 1.226 1.598
-Parameters optimization took 10 rounds (7.039 sec)
+Current log-likelihood at step 5: -42268.659
+Current log-likelihood at step 6: -42268.210
+Current log-likelihood at step 7: -42268.017
+Current log-likelihood at step 8: -42267.731
+Current log-likelihood at step 9: -42267.600
+Current log-likelihood at step 10: -42267.424
+Current log-likelihood at step 11: -42267.328
+Partition-specific rates:  1.960 1.127 0.385 0.755 0.804 0.742 1.226 1.598
+Parameters optimization took 10 rounds (13.776 sec)
 
-Computing ML distances based on estimated model parameters... 0.979 sec
+Computing ML distances based on estimated model parameters...
+Computing ML distances took 0.000356 sec (of wall-clock time) 0.000000 sec(of CPU time)
 WARNING: Some pairwise ML distances are too long (saturated)
-Computing BIONJ tree...
-0.002 seconds
-Log-likelihood of BIONJ tree: -42824.491
+Computing RapidNJ tree took 0.000586 sec (of wall-clock time) 0.000000 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -58444.680
 --------------------------------------------------------------------
 |             INITIALIZING CANDIDATE TREE SET                      |
 --------------------------------------------------------------------
-Generating 98 parsimony trees... 2.974 second
-Computing log-likelihood of 98 initial trees ... 15.670 seconds
-Current best score: -42267.284
+Generating 98 parsimony trees... 4.552 second
+Computing log-likelihood of 98 initial trees ... 31.267 seconds
+Current best score: -42267.328
 
 Do NNI search on 20 best initial trees
 Estimate model parameters (epsilon = 0.100)
-Initial log-likelihood: -42267.284
-Current log-likelihood at step 1: -42267.188
-Parameters optimization took 0 rounds (0.565 sec)
+Initial log-likelihood: -42267.328
+Current log-likelihood at step 1: -42267.231
+Parameters optimization took 0 rounds (1.099 sec)
 
-BETTER TREE FOUND at iteration 1: -42267.188
+BETTER TREE FOUND at iteration 1: -42267.231
 Estimate model parameters (epsilon = 0.100)
-Initial log-likelihood: -42255.623
-Current log-likelihood at step 1: -42255.563
-Parameters optimization took 0 rounds (0.580 sec)
+Initial log-likelihood: -42255.682
+Current log-likelihood at step 1: -42255.610
+Parameters optimization took 0 rounds (1.171 sec)
 
-BETTER TREE FOUND at iteration 2: -42255.563
-BETTER TREE FOUND at iteration 3: -42255.563
-Iteration 10 / LogL: -42255.563 / Time: 0h:1m:2s
-Iteration 20 / LogL: -42256.259 / Time: 0h:1m:39s
-Finish initializing candidate tree set (5)
-Current best tree score: -42255.563 / CPU time: 90.182
+BETTER TREE FOUND at iteration 2: -42255.610
+UPDATE BEST LOG-LIKELIHOOD: -42255.609
+UPDATE BEST LOG-LIKELIHOOD: -42255.607
+UPDATE BEST LOG-LIKELIHOOD: -42255.606
+Iteration 10 / LogL: -42255.606 / Time: 0h:1m:37s
+Iteration 20 / LogL: -42255.606 / Time: 0h:2m:41s
+Finish initializing candidate tree set (4)
+Current best tree score: -42255.606 / CPU time: 144.604
 Number of iterations: 20
 --------------------------------------------------------------------
 |               OPTIMIZING CANDIDATE TREE SET                      |
 --------------------------------------------------------------------
-UPDATE BEST LOG-LIKELIHOOD: -42255.563
-UPDATE BEST LOG-LIKELIHOOD: -42255.563
-Iteration 30 / LogL: -42255.563 / Time: 0h:2m:18s (0h:5m:49s left)
-Iteration 40 / LogL: -42255.563 / Time: 0h:2m:59s (0h:4m:49s left)
-UPDATE BEST LOG-LIKELIHOOD: -42255.563
-Iteration 50 / LogL: -42267.230 / Time: 0h:3m:42s (0h:4m:0s left)
-Iteration 60 / LogL: -42255.563 / Time: 0h:4m:18s (0h:3m:8s left)
-UPDATE BEST LOG-LIKELIHOOD: -42255.563
-UPDATE BEST LOG-LIKELIHOOD: -42255.563
-Iteration 70 / LogL: -42255.563 / Time: 0h:5m:2s (0h:2m:24s left)
-Iteration 80 / LogL: -42255.567 / Time: 0h:5m:44s (0h:1m:40s left)
-Iteration 90 / LogL: -42255.563 / Time: 0h:6m:23s (0h:0m:55s left)
-Iteration 100 / LogL: -42255.567 / Time: 0h:7m:3s (0h:0m:12s left)
-TREE SEARCH COMPLETED AFTER 104 ITERATIONS / Time: 0h:7m:17s
+UPDATE BEST LOG-LIKELIHOOD: -42255.606
+Iteration 30 / LogL: -42255.606 / Time: 0h:3m:53s (0h:9m:38s left)
+Iteration 40 / LogL: -42255.654 / Time: 0h:5m:15s (0h:8m:21s left)
+Iteration 50 / LogL: -42267.572 / Time: 0h:6m:32s (0h:6m:56s left)
+UPDATE BEST LOG-LIKELIHOOD: -42255.605
+Iteration 60 / LogL: -42255.628 / Time: 0h:7m:47s (0h:5m:32s left)
+Iteration 70 / LogL: -42255.610 / Time: 0h:9m:6s (0h:4m:13s left)
+Iteration 80 / LogL: -42255.608 / Time: 0h:10m:21s (0h:2m:53s left)
+Iteration 90 / LogL: -42256.571 / Time: 0h:11m:33s (0h:1m:33s left)
+Iteration 100 / LogL: -42255.606 / Time: 0h:12m:48s (0h:0m:15s left)
+TREE SEARCH COMPLETED AFTER 103 ITERATIONS / Time: 0h:13m:10s
 
 --------------------------------------------------------------------
 |                    FINALIZING TREE SEARCH                        |
 --------------------------------------------------------------------
 Performs final model parameters optimization
 Estimate model parameters (epsilon = 0.010)
-Initial log-likelihood: -42255.563
-Current log-likelihood at step 1: -42255.556
-Partition-specific rates:  2.000 1.122 0.388 0.761 0.795 0.737 1.223 1.589
-Parameters optimization took 0 rounds (0.566 sec)
+Initial log-likelihood: -42255.605
+Current log-likelihood at step 1: -42255.599
+Partition-specific rates:  2.001 1.123 0.389 0.760 0.795 0.737 1.223 1.588
+Parameters optimization took 0 rounds (1.088 sec)
 
 Partition information was printed to clockgenes.best_model.nex
-BEST SCORE FOUND : -42255.556
-Total tree length: 6.578
+BEST SCORE FOUND : -42255.599
+Total tree length: 6.576
 
-Total number of iterations: 104
-CPU time used for tree search: 427.868 sec (0h:7m:7s)
-Wall-clock time used for tree search: 428.687 sec (0h:7m:8s)
-Total CPU time used: 437.592 sec (0h:7m:17s)
-Total wall-clock time used: 438.433 sec (0h:7m:18s)
+Total number of iterations: 103
+CPU time used for tree search: 772.764 sec (0h:12m:52s)
+Wall-clock time used for tree search: 773.148 sec (0h:12m:53s)
+Total CPU time used: 791.048 sec (0h:13m:11s)
+Total wall-clock time used: 791.405 sec (0h:13m:11s)
 
 Analysis results written to: 
   IQ-TREE report:                clockgenes.iqtree
@@ -514,28 +538,33 @@ Analysis results written to:
   Likelihood distances:          clockgenes.mldist
   Screen log file:               clockgenes.log
 
+--- Start phylogenetic dating ---
 Reading date file dates_file.txt ...
-49 dates extracted
+2 dates extracted
 Building time tree by least-square dating (LSD) with command:
-lsd -i clockgenes.timetree.subst -s 3424 -c -o clockgenes.timetree -g clockgenes.timetree.outgroup -d clockgenes.timetree.date 
-Removing outgroups of tree 1 ...
+lsd -i clockgenes.timetree.subst -s 3424 -o clockgenes.timetree -f 100 -r a -d clockgenes.timetree.date -z 0 
 
 TREE 1
 *PROCESSING:
 Reading the tree ... 
-Collapse 1 (over 46) internal branches having branch length <= 0.000 (settable via option -l)
-Minimum branch length of time scaled tree (settable via option -u and -U): 0.256, rounded to 0.260 (26.000/100.000) using factor 100.000 (settable via option -R)
-Dating under temporal constraints mode ...
-*WARNINGS:
-- There are some nodes in the input date file that are not present in the input tree.
+Collapse 1 (over 45) internal branches having branch length <= 0.000146
+ (settable via option -l)
+Parameter to adjust variances was set to 0.0213 (settable via option -b)
+Minimum branch length of time scaled tree (settable via option -u and -U): 0
+Estimating the root position on all branches using fast method ...
+Computing confidence intervals using sequence length 3424 and a lognormal
+ relaxed clock with mean 1, standard deviation 0.2 (settable via option -q)
 *RESULTS:
 - Dating results:
- rate 0.00125653, tMRCA -443.8, objective function 186.144
+ rate 0.00128768, tMRCA -508 , objective function 0.845767
+- Results with confidence intervals:
+ rate 0.00128768 [0.00111069; 0.00147734], tMRCA -508 [-508; -508], objective function 0.845767
 
-TOTAL ELAPSED TIME: 0.002 seconds
+TOTAL ELAPSED TIME: 0.0361 seconds
 LSD results written to:
   LSD report:                  clockgenes.timetree.lsd
   Time tree in nexus format:   clockgenes.timetree.nex
   Time tree in newick format:  clockgenes.timetree.nwk
 
-Date and Time: Mon Mar 15 11:22:04 2021
+--- End phylogenetic dating ---
+Date and Time: Mon Mar 15 16:52:56 2021
