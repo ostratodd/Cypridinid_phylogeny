@@ -1,0 +1,23 @@
+execute clock_concat.nex
+prset clockratepr = lognorm(-7,0.6)
+prset clockvarpr = tk02
+prset tk02varpr = exp(1)
+prset clockvarpr = igr
+prset igrvarpr = exp(10)
+outgroup Dstev_ENA
+constraint myodocopida = AllBzSVU AllBzVAD   AllRoDU AllRoRD   AltLiz   BothGPH   BothJaLSZZ   BothJaOBD   BothJaSVD  BothJaVAD  BothPmorini  BothRoCMU  BothRoODH  BothSVD  BothVhilg_shim  Chlorica  Cylindroleberidinae EGD_Niko  FatWhiteEye  Gigantocypris  GlovSkog  Gruber_Pannecohenae  JaAU_S56  JaWLU_S67  JaWTF_S54  Korn_hast_c LIRSCyp1  LIRSCyp2  LongWhiteEye  NOL_Niko  PMMFU  PSKO  RO_AG_S10  RoIR_S66  SFM_Niko  Vhilg  Vtsu WhiteVanessaLIRS curacao jpcyp2b
+calibrate myodocopida = offsetexponential(443.8, 509)
+prset nodeagepr = calibrated
+prset brlenspr = clock:birthdeath
+prset samplestrat = diversity
+prset sampleprob = 0.0001
+prset extinctionpr = beta(1,1)
+prset treeagepr = uniform(443.8, 509)
+mcmcp nrun = 2 nchain = 4 ngen = 500000 samplefr = 100 starttree=parsimony
+mcmcp filename = uniclock printfr = 1000 diagnfr = 5000
+prset topologypr = constraint(myodocopida)
+mcmc
+
+
+
+

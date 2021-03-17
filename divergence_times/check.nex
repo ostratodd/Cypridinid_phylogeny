@@ -1,0 +1,3 @@
+execute clock_concat.nex
+mcmcp burninfrac = .5
+sumt filename = test
