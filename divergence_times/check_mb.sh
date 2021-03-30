@@ -1,8 +1,8 @@
-cp uniclock.run1.t test.run1.t
-cp uniclock.run2.t test.run2.t
+cp aauniclock.run1.t test.run1.t
+cp aauniclock.run2.t test.run2.t
 
-#echo "end;" >> test.run1.t
-#echo "end;" >> test.run2.t
+echo "end;" >> test.run1.t
+echo "end;" >> test.run2.t
 
 rm test.con.tre	
 rm test.trprobs	

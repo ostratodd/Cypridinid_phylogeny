@@ -1,4 +1,5 @@
 execute clock_concat.nex
+execute clockgenes.partitions.nex
 prset clockratepr = lognorm(-7,0.6)
 prset clockvarpr = tk02
 prset tk02varpr = exp(1)
@@ -14,7 +15,7 @@ prset sampleprob = 0.0001
 prset extinctionpr = beta(1,1)
 prset treeagepr = uniform(443.8, 509)
 mcmcp nrun = 2 nchain = 4 ngen = 500000 samplefr = 100 starttree=parsimony
-mcmcp filename = uniclock printfr = 1000 diagnfr = 5000
+mcmcp filename = aauniclock printfr = 1000 diagnfr = 5000
 prset topologypr = constraint(myodocopida)
 mcmc
 

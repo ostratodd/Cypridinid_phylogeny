@@ -1,0 +1,31 @@
+#nexus
+begin mrbayes;
+charset OG0002110 = 1-253;
+charset OG0002445 = 254-710;
+charset OG0002953 = 711-1124;
+charset OG0003093 = 1125-1557;
+charset OG0003508 = 1558-1922;
+charset OG0003971 = 1923-2597;
+charset OG0004555 = 2598-3107;
+charset OG0006132 = 3108-3424;
+
+partition by_gene = 8: OG0002110, OG0002445, OG0002953, OG0003093, OG0003508, OG0003971, OG0004555, OG0006132;
+set partition=by_gene;
+prset aamodelpr=mixed;
+end;
+
+begin junk;
+  partition mymodels = 8:
+    LG+G4: OG0002110,
+    JTT+G4: OG0002445,
+    LG+G4: OG0002953,
+    JTT+R3: OG0003093,
+    LG+G4: OG0003508,
+    LG+G4: OG0003971,
+    JTT+G4: OG0004555,
+    JTT+G4: OG0006132;
+  set partition = mymodels;
+end;
+
+
+
