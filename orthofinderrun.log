@@ -1,0 +1,225 @@
+
+OrthoFinder version 2.5.2 Copyright (C) 2014 David Emms
+
+2021-03-31 09:07:24 : Starting OrthoFinder 2.5.2
+4 thread(s) for highly parallel tasks (BLAST searches etc.)
+1 thread(s) for OrthoFinder algorithm
+
+Checking required programs are installed
+----------------------------------------
+Test can run "mcl -h" - ok
+Test can run "mafft ./OrthoFinder_results/Results_Mar31/WorkingDirectory//_dependencies_check/SimpleTest.fa" - ok
+Test can run "FastTree ./OrthoFinder_results/Results_Mar31/WorkingDirectory//_dependencies_check/SimpleTest.fa" - ok
+
+WARNING: Files have been ignored as they don't appear to be FASTA files:
+dir
+tempmake_srep.pl
+OrthoFinder expects FASTA files to have one of the following extensions: fas, fa, faa, pep, fasta
+
+Dividing up work for BLAST for parallel processing
+--------------------------------------------------
+2021-03-31 09:07:32 : Creating diamond database 1 of 50
+2021-03-31 09:07:32 : Creating diamond database 2 of 50
+2021-03-31 09:07:32 : Creating diamond database 3 of 50
+2021-03-31 09:07:33 : Creating diamond database 4 of 50
+2021-03-31 09:07:33 : Creating diamond database 5 of 50
+2021-03-31 09:07:33 : Creating diamond database 6 of 50
+2021-03-31 09:07:33 : Creating diamond database 7 of 50
+2021-03-31 09:07:33 : Creating diamond database 8 of 50
+2021-03-31 09:07:33 : Creating diamond database 9 of 50
+2021-03-31 09:07:33 : Creating diamond database 10 of 50
+2021-03-31 09:07:34 : Creating diamond database 11 of 50
+2021-03-31 09:07:34 : Creating diamond database 12 of 50
+2021-03-31 09:07:34 : Creating diamond database 13 of 50
+2021-03-31 09:07:34 : Creating diamond database 14 of 50
+2021-03-31 09:07:34 : Creating diamond database 15 of 50
+2021-03-31 09:07:34 : Creating diamond database 16 of 50
+2021-03-31 09:07:35 : Creating diamond database 17 of 50
+2021-03-31 09:07:35 : Creating diamond database 18 of 50
+2021-03-31 09:07:35 : Creating diamond database 19 of 50
+2021-03-31 09:07:35 : Creating diamond database 20 of 50
+2021-03-31 09:07:35 : Creating diamond database 21 of 50
+2021-03-31 09:07:35 : Creating diamond database 22 of 50
+2021-03-31 09:07:36 : Creating diamond database 23 of 50
+2021-03-31 09:07:36 : Creating diamond database 24 of 50
+2021-03-31 09:07:36 : Creating diamond database 25 of 50
+2021-03-31 09:07:36 : Creating diamond database 26 of 50
+2021-03-31 09:07:37 : Creating diamond database 27 of 50
+2021-03-31 09:07:37 : Creating diamond database 28 of 50
+2021-03-31 09:07:37 : Creating diamond database 29 of 50
+2021-03-31 09:07:38 : Creating diamond database 30 of 50
+2021-03-31 09:07:38 : Creating diamond database 31 of 50
+2021-03-31 09:07:38 : Creating diamond database 32 of 50
+2021-03-31 09:07:38 : Creating diamond database 33 of 50
+2021-03-31 09:07:38 : Creating diamond database 34 of 50
+2021-03-31 09:07:38 : Creating diamond database 35 of 50
+2021-03-31 09:07:38 : Creating diamond database 36 of 50
+2021-03-31 09:07:38 : Creating diamond database 37 of 50
+2021-03-31 09:07:38 : Creating diamond database 38 of 50
+2021-03-31 09:07:38 : Creating diamond database 39 of 50
+2021-03-31 09:07:38 : Creating diamond database 40 of 50
+2021-03-31 09:07:39 : Creating diamond database 41 of 50
+2021-03-31 09:07:39 : Creating diamond database 42 of 50
+2021-03-31 09:07:39 : Creating diamond database 43 of 50
+2021-03-31 09:07:40 : Creating diamond database 44 of 50
+2021-03-31 09:07:40 : Creating diamond database 45 of 50
+2021-03-31 09:07:40 : Creating diamond database 46 of 50
+2021-03-31 09:07:41 : Creating diamond database 47 of 50
+2021-03-31 09:07:41 : Creating diamond database 48 of 50
+2021-03-31 09:07:41 : Creating diamond database 49 of 50
+2021-03-31 09:07:41 : Creating diamond database 50 of 50
+
+Running diamond all-versus-all
+------------------------------
+Using 4 thread(s)
+2021-03-31 09:07:42 : This may take some time....
+2021-03-31 15:35:51 : Done 1000 of 2500
+2021-03-31 09:07:42 : Done 0 of 2500
+2021-03-31 18:20:59 : Done 2000 of 2500
+2021-03-31 18:51:17 : Done all-versus-all sequence search
+
+Running OrthoFinder algorithm
+-----------------------------
+2021-03-31 18:51:21 : Initial processing of each species
+2021-03-31 18:51:49 : Initial processing of species 0 complete
+2021-03-31 18:52:46 : Initial processing of species 1 complete
+2021-03-31 18:55:39 : Initial processing of species 2 complete
+2021-03-31 18:56:09 : Initial processing of species 3 complete
+2021-03-31 18:57:45 : Initial processing of species 4 complete
+2021-03-31 18:58:34 : Initial processing of species 5 complete
+2021-03-31 18:59:43 : Initial processing of species 6 complete
+2021-03-31 19:01:21 : Initial processing of species 7 complete
+2021-03-31 19:02:22 : Initial processing of species 8 complete
+2021-03-31 19:02:51 : Initial processing of species 9 complete
+2021-03-31 19:04:13 : Initial processing of species 10 complete
+2021-03-31 19:05:31 : Initial processing of species 11 complete
+2021-03-31 19:06:33 : Initial processing of species 12 complete
+2021-03-31 19:07:29 : Initial processing of species 13 complete
+2021-03-31 19:09:22 : Initial processing of species 14 complete
+2021-03-31 19:11:58 : Initial processing of species 15 complete
+2021-03-31 19:12:33 : Initial processing of species 16 complete
+2021-03-31 19:13:16 : Initial processing of species 17 complete
+2021-03-31 19:14:19 : Initial processing of species 18 complete
+2021-03-31 19:15:22 : Initial processing of species 19 complete
+2021-03-31 19:16:13 : Initial processing of species 20 complete
+2021-03-31 19:19:47 : Initial processing of species 21 complete
+2021-03-31 19:19:58 : Initial processing of species 22 complete
+2021-03-31 19:21:46 : Initial processing of species 23 complete
+2021-03-31 19:22:55 : Initial processing of species 24 complete
+2021-03-31 19:24:39 : Initial processing of species 25 complete
+2021-03-31 19:26:42 : Initial processing of species 26 complete
+2021-03-31 19:28:24 : Initial processing of species 27 complete
+2021-03-31 19:30:39 : Initial processing of species 28 complete
+2021-03-31 19:32:19 : Initial processing of species 29 complete
+2021-03-31 19:32:22 : Initial processing of species 30 complete
+2021-03-31 19:33:00 : Initial processing of species 31 complete
+2021-03-31 19:34:09 : Initial processing of species 32 complete
+2021-03-31 19:34:24 : Initial processing of species 33 complete
+2021-03-31 19:35:08 : Initial processing of species 34 complete
+2021-03-31 19:35:37 : Initial processing of species 35 complete
+2021-03-31 19:36:07 : Initial processing of species 36 complete
+2021-03-31 19:37:34 : Initial processing of species 37 complete
+2021-03-31 19:38:34 : Initial processing of species 38 complete
+2021-03-31 19:40:54 : Initial processing of species 39 complete
+2021-03-31 19:42:38 : Initial processing of species 40 complete
+2021-03-31 19:44:41 : Initial processing of species 41 complete
+2021-03-31 19:46:52 : Initial processing of species 42 complete
+2021-03-31 19:49:06 : Initial processing of species 43 complete
+2021-03-31 19:51:22 : Initial processing of species 44 complete
+2021-03-31 19:52:32 : Initial processing of species 45 complete
+2021-03-31 19:54:36 : Initial processing of species 46 complete
+2021-03-31 19:56:48 : Initial processing of species 47 complete
+2021-03-31 19:58:24 : Initial processing of species 48 complete
+2021-03-31 20:00:36 : Initial processing of species 49 complete
+2021-03-31 20:06:29 : Connected putative homologues
+2021-03-31 20:06:36 : Written final scores for species 0 to graph file
+2021-03-31 20:06:52 : Written final scores for species 1 to graph file
+2021-03-31 20:07:36 : Written final scores for species 2 to graph file
+2021-03-31 20:07:43 : Written final scores for species 3 to graph file
+2021-03-31 20:08:10 : Written final scores for species 4 to graph file
+2021-03-31 20:08:23 : Written final scores for species 5 to graph file
+2021-03-31 20:08:44 : Written final scores for species 6 to graph file
+2021-03-31 20:09:10 : Written final scores for species 7 to graph file
+2021-03-31 20:09:28 : Written final scores for species 8 to graph file
+2021-03-31 20:09:35 : Written final scores for species 9 to graph file
+2021-03-31 20:09:55 : Written final scores for species 10 to graph file
+2021-03-31 20:10:14 : Written final scores for species 11 to graph file
+2021-03-31 20:10:27 : Written final scores for species 12 to graph file
+2021-03-31 20:10:41 : Written final scores for species 13 to graph file
+2021-03-31 20:11:09 : Written final scores for species 14 to graph file
+2021-03-31 20:11:51 : Written final scores for species 15 to graph file
+2021-03-31 20:11:59 : Written final scores for species 16 to graph file
+2021-03-31 20:12:10 : Written final scores for species 17 to graph file
+2021-03-31 20:12:27 : Written final scores for species 18 to graph file
+2021-03-31 20:12:43 : Written final scores for species 19 to graph file
+2021-03-31 20:12:55 : Written final scores for species 20 to graph file
+2021-03-31 20:13:56 : Written final scores for species 21 to graph file
+2021-03-31 20:13:59 : Written final scores for species 22 to graph file
+2021-03-31 20:14:24 : Written final scores for species 23 to graph file
+2021-03-31 20:14:42 : Written final scores for species 24 to graph file
+2021-03-31 20:15:07 : Written final scores for species 25 to graph file
+2021-03-31 20:15:37 : Written final scores for species 26 to graph file
+2021-03-31 20:16:01 : Written final scores for species 27 to graph file
+2021-03-31 20:16:33 : Written final scores for species 28 to graph file
+2021-03-31 20:16:56 : Written final scores for species 29 to graph file
+2021-03-31 20:16:57 : Written final scores for species 30 to graph file
+2021-03-31 20:17:06 : Written final scores for species 31 to graph file
+2021-03-31 20:17:26 : Written final scores for species 32 to graph file
+2021-03-31 20:17:30 : Written final scores for species 33 to graph file
+2021-03-31 20:17:40 : Written final scores for species 34 to graph file
+2021-03-31 20:17:47 : Written final scores for species 35 to graph file
+2021-03-31 20:17:54 : Written final scores for species 36 to graph file
+2021-03-31 20:18:18 : Written final scores for species 37 to graph file
+2021-03-31 20:18:33 : Written final scores for species 38 to graph file
+2021-03-31 20:19:11 : Written final scores for species 39 to graph file
+2021-03-31 20:19:38 : Written final scores for species 40 to graph file
+2021-03-31 20:20:12 : Written final scores for species 41 to graph file
+2021-03-31 20:20:44 : Written final scores for species 42 to graph file
+2021-03-31 20:21:18 : Written final scores for species 43 to graph file
+2021-03-31 20:21:52 : Written final scores for species 44 to graph file
+2021-03-31 20:22:08 : Written final scores for species 45 to graph file
+2021-03-31 20:22:37 : Written final scores for species 46 to graph file
+2021-03-31 20:23:09 : Written final scores for species 47 to graph file
+2021-03-31 20:23:33 : Written final scores for species 48 to graph file
+2021-03-31 20:24:05 : Written final scores for species 49 to graph file
+
+WARNING: program called by OrthoFinder produced output to stderr
+
+Command: mcl ./OrthoFinder_results/Results_Mar31/WorkingDirectory/OrthoFinder_graph.txt -I 2.1 -o ./OrthoFinder_results/Results_Mar31/WorkingDirectory/clusters_OrthoFinder_I2.1.txt -te 1 -V all
+
+stdout
+------
+b''
+stderr
+------
+b'[mcl] cut <1> instances of overlap\n'
+2021-03-31 21:04:16 : Ran MCL
+
+Writing orthogroups to file
+---------------------------
+OrthoFinder assigned 1172745 genes (94.5% of total) to 71607 orthogroups. Fifty percent of all genes were in orthogroups with 61 or more genes (G50 was 61) and were contained in the largest 4920 orthogroups (O50 was 4920). There were 11 orthogroups with all species present and 0 of these consisted entirely of single-copy genes.
+
+2021-03-31 21:05:21 : Done orthogroups
+
+Analysing Orthogroups
+=====================
+2021-03-31 21:05:23 : Starting MSA/Trees
+Species tree: Using 1416 orthogroups with minimum of 22.0% of species having single-copy genes in any orthogroup
+
+Inferring multiple sequence alignments for species tree
+-------------------------------------------------------
+2021-03-31 21:10:31 : Done 400 of 1416
+2021-03-31 21:16:31 : Done 1100 of 1416
+2021-03-31 21:07:11 : Done 100 of 1416
+2021-03-31 21:09:30 : Done 300 of 1416
+2021-03-31 21:12:26 : Done 600 of 1416
+2021-03-31 21:14:21 : Done 800 of 1416
+2021-03-31 21:15:08 : Done 900 of 1416
+2021-03-31 21:17:37 : Done 1300 of 1416
+2021-03-31 21:06:01 : Done 0 of 1416
+2021-03-31 21:11:31 : Done 500 of 1416
+2021-03-31 21:13:26 : Done 700 of 1416
+2021-03-31 21:15:55 : Done 1000 of 1416
+2021-03-31 21:17:05 : Done 1200 of 1416
+2021-03-31 21:18:05 : Done 1400 of 1416
+2021-03-31 21:08:20 : Done 200 of 1416

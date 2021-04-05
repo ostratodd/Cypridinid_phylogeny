@@ -1,0 +1,3 @@
+uses bioperl which is only in base conda
+previous runs found gene trees with all paralogs. Then ppp pruned to find only orthologs
+this script re-aligns and re-estimates gene trees for those

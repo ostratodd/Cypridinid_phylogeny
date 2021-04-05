@@ -1,0 +1,102 @@
+Next add sequences 
+
+	ADDED 14612 sequences from Dstev_ENA to mysql in ellis2021 database, aaseqs table
+
+	ADDED 44701 sequences from EGD_Niko to mysql in ellis2021 database, aaseqs table
+
+	ADDED 31913 sequences from NOL_Niko to mysql in ellis2021 database, aaseqs table
+
+	ADDED 39492 sequences from SFM_Niko to mysql in ellis2021 database, aaseqs table
+
+	ADDED 8393 sequences from AltLiz to mysql in ellis2021 database, aaseqs table
+
+	ADDED 18968 sequences from LongWhiteEye to mysql in ellis2021 database, aaseqs table
+
+	ADDED 51994 sequences from LIRSCyp2 to mysql in ellis2021 database, aaseqs table
+
+	ADDED 8812 sequences from LIRSCyp1 to mysql in ellis2021 database, aaseqs table
+
+	ADDED 31664 sequences from FatWhiteEye to mysql in ellis2021 database, aaseqs table
+
+	ADDED 16196 sequences from Chlorica to mysql in ellis2021 database, aaseqs table
+
+	ADDED 23582 sequences from WhiteVanessaLIRS to mysql in ellis2021 database, aaseqs table
+
+	ADDED 31451 sequences from Euph_microasciformis to mysql in ellis2021 database, aaseqs table
+
+	ADDED 20904 sequences from Harb_slatteryi to mysql in ellis2021 database, aaseqs table
+
+	ADDED 8101 sequences from GlovSkog to mysql in ellis2021 database, aaseqs table
+
+	ADDED 23425 sequences from BothMSH to mysql in ellis2021 database, aaseqs table
+
+	ADDED 22128 sequences from Korn_hast_c to mysql in ellis2021 database, aaseqs table
+
+	ADDED 15633 sequences from BothSVD to mysql in ellis2021 database, aaseqs table
+
+	ADDED 15535 sequences from AllBzSVU to mysql in ellis2021 database, aaseqs table
+
+	ADDED 32445 sequences from AllBzVAD to mysql in ellis2021 database, aaseqs table
+
+	ADDED 50889 sequences from Gruber_Pannecohenae to mysql in ellis2021 database, aaseqs table
+
+	ADDED 10331 sequences from BothPmorini to mysql in ellis2021 database, aaseqs table
+
+	ADDED 11673 sequences from Gigantocypris to mysql in ellis2021 database, aaseqs table
+
+	ADDED 20860 sequences from Vtsu to mysql in ellis2021 database, aaseqs table
+
+	ADDED 18081 sequences from curacao to mysql in ellis2021 database, aaseqs table
+
+	ADDED 75205 sequences from Cylindroleberidinae to mysql in ellis2021 database, aaseqs table
+
+	ADDED 3016 sequences from BothJaJimGun to mysql in ellis2021 database, aaseqs table
+
+	ADDED 29651 sequences from JaAU_S56 to mysql in ellis2021 database, aaseqs table
+
+	ADDED 20431 sequences from BothJaLSZZ to mysql in ellis2021 database, aaseqs table
+
+	ADDED 28263 sequences from BothJaOBD to mysql in ellis2021 database, aaseqs table
+
+	ADDED 35613 sequences from BothJaSVD to mysql in ellis2021 database, aaseqs table
+
+	ADDED 28176 sequences from BothJaVAD to mysql in ellis2021 database, aaseqs table
+
+	ADDED 37037 sequences from JaWLU_S67 to mysql in ellis2021 database, aaseqs table
+
+	ADDED 26936 sequences from JaWTF_S54 to mysql in ellis2021 database, aaseqs table
+
+	ADDED 492 sequences from BothJamescasei to mysql in ellis2021 database, aaseqs table
+
+	ADDED 10671 sequences from Allmacelroy to mysql in ellis2021 database, aaseqs table
+
+	ADDED 22734 sequences from jpcyp2b to mysql in ellis2021 database, aaseqs table
+
+	ADDED 4773 sequences from Jp_Melavar22 to mysql in ellis2021 database, aaseqs table
+
+	ADDED 11204 sequences from BothPara_w to mysql in ellis2021 database, aaseqs table
+
+	ADDED 8651 sequences from Vhilg to mysql in ellis2021 database, aaseqs table
+
+	ADDED 7576 sequences from BothVhilg_shim to mysql in ellis2021 database, aaseqs table
+
+	ADDED 29525 sequences from PSKO to mysql in ellis2021 database, aaseqs table
+
+	ADDED 17266 sequences from PMMFU to mysql in ellis2021 database, aaseqs table
+
+	ADDED 38646 sequences from RO-AG_S10 to mysql in ellis2021 database, aaseqs table
+
+	ADDED 39902 sequences from BothRoCMU to mysql in ellis2021 database, aaseqs table
+
+	ADDED 38918 sequences from AllRoDU to mysql in ellis2021 database, aaseqs table
+
+	ADDED 18250 sequences from RoIR_S66 to mysql in ellis2021 database, aaseqs table
+
+	ADDED 34012 sequences from BothRoODH to mysql in ellis2021 database, aaseqs table
+
+	ADDED 36608 sequences from AllRoRD to mysql in ellis2021 database, aaseqs table
+
+	ADDED 27931 sequences from BothGPH to mysql in ellis2021 database, aaseqs table
+
+	ADDED 37348 sequences from ROWLU_2018 to mysql in ellis2021 database, aaseqs table
+Now adding orthogroups to sql
