@@ -1,0 +1,54 @@
+Cypridina sp	Australia	LIRSCyp2
+Euphilomedes sp	Australia	Euph_microasciformis
+Harbansus slatteryi	Australia	Harb_slatteryi
+Vargula sp	Australia	LIRSCyp1
+Chelicopia lorica	Australia	Chlorica
+Alternochelata lizardensis	Australia	AltLiz
+Paravargula sp2	Australia	BothPara_w
+Maristella BZ_SVU	Belize	AllBzSVU
+Maristella BZ_VAD	Belize	AllBzVAD
+Maristella RO_DU	Roatan Honduras	AllRoDU
+Maristella RO_RD	Roatan Honduras	AllRoRD
+Photeros mcelroyi	Jamaica	Allmacelroy
+Maristella JA_AU	Jamaica	JaAU_S56
+Maristella JA_WLU	Jamaica	JaWLU_S67
+Maristella JA_WTF	Jamaica	JaWTF_S54
+PA_MFU	Panama	PMMFU
+Maristella RO_AG	Roatan Honduras	RO-AG_S10
+Photeros RO_WLU	Roatan Honduras	ROWLU_2018
+Maristella RO_IR	Roatan Honduras	RoIR_S66
+Photeros jamescasei	Jamaica	BothJamescasei
+Photeros RO_GPH	Roatan Honduras	BothGPH
+Maristella JA_LSZZ	Jamaica	BothJaLSZZ
+Maristella JA_OBD	Jamaica	BothJaOBD
+Maristella JA_SVD	Jamaica	BothJaSVD
+Maristella JA_VAD	Jamaica	BothJaVAD
+Photeros morini	Belize	BothPmorini
+Kornickeria RO_CMU	Roatan Honduras	BothRoCMU
+Maristella RO_ODH	Roatan Honduras	BothRoODH
+Photeros annecohenae	Belize	Gruber_Pannecohenae
+Kornickeria hastingsii carriebowae	Belize	Korn_hast_c
+Jimmorinia gunnari	Jamaica	BothJaJimGun
+Gigantocypris sp	California	Gigantocypris
+Melavargula japonica	Japan	Jp_Melavar22
+Skogsbergia sp	Panama	PSKO
+Skogsbergia sp2	GloversPanama	GlovSkog
+Vargula hilgendorfii	Japan	Vhilg
+Vargula hilgendorfii2	Shimoda Japan	BothVargula_hilgendorfii_shim
+Vargula tsujii	California USA	Vtsu
+Kornickeria CU_SDF	Curacao	curacao
+Cypridinodes_sp	Japan	jpcyp2b
+Photeros_PA_EGD	Panama	EGD_Niko
+Photeros_PA_NOL	Panama	NOL_Niko
+Photeros_PA_SFM	Panama	SFM_Niko
+Darwinula_stevensoni	Published	Dstev_ENA
+Cylindroleberidinae	Published	Cylindroleberidinae
+Maristella_BZ_SVD	Belize	BothSVD
+Paradoloria_sp	Australia	FatWhiteEye
+Pterocypridina_sp	Australia	WhiteVanessa
+Paravargula_sp	Australia	LongWhiteEye
+Maristella chicoi	Belize	BothMSH
+
+
+((((Maristella_BZ_VAD:0.011820485,Maristella_BZ_SVD:0.011990331)1.000:0.004294702,Maristella_chicoi:0.093314064)0.263:0.002201842,(Maristella_JA_SVD:0.020937010,(Maristella_JA_WLU:0.003389413,Maristella_JA_WTF:0.002984081)1.000:0.008648974)1.000:0.011995179)1.000:0.002349450,((Maristella_JA_LSZZ:0.018968978,(Maristella_JA_VAD:0.005424240,Maristella_JA_AU:0.004379255)1.000:0.007252856)1.000:0.008084054,(((((Photeros_mcelroyi:0.020534513,(Photeros_morini:0.018286656,(Photeros_RO_WLU:0.005124764,Photeros_jamescasei:0.012988406)0.468:0.012244108)0.999:0.003745042)1.000:0.002020693,((Photeros_annecohenae:0.010641684,(Photeros_PA_EGD:0.014281825,(Photeros_PA_SFM:0.006519531,Photeros_PA_NOL:0.005824744)0.838:0.001219461)1.000:0.004867472)1.000:0.003786581,Photeros_RO_GPH:0.015527200)0.995:0.003388859)1.000:0.110937481,(((Cypridina_sp:0.120523712,(Vargula_sp:0.048145246,(Vargula_hilgendorfii2:0.006524336,Vargula_hilgendorfii:0.004004137)1.000:0.044916678)1.000:0.041101070)1.000:0.052156723,(Jimmorinia_gunnari:0.213147474,(Cypridinodes_sp:0.209683805,(Gigantocypris_sp:0.179853536,((Cylindroleberidinae:0.323142109,(Darwinula_stevensoni:0.741118133,(Alternochelata_lizardensis:0.220473231,(Chelicopia_lorica:0.199879266,(Euphilomedes_sp:0.010785803,Harbansus_slatteryi:0.050560412)1.000:0.202381548)1.000:0.083800116)1.000:0.073121111)1.000:0.032894094)1.000:0.166887960,(((Paravargula_sp:0.070074994,(Pterocypridina_spLIRS:0.009235697,Paradoloria_sp:0.014632689)1.000:0.069780617)1.000:0.044959859,(Melavargula_japonica:0.107381809,(Skogsbergia_sp:0.043317063,Skogsbergia_sp2:0.043908369)1.000:0.025232933)1.000:0.015561460)1.000:0.029729017,Paravargula_sp2:0.126081746)1.000:0.114589282)1.000:0.027003368)1.000:0.036391621)1.000:0.054141571)1.000:0.050625337)1.000:0.059775670,(Kornickeria_CU_SDF:0.080181435,(Kornickeria_RO_CMU:0.006116099,Kornickeria_hastingsii_carriebowae:0.007202601)1.000:0.076708838)1.000:0.038952333)1.000:0.019031926)1.000:0.057104450,(Vargula_tsujii:0.042643229,PA_MFU:0.040206142)1.000:0.020056322)1.000:0.031740259,(Maristella_BZ_SVU:0.025799191,(Maristella_RO_AG:0.006180530,Maristella_RO_IR:0.003965792)1.000:0.010614390)1.000:0.020966987)1.000:0.027158481)1.000:0.002969149,((Maristella_JA_OBD:0.011125968,(Maristella_RO_RD:0.004719036,Maristella_RO_DU:0.004282222)1.000:0.004590494)1.000:0.008002873,Maristella_RO_ODH:0.016820531)1.000:0.001589203);
+

@@ -1,0 +1,53 @@
+Cypridina sp	Australia	LIRSCyp2
+Euphilomedes sp	Australia	Euph_microasciformis
+Harbansus slatteryi	Australia	Harb_slatteryi
+Vargula sp	Australia	LIRSCyp1
+Chelicopia lorica	Australia	Chlorica
+Alternochelata lizardensis	Australia	AltLiz
+Paravargula sp2	Australia	BothPara_w
+Maristella BZ_SVU	Belize	AllBzSVU
+Maristella BZ_VAD	Belize	AllBzVAD
+Maristella RO_DU	Roatan Honduras	AllRoDU
+Maristella RO_RD	Roatan Honduras	AllRoRD
+Photeros mcelroyi	Jamaica	Allmacelroy
+Maristella JA_AU	Jamaica	JaAU_S56
+Maristella JA_WLU	Jamaica	JaWLU_S67
+Maristella JA_WTF	Jamaica	JaWTF_S54
+PA_MFU	Panama	PMMFU
+Maristella RO_AG	Roatan Honduras	RO-AG_S10
+Photeros RO_WLU	Roatan Honduras	ROWLU_2018
+Maristella RO_IR	Roatan Honduras	RoIR_S66
+Photeros RO_GPH	Roatan Honduras	BothGPH
+Maristella JA_LSZZ	Jamaica	BothJaLSZZ
+Maristella JA_OBD	Jamaica	BothJaOBD
+Maristella JA_SVD	Jamaica	BothJaSVD
+Maristella JA_VAD	Jamaica	BothJaVAD
+Photeros morini	Belize	BothPmorini
+Kornickeria RO_CMU	Roatan Honduras	BothRoCMU
+Maristella RO_ODH	Roatan Honduras	BothRoODH
+Photeros annecohenae	Belize	Gruber_Pannecohenae
+Kornickeria hastingsii carriebowae	Belize	Korn_hast_c
+Jimmorinia gunnari	Jamaica	BothJaJimGun
+Gigantocypris sp	California	Gigantocypris
+Melavargula japonica	Japan	Jp_Melavar22
+Skogsbergia sp	Panama	PSKO
+Skogsbergia sp2	GloversPanama	GlovSkog
+Vargula hilgendorfii	Japan	Vhilg
+Vargula hilgendorfii2	Shimoda Japan	BothVargula_hilgendorfii_shim
+Vargula tsujii	California USA	Vtsu
+Kornickeria CU_SDF	Curacao	curacao
+Cypridinodes_sp	Japan	jpcyp2b
+Photeros_PA_EGD	Panama	EGD_Niko
+Photeros_PA_NOL	Panama	NOL_Niko
+Photeros_PA_SFM	Panama	SFM_Niko
+Darwinula_stevensoni	Published	Dstev_ENA
+Cylindroleberidinae	Published	Cylindroleberidinae
+Maristella_BZ_SVD	Belize	BothSVD
+Paradoloria_sp	Australia	FatWhiteEye
+Pterocypridina_sp	Australia	WhiteVanessa
+Paravargula_sp	Australia	LongWhiteEye
+Maristella chicoi	Belize	BothMSH
+
+
+(Maristella_RO_RD,(Maristella_RO_DU,(Maristella_JA_OBD,(Maristella_chicoi,(Maristella_RO_ODH,(((((((Cypridinodes_sp,(Gigantocypris_sp,((Jimmorinia_gunnari,(Darwinula_stevensoni,(Cylindroleberidinae,(Alternochelata_lizardensis,(Chelicopia_lorica,(Harbansus_slatteryi,Euphilomedes_sp)0.96:1.0337516544660685)0.47:0.06310070636794372)0.97:0.9271162773790772)0.7:0.2722311212960618)0.61:0.1875986138947985)0.51:0.0,(((Melavargula_japonica,Paravargula_sp2)0.81:0.5585570265871805,(Skogsbergia_sp,Skogsbergia_sp2)0.93:0.7891618337995338)0.46:0.03990121675218596,(Paravargula_sp,(Pterocypridina_spLIRS,Paradoloria_sp)1:2.0216435371561072)0.96:0.694699975903006)0.98:1.1400889476961975)0.79:0.4161527340960566)0.8:0.4229437053821242)0.99:1.3680365925463254,(Cypridina_sp,(Vargula_sp,(Vargula_hilgendorfii,Vargula_hilgendorfii2)1:1.713928484583387)0.87:0.4409394963018243)1:1.3186956066857254)0.99:1.0249846973345957,(Kornickeria_CU_SDF,(Kornickeria_hastingsii_carriebowae,Kornickeria_RO_CMU)1:2.0177973785686287)0.99:1.031976140285882)0.5:0.15129782789522195,(((Photeros_annecohenae,(Photeros_PA_NOL,(Photeros_PA_SFM,Photeros_PA_EGD)0.69:0.2234296334217253)0.77:0.27491594162874516)0.68:0.24654114952824854,(Photeros_mcelroyi,Photeros_RO_GPH)0.53:0.17341397890284183)0.61:0.1961669636160078,(Photeros_morini,Photeros_RO_WLU)0.8:0.5278232001345616)0.99:1.2222428884860081)1:1.5238599392829295,(Vargula_tsujii,PA_MFU)1:1.3984347099554417)1:1.8284495380349655,(Maristella_BZ_SVU,(Maristella_RO_IR,Maristella_RO_AG)1:2.0812514969250753)1:1.9269729480355626)1:1.6172177798809606,(((Maristella_JA_SVD,(Maristella_JA_WLU,Maristella_JA_WTF)1:1.415970129266007)1:1.0250935917229544,(Maristella_BZ_SVD,Maristella_BZ_VAD)1:0.905560514622042)0.88:0.39566425108915093,(Maristella_JA_LSZZ,(Maristella_JA_AU,Maristella_JA_VAD)0.94:0.5170561735166267)1:1.1184585850400404)0.44:0.05032359734186875)0.45:0.03545617545436841)0.49:0.0625796566522382)0.61:0.24571787335274894)1:1.1224011506321245):0.0); 
+
