@@ -1,28 +1,58 @@
+setwd("~/Documents/GitHub/Cypridinid_phylogeny/ancestral_state_reconstruction/ttscm/")
 require(ape);
-read.nexus(file="~/Documents/GitHub/Cypridinidae_phylogeny/mb_clock.tre") -> consensus
+library(phytools)
+library(ggplot2)
+source(file="chronofunctions1.0.R")
+read.nexus(file="../../mb_clock.tre") -> consensus
 
 
-read.nexus(file="~/Documents/GitHub/Cypridinidae_phylogeny/divergence_times/aauniclock.run1.t") -> run1
-read.nexus(file="~/Documents/GitHub/Cypridinidae_phylogeny/divergence_times/aauniclock.run2.t") -> run2
+read.nexus(file="~/Documents/GitHub/Cypridinid_phylogeny/divergence_times/aauniclock.run1.t") -> run1
+read.nexus(file="~/Documents/GitHub/Cypridinid_phylogeny/divergence_times/aauniclock.run2.t") -> run2
 
-read.csv(file="character_states.csv")
+data.frame(read.csv(file="character_states.csv", header=FALSE), row.names=TRUE) -> chars
+names(chars) <- c("biolum", "court")
+biolum <-chars$biolum
+names(biolum) <- row.names(chars)
 
+#Plot tree to check character states
+plotTree(consensus,fsize=0.8,ftype="i")
+cols<-setNames(palette()[1:length(unique(biolum))],sort(unique(biolum)))
+tiplabels(pie=to.matrix(biolum,sort(unique(biolum))),piecol=cols,cex=0.3)
+add.simmap.legend(colors=cols,prompt=FALSE,x=0.9*par()$usr[1],
+    y=-max(nodeHeights(tree)),fsize=0.8)
+    
+    
 #Set up character states
-biolum <- c(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0)
-names(biolum)<-consensus$tip.label
-biolum
+
+rm(changedata)
+rm(countdata)
+firsttimethru <- 1
+for(i in 4000:4010) {
+ print("calculating tree:")
+ print(i)
+
+simulation <- make.simmap(run1[[i]], biolum, model="SYM", nsim=100)
+	treedepth <- rootdepth(simulation[[1]])
+	print("  Tree Depth")
+	print(treedepth)
+
+if(firsttimethru==1){
+					changedata<-chronoSimmap(simulation, rev.order=TRUE,treedepth)
+					countdata<-countLineages(simulation, treedepth)
+					firsttimethru <- 2
+				}else{
+ 					changedata <- rbind(changedata,chronoSimmap(simulation, rev.order=TRUE,treedepth))
+ 					countdata <- rbind(countdata,countLineages(simulation,treedepth))
+ 				}
+
+}
+
 
 
 
 
 
 #**************************Salmonid migration3.R alexandrou et al
-library(phytools)
-library(ggplot2)
-source(file="chronofunctions1.0.R")
-SalmonPruned <- read.nexus(file="SalmonYulePruned150.trees")
-migration <-c(0,0,0,0,0,1,1,1,1,1,1,0,0,0,1,1,2,1,1,0,1,1,1,1,2,2,2,1,2,2,2,2,2,1,1,1,2,1,2,0,0,2,0,0,0,0,0,0,0)
-
 rm(changedata)
 rm(countdata)
 #rm(data)
