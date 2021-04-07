@@ -10,4 +10,4 @@ rm test.vstat
 rm test.parts	
 rm test.tstat
 
-mb < check.nex
+mb < tempcheck.nex

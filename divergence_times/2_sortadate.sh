@@ -39,9 +39,10 @@ python /Users/oakley/Documents/GitHub/SortaDate/src/get_bp_genetrees.py sortadat
 
 python /Users/oakley/Documents/GitHub/SortaDate/src/combine_results.py sortadateresult concordance --outf sorted
 
-python /Users/oakley/Documents/GitHub/SortaDate/src/get_good_genes.py sorted --outf goodgenes --max 8
+python /Users/oakley/Documents/GitHub/SortaDate/src/get_good_genes.py sorted --outf goodgenes --max 15
 
 #script uses goodgenes and pulls trees into one file
+#this script also creates directory called clockgenes and copies files 
 ../../scripts/gg2tree.pl goodgenes
 cat clocktrees/*.treefile > clockgenes.treefile
 
