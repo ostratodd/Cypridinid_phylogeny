@@ -59,30 +59,36 @@ cat concat_paralogs_fasttree.tre
 #cd..
 	
 
-#******************************
-#Step 9 - use sortadate to find clock-like genes
-#--------------------
-#conda activate phylogeny
-echo "Running sortadate to find most clock-like genes"
-cd divergence_times
-./2_sortadate.sh > ../sortadate.log
-cd ..
-../scripts/searchrepsp.pl SSC.tab divergence_times/astral_clockgenes.tre > astral_10_clockgenes.tre
-echo "Astral with only 10 clockiest genes"
-cat astral_10_clockgenes.tre
+##******************************
+##Step 9 - use sortadate to find clock-like genes
+##--------------------
+##conda activate phylogeny
+#echo "Running sortadate to find most clock-like genes"
+#cd divergence_times
+#./2_sortadate.sh > ../sortadate.log
+#cd ..
+#../scripts/searchrepsp.pl SSC.tab divergence_times/astral_clockgenes.tre > astral_10_clockgenes.tre
+#echo "Astral with only 10 clockiest genes"
+#cat astral_10_clockgenes.tre
 
-#**********
-#Step 10
-#mrbayes divergence times
-echo "running mr bayes for divergence time analysis"
-cd divergence_times
-./4_mrbayes.sh > mbclock.log
-cd ..
+##**********
+##Step 10
+##mrbayes divergence times
+#echo "running mr bayes for divergence time analysis"
+#cd divergence_times
+#./4_mrbayes.sh > mbclock.log
+#cd ..
 
 
 ##final MrBayes tree with 8 sortadate genes and divergence times
 cd divergence_times
 rm aauniclock.con.tre
+rm aauniclock.trprobs	
+rm aauniclock.vstat
+rm aauniclock.parts	
+rm aauniclock.tstat
+
+
 mb < check.nex
 cd ..
 echo "Bayes relaxed clock"
