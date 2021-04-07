@@ -1,27 +1,26 @@
-require(phytools)
+
 #laptop
 setwd("~/Documents/GitHub/Cypridinid_phylogeny/ancestral_state_reconstruction/ttscm/")
 #desktop
 setwd("~/Documents/GitHub/Cypridinidae_phylogeny/ancestral_state_reconstruction/ttscm/")
 
-require(ape);
+library(ape);
 library(phytools)
 library(ggplot2)
 source(file="chronofunctions1.0.R")
 read.nexus(file="../../mb_clock.tre") -> consensus
 read.nexus(file="../../mcmctrees.tre") -> mcmc
-
 data.frame(read.csv(file="character_states.csv", header=FALSE), row.names=TRUE) -> chars
 names(chars) <- c("biolum", "court")
 biolum <-chars$biolum
 names(biolum) <- row.names(chars)
 
-#Plot tree to check character states
-plotTree(mcmc[[4500]],fsize=0.8,ftype="i")
-cols<-setNames(palette()[1:length(unique(biolum))],sort(unique(biolum)))
-tiplabels(pie=to.matrix(biolum,sort(unique(biolum))),piecol=cols,cex=0.3)
-add.simmap.legend(colors=cols,prompt=FALSE,x=0.9*par()$usr[1],
-    y=-max(nodeHeights(tree)),fsize=0.8)
+##Plot tree to check character states -- Uncomment to plot tree
+#plotTree(mcmc[[4500]],fsize=0.8,ftype="i")
+#cols<-setNames(palette()[1:length(unique(biolum))],sort(unique(biolum)))
+#tiplabels(pie=to.matrix(biolum,sort(unique(biolum))),piecol=cols,cex=0.3)
+#add.simmap.legend(colors=cols,prompt=FALSE,x=0.9*par()$usr[1],
+#   y=-max(nodeHeights(tree)),fsize=0.8)
     
     
 #Set up character states
@@ -29,12 +28,17 @@ add.simmap.legend(colors=cols,prompt=FALSE,x=0.9*par()$usr[1],
 rm(changedata)
 rm(countdata)
 firsttimethru <- 1
-for(i in 4500:4510) {
+for(i in 4510:4610) {
  print("calculating tree:")
  print(i)
 
+   #MrBayes mcmc file does not have absolute branch lengths
+	clockrate <- 0.0007
+	mcmc[[i]]$edge.length = mcmc[[i]]$edge.length / clockrate
+
+
 simulation <- make.simmap(mcmc[[i]], biolum, model="SYM", nsim=100)
-	treedepth <- rootdepth(simulation[[1]])
+ 	treedepth <- rootdepth(simulation[[1]])
 	print("  Tree Depth")
 	print(treedepth)
 
