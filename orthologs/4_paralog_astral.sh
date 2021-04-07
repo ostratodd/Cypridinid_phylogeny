@@ -17,6 +17,7 @@ perl -p -i -e 's/\_OG\d\d\d\d\d\d\d\_DN[0-9]+//g' combined_ft_astral.treefile
 perl -p -i -e 's/\_OG\d\d\d\d\d\d\d\_CAD[0-9]+//g' combined_ft_astral.treefile
 
 ##DANGER DANGER -- THIS IS FOR DEBUGGING -- NOT ENOUGH DATA FOR JAMESCASEI SO ARBITRARILY SWAP TO PHOTEROS
+#Do not leave this uncommented accidentally
 ##This is for early in gene tree calculation
 #perl -p -i -e 's/BothJamescasei/Gruber_Pannecohenae/g' combined_ft_astral.treefile;
 #perl -p -i -e 's/Jp_Melavar22/PSKO/g' combined_ft_astral.treefile;

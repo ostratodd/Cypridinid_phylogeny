@@ -22,7 +22,7 @@ mysql -u root -p9DogsinaTree < index.sql
 
 
 echo "Now adding orthogroups to sql"
-../../scripts/orthtable2sql.pl /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/pep/Orthofinder/Results_Feb27_1/Orthogroups/Orthogroups.tsv
+../../scripts/orthtable2sql.pl /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/OrthoFinder_results/Results_Mar31/Orthogroups/Orthogroups.tsv
 
 #Name of genome orthogroups do not match
 mysql -u root -p < replace.sql
