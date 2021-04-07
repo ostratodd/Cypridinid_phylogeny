@@ -1,418 +1,196 @@
-setwd("~/Documents/GitHub/Cypridinidae_phylogeny/ancestral_state_reconstruction/ttscm")
-dir()
-ls()
-dir
-ls
-chronoSimmap<-function(simtree,rev.order=TRUE,depth) {#
-	if(class(simtree)=="multiPhylo"){	#
-        for(treeno in 1:length(simtree)) {#
- 			if(rev.order){#
-				curtree <- (chronoSimmap(simtree[[treeno]],rev.order=TRUE,depth))           #
-			}else{#
-				curtree <- (chronoSimmap(simtree[[treeno]],rev.order=FALSE,depth))#
-			}#
-            if(!exists("firstthru")) {#
-				out <- curtree#
-				firstthru <- 2#
-			}			#
-			out <- data.frame(rbind(curtree,out))#
-		}#
-		return(out)#
-	}else{#
+setwd("~/Documents/GitHub/Cypridinid_phylogeny/ancestral_state_reconstruction/ttscm/")#
+require(ape);#
+library(phytools)#
+library(ggplot2)#
+source(file="chronofunctions1.0.R")#
+read.nexus(file="../../mb_clock.tre") -> consensus#
+read.nexus(file="../../mcmctrees.tre") -> mcmc#
 #
-#	allchanges <- matrix(ncol=2)#
+data.frame(read.csv(file="character_states.csv", header=FALSE), row.names=TRUE) -> chars#
+names(chars) <- c("biolum", "court")#
+biolum <-chars$biolum#
+names(biolum) <- row.names(chars)#
 #
-	nbranches <- dim(simtree$edge)[1];#
-	nstates <- dim(simtree$edge)[2];#
-	firsttimethru <- 1#
-	if(firsttimethru == 1){#
+#Plot tree to check character states#
+plotTree(mcmc[[4500]],fsize=0.8,ftype="i")#
+cols<-setNames(palette()[1:length(unique(biolum))],sort(unique(biolum)))#
+tiplabels(pie=to.matrix(biolum,sort(unique(biolum))),piecol=cols,cex=0.3)#
+add.simmap.legend(colors=cols,prompt=FALSE,x=0.9*par()$usr[1],#
+    y=-max(nodeHeights(tree)),fsize=0.8)#
+#Set up character states#
 #
-	#reverse order of maps due to 2 different conventions in phytools and Simmap#
-    		if(rev.order==TRUE){#
-        		    simtree$maps<-lapply(simtree$maps,function(x) x<-x[length(x):1])#
-     		}#
-	}#
-	for(i in 1:nbranches){				#checks each branch i #
-		nchanges <- length(simtree$maps[[i]])#
-		if(nchanges > 1) {				#if >1 state changes#
-			#calculate total time up to currentnode#
-			time2node <- timebeforenode(simtree,i)#
-			time2currentchange <- 0#
-			for(j in 1:(nchanges-1) ) {#
-				if(firsttimethru==1){#
-					allchanges <- cbind(names(simtree$maps[[i]])[j], (time2node+simtree$maps[[i]][[j]]+time2currentchange), depth-(time2node+simtree$maps[[i]][[j]]+time2currentchange) )#
+rm(changedata)#
+rm(countdata)#
+firsttimethru <- 1#
+for(i in 4500:4510) {#
+ print("calculating tree:")#
+ print(i)#
+#
+simulation <- make.simmap(mcmc[[i]], biolum, model="SYM", nsim=100)#
+	treedepth <- rootdepth(simulation[[1]])#
+	print("  Tree Depth")#
+	print(treedepth)#
+#
+if(firsttimethru==1){#
+					changedata<-chronoSimmap(simulation, rev.order=TRUE,treedepth)#
+					countdata<-countLineages(simulation, treedepth)#
 					firsttimethru <- 2#
 				}else{#
-					#print state that is changed to, then time of change after root, then tip-change#
-					nextdelta <- cbind(names(simtree$maps[[i]])[j], (time2node+simtree$maps[[i]][[j]]+time2currentchange),  depth-(time2node+simtree$maps[[i]][[j]]+time2currentchange))#
-					allchanges <- rbind(allchanges,nextdelta)#
-				}#
-				time2currentchange <- time2currentchange + simtree$maps[[i]][[j]]#
-			}#
-		}#
-	}#
-	changesdataframe <- data.frame(cbind(allchanges[,1]),as.numeric(allchanges[,2]),as.numeric(allchanges[,3]))#
-	colnames(changesdataframe) <- c("ChangeToState","AtTime","BeforePresent")#
-	return(changesdataframe)#
-	#return(allchanges)#
+ 					changedata <- rbind(changedata,chronoSimmap(simulation, rev.order=TRUE,treedepth))#
+ 					countdata <- rbind(countdata,countLineages(simulation,treedepth))#
+ 				}#
+#
 }#
-}#extra bracket since multiphylo not indented at beginning#
-findancestorbranch<-function(simtree,branch){#
-	Nbranches <- dim(simtree$edge)[1];#
-	ancestor <- simtree$edge[branch,1]#
-	for(i in 1:Nbranches) {#
-		if(ancestor == simtree$edge[i,2]) {#
-			return(i)#
-		}		#
-	}#
-	#if no ancestor, we are at root, then return 1+total number of branches#
-	return(Nbranches+1)#
-}#
-#*************************************************#
-timebeforenode<-function(simtree,curbranch){#
-	#function to count time from node to ancestorbranch#
-	sumtime <- 0 #
-	Nbranches <- dim(simtree$edge)[1];#
+branchtimehist <-hist(countdata$NewBranchTime) #
+cumhist<-branchtimehist #
+bth <- branchtimehist$counts#
+#make cumulative distribution for branches. This will be the denominator for changes/branch. #
+#***************** first, reverse order of branch times.#
+revbth <- rev(bth)#
+#next calculate cumulative sum to yield (backwards) total # of branches per bin.#
+crevbth <- cumsum(revbth)#
+#Now reverse the order to have yougest first, oldest last#
+cdist <- rev(crevbth) cumhist$counts <- cdist#
+#Not using density or intensity cumhist$density <- #
+#max(cumsum(branchtimehist$density))-cumsum(branchtimehist$density)+.1 cumhist$intensities <- #
+#cumsum(branchtimehist$intensity)#
+changedatahist <- hist(changedata$BeforePresent, breaks=cumhist$breaks)
+read.nexus(file="../../mcmctrees.tre") -> mcmc
+setwd("~/Documents/GitHub/Cypridinid_phylogeny/ancestral_state_reconstruction/ttscm/")
+setwd("~/Documents/GitHub/Cypridinidae_phylogeny/ancestral_state_reconstruction/ttscm/")
+source(file="chronofunctions1.0.R")
+read.nexus(file="../../mb_clock.tre") -> consensus
+read.nexus(file="../../mcmctrees.tre") -> mcmc
+#desktop#
+setwd("~/Documents/GitHub/Cypridinidae_phylogeny/ancestral_state_reconstruction/ttscm/")#
 #
-	for(i in 1:Nbranches) {#
-		previousbranch <- findancestorbranch(simtree,curbranch)#
-			if(previousbranch == Nbranches+1) {#
-				return(sumtime)#
-			}else{#
-				sumtime <- sumtime + simtree$edge.length[previousbranch]#
-				curbranch <- previousbranch#
-		}#
-	}#
-}#
+require(ape);#
+library(phytools)#
+library(ggplot2)#
+source(file="chronofunctions1.0.R")#
+read.nexus(file="../../mb_clock.tre") -> consensus#
+read.nexus(file="../../mcmctrees.tre") -> mcmc#
 #
-#*************************************************#
-rootdepth<-function(simtree){#
-	#function to count time from node to ancestorbranch#
-	Nbranches <- dim(simtree$edge)[1];#
-	maxdepth <- 0#
-	for(i in 1:Nbranches) {#
-		sumtime <- 0 #
-		curbranch <- i#
-		reachedroot <- 0#
-		for(j in 1:Nbranches) {#
-			curbranchlen <- simtree$edge.length[curbranch]#
-			previousbranch <- findancestorbranch(simtree,curbranch)#
-			if(previousbranch == Nbranches+1) {#
-				#At root branch#
-				sumtime <- sumtime + curbranchlen#
-				if(sumtime > maxdepth){#
-					if(reachedroot ==0){#
-						maxdepth <- sumtime#
-					}#
-				}#
-				reachedroot <- 1#
-			}else{#
-				sumtime <- sumtime + curbranchlen#
-				curbranch <- previousbranch#
-				if(sumtime > maxdepth){#
-					maxdepth <- sumtime#
-				}#
-			}#
-		}#
-	}#
-	print("")#
-	return(maxdepth)#
-}#
-#*************************************************#
-plotchanges <-function(simtree,rev.order=TRUE){#
-	if(rev.order){#
-		data <- chronoSimmap(simtree, rev.order=TRUE)#
-	}else{#
-		data <- chronoSimmap(simtree, rev.order=FALSE)#
-	}#
-	ggplot(data, aes(x =(as.numeric(AtTime)), fill = ChangeToState)) + geom_histogram() + scale_x_continuous("Time Since Root of Tree") + 	scale_y_continuous("Number of State Changes")#
-}#
+data.frame(read.csv(file="character_states.csv", header=FALSE), row.names=TRUE) -> chars#
+names(chars) <- c("biolum", "court")#
+biolum <-chars$biolum#
+names(biolum) <- row.names(chars)#
 #
-#*************************************************#
-countLineages<-function(simtree, depth) {#
-	if(class(simtree)=="multiPhylo"){#
-		for(treeno in 1:length(simtree)) {#
-			curtree <- (countLineages(simtree[[treeno]],depth))#
-			if(!exists("firstthru")) {#
-				out <- curtree#
-				firstthru <- 2#
-			}			#
-			out <- data.frame(rbind(curtree,out))#
-		}#
-		return(out)#
-	}else{#
-#	allchanges <- matrix(ncol=2)#
-	nbranches <- dim(simtree$edge)[1];#
-	nstates <- dim(simtree$edge)[2];#
-	firsttimethru <- 1#
-	for(i in 1:nbranches){				#checks each branch i #
-		time2node <- timebeforenode(simtree,i)#
-		time2node <- depth - time2node#
-		if(firsttimethru==1){#
-			allchanges <- cbind(time2node)#
-			firsttimethru <- 2#
-		}else{#
-			#print time of new lineage#
-			nextdelta <- cbind(time2node)#
-		allchanges <- rbind(nextdelta,allchanges)#
-		}#
-	}#
-	branchesdataframe <- data.frame(allchanges)#
-	colnames(branchesdataframe) <- c("NewBranchTime")#
-	return(branchesdataframe)#
-	#return(allchanges)#
-}#
-}#extra bracket since multiphylo not indented at beginning#
+#Plot tree to check character states#
+plotTree(mcmc[[4500]],fsize=0.8,ftype="i")#
+cols<-setNames(palette()[1:length(unique(biolum))],sort(unique(biolum)))#
+tiplabels(pie=to.matrix(biolum,sort(unique(biolum))),piecol=cols,cex=0.3)#
+add.simmap.legend(colors=cols,prompt=FALSE,x=0.9*par()$usr[1],#
+    y=-max(nodeHeights(tree)),fsize=0.8)#
+#Set up character states#
 #
-#*************************************************#
-comparePlots<-function(simulation,rev.order=TRUE){#
+rm(changedata)#
+rm(countdata)#
+firsttimethru <- 1#
+for(i in 4500:4510) {#
+ print("calculating tree:")#
+ print(i)#
 #
-	countdata<-countLineages(simulation)#
-	branchtimehist <-hist(countdata$NewBranchTime)#
-	cumhist<-branchtimehist#
+simulation <- make.simmap(mcmc[[i]], biolum, model="SYM", nsim=100)#
+	treedepth <- rootdepth(simulation[[1]])#
+	print("  Tree Depth")#
+	print(treedepth)#
 #
-	#make cumulative distribution#
-	cumhist$counts <- cumsum(branchtimehist$counts)#
-	cumhist$density <- cumsum(branchtimehist$density)#
-	cumhist$intensities <- cumsum(branchtimehist$intensity)#
-#
-	plot(cumhist)#
-#
-	if(rev.order){#
-		changedata<-chronoSimmap(simulation, rev.order=TRUE)#
-	}else{#
-		changedata<-chronoSimmap(simulation, rev.order=FALSE)#
-	}#
-#
-	#Make a histogram of state changes using the same break points as used in branch 	counts#
-	changedatahist <- hist(changedata$AtTime, breaks=cumhist$breaks)#
-#
-	#Now divide to get average changes per branch#
-	avehist<-changedatahist#
-#
-	avehist$counts <- changedatahist$counts/cumhist$counts#
-	avehist$density <-changedatahist$density/cumhist$density#
-	avehist$intensities <- changedatahist$intensity/cumhist$intensity#
-#
-	par(mfrow=c(3,1))#
-	plot(changedatahist, main = "Total state changes")#
-	plot(avehist, main = "State changes per branch")#
-	plot(cumhist, main = "Lineages per time")#
-}
-chronoSimmap<-function(simtree,rev.order=TRUE,depth) {#
-	if(class(simtree)=="multiPhylo"){	#
-        for(treeno in 1:length(simtree)) {#
- 			if(rev.order){#
-				curtree <- (chronoSimmap(simtree[[treeno]],rev.order=TRUE,depth))           #
-			}else{#
-				curtree <- (chronoSimmap(simtree[[treeno]],rev.order=FALSE,depth))#
-			}#
-            if(!exists("firstthru")) {#
-				out <- curtree#
-				firstthru <- 2#
-			}			#
-			out <- data.frame(rbind(curtree,out))#
-		}#
-		return(out)#
-	}else{#
-#
-#	allchanges <- matrix(ncol=2)#
-#
-	nbranches <- dim(simtree$edge)[1];#
-	nstates <- dim(simtree$edge)[2];#
-	firsttimethru <- 1#
-	if(firsttimethru == 1){#
-#
-	#reverse order of maps due to 2 different conventions in phytools and Simmap#
-    		if(rev.order==TRUE){#
-        		    simtree$maps<-lapply(simtree$maps,function(x) x<-x[length(x):1])#
-     		}#
-	}#
-	for(i in 1:nbranches){				#checks each branch i #
-		nchanges <- length(simtree$maps[[i]])#
-		if(nchanges > 1) {				#if >1 state changes#
-			#calculate total time up to currentnode#
-			time2node <- timebeforenode(simtree,i)#
-			time2currentchange <- 0#
-			for(j in 1:(nchanges-1) ) {#
-				if(firsttimethru==1){#
-					allchanges <- cbind(names(simtree$maps[[i]])[j], (time2node+simtree$maps[[i]][[j]]+time2currentchange), depth-(time2node+simtree$maps[[i]][[j]]+time2currentchange) )#
+if(firsttimethru==1){#
+					changedata<-chronoSimmap(simulation, rev.order=TRUE,treedepth)#
+					countdata<-countLineages(simulation, treedepth)#
 					firsttimethru <- 2#
 				}else{#
-					#print state that is changed to, then time of change after root, then tip-change#
-					nextdelta <- cbind(names(simtree$maps[[i]])[j], (time2node+simtree$maps[[i]][[j]]+time2currentchange),  depth-(time2node+simtree$maps[[i]][[j]]+time2currentchange))#
-					allchanges <- rbind(allchanges,nextdelta)#
-				}#
-				time2currentchange <- time2currentchange + simtree$maps[[i]][[j]]#
-			}#
-		}#
-	}#
-	changesdataframe <- data.frame(cbind(allchanges[,1]),as.numeric(allchanges[,2]),as.numeric(allchanges[,3]))#
-	colnames(changesdataframe) <- c("ChangeToState","AtTime","BeforePresent")#
-	return(changesdataframe)#
-	#return(allchanges)#
+ 					changedata <- rbind(changedata,chronoSimmap(simulation, rev.order=TRUE,treedepth))#
+ 					countdata <- rbind(countdata,countLineages(simulation,treedepth))#
+ 				}#
+#
 }#
-}#extra bracket since multiphylo not indented at beginning#
-findancestorbranch<-function(simtree,branch){#
-	Nbranches <- dim(simtree$edge)[1];#
-	ancestor <- simtree$edge[branch,1]#
-	for(i in 1:Nbranches) {#
-		if(ancestor == simtree$edge[i,2]) {#
-			return(i)#
-		}		#
-	}#
-	#if no ancestor, we are at root, then return 1+total number of branches#
-	return(Nbranches+1)#
-}#
-#*************************************************#
-timebeforenode<-function(simtree,curbranch){#
-	#function to count time from node to ancestorbranch#
-	sumtime <- 0 #
-	Nbranches <- dim(simtree$edge)[1];#
-#
-	for(i in 1:Nbranches) {#
-		previousbranch <- findancestorbranch(simtree,curbranch)#
-			if(previousbranch == Nbranches+1) {#
-				return(sumtime)#
-			}else{#
-				sumtime <- sumtime + simtree$edge.length[previousbranch]#
-				curbranch <- previousbranch#
-		}#
-	}#
-}#
-#
-#*************************************************#
-rootdepth<-function(simtree){#
-	#function to count time from node to ancestorbranch#
-	Nbranches <- dim(simtree$edge)[1];#
-	maxdepth <- 0#
-	for(i in 1:Nbranches) {#
-		sumtime <- 0 #
-		curbranch <- i#
-		reachedroot <- 0#
-		for(j in 1:Nbranches) {#
-			curbranchlen <- simtree$edge.length[curbranch]#
-			previousbranch <- findancestorbranch(simtree,curbranch)#
-			if(previousbranch == Nbranches+1) {#
-				#At root branch#
-				sumtime <- sumtime + curbranchlen#
-				if(sumtime > maxdepth){#
-					if(reachedroot ==0){#
-						maxdepth <- sumtime#
-					}#
-				}#
-				reachedroot <- 1#
-			}else{#
-				sumtime <- sumtime + curbranchlen#
-				curbranch <- previousbranch#
-				if(sumtime > maxdepth){#
-					maxdepth <- sumtime#
-				}#
-			}#
-		}#
-	}#
-	print("")#
-	return(maxdepth)#
-}#
-#*************************************************#
-plotchanges <-function(simtree,rev.order=TRUE){#
-	if(rev.order){#
-		data <- chronoSimmap(simtree, rev.order=TRUE)#
-	}else{#
-		data <- chronoSimmap(simtree, rev.order=FALSE)#
-	}#
-	ggplot(data, aes(x =(as.numeric(AtTime)), fill = ChangeToState)) + geom_histogram() + scale_x_continuous("Time Since Root of Tree") + 	scale_y_continuous("Number of State Changes")#
-}#
-#
-#*************************************************#
-countLineages<-function(simtree, depth) {#
-	if(class(simtree)=="multiPhylo"){#
-		for(treeno in 1:length(simtree)) {#
-			curtree <- (countLineages(simtree[[treeno]],depth))#
-			if(!exists("firstthru")) {#
-				out <- curtree#
-				firstthru <- 2#
-			}			#
-			out <- data.frame(rbind(curtree,out))#
-		}#
-		return(out)#
-	}else{#
-#	allchanges <- matrix(ncol=2)#
-	nbranches <- dim(simtree$edge)[1];#
-	nstates <- dim(simtree$edge)[2];#
-	firsttimethru <- 1#
-	for(i in 1:nbranches){				#checks each branch i #
-		time2node <- timebeforenode(simtree,i)#
-		time2node <- depth - time2node#
-		if(firsttimethru==1){#
-			allchanges <- cbind(time2node)#
-			firsttimethru <- 2#
-		}else{#
-			#print time of new lineage#
-			nextdelta <- cbind(time2node)#
-		allchanges <- rbind(nextdelta,allchanges)#
-		}#
-	}#
-	branchesdataframe <- data.frame(allchanges)#
-	colnames(branchesdataframe) <- c("NewBranchTime")#
-	return(branchesdataframe)#
-	#return(allchanges)#
-}#
-}#extra bracket since multiphylo not indented at beginning#
-#
-#*************************************************#
-comparePlots<-function(simulation,rev.order=TRUE){#
-#
-	countdata<-countLineages(simulation)#
-	branchtimehist <-hist(countdata$NewBranchTime)#
-	cumhist<-branchtimehist#
-#
-	#make cumulative distribution#
-	cumhist$counts <- cumsum(branchtimehist$counts)#
-	cumhist$density <- cumsum(branchtimehist$density)#
-	cumhist$intensities <- cumsum(branchtimehist$intensity)#
-#
-	plot(cumhist)#
-#
-	if(rev.order){#
-		changedata<-chronoSimmap(simulation, rev.order=TRUE)#
-	}else{#
-		changedata<-chronoSimmap(simulation, rev.order=FALSE)#
-	}#
-#
-	#Make a histogram of state changes using the same break points as used in branch 	counts#
-	changedatahist <- hist(changedata$AtTime, breaks=cumhist$breaks)#
-#
-	#Now divide to get average changes per branch#
-	avehist<-changedatahist#
-#
-	avehist$counts <- changedatahist$counts/cumhist$counts#
-	avehist$density <-changedatahist$density/cumhist$density#
-	avehist$intensities <- changedatahist$intensity/cumhist$intensity#
-#
-	par(mfrow=c(3,1))#
-	plot(changedatahist, main = "Total state changes")#
-	plot(avehist, main = "State changes per branch")#
-	plot(cumhist, main = "Lineages per time")#
-}
+branchtimehist <-hist(countdata$NewBranchTime) #
+cumhist<-branchtimehist #
+bth <- branchtimehist$counts#
+#make cumulative distribution for branches. This will be the denominator for changes/branch. #
+#***************** first, reverse order of branch times.#
+revbth <- rev(bth)#
+#next calculate cumulative sum to yield (backwards) total # of branches per bin.#
+crevbth <- cumsum(revbth)#
+#Now reverse the order to have yougest first, oldest last#
+cdist <- rev(crevbth) cumhist$counts <- cdist#
+#Not using density or intensity cumhist$density <- #
+#max(cumsum(branchtimehist$density))-cumsum(branchtimehist$density)+.1 cumhist$intensities <- #
+#cumsum(branchtimehist$intensity)#
+changedatahist <- hist(changedata$BeforePresent, breaks=cumhist$breaks)
+use(phytools)
+require(phytools)
+install.packages("phytools")
+require(phytools)
+install.packages("phangorn")
 install.packages("ape")
-require(ape);
-read.nexus(file="~/Documents/GitHub/Cypridinidae_phylogeny/mb_clock.tre")
-read.nexus(file="~/Documents/GitHub/Cypridinidae_phylogeny/mb_clock.tre") -> consensus
-plot.tree(consensus)
-plot(consensus)
-read.nexus(file="=~/Documents/GitHub/Cypridinidae_phylogeny/divergence_times/aauniclock.run1.t") -> run1
-read.nexus(file="~/Documents/GitHub/Cypridinidae_phylogeny/divergence_times/aauniclock.run1.t") -> run1
-plot(run1)
-run1
-read.nexus(file="~/Documents/GitHub/Cypridinidae_phylogeny/divergence_times/aauniclock.run2.t") -> run2
-run2
-consensus
-biolum <- c(0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
-biolum
-names(biolum)<-consensus$tip.label
-biolum
-biolum <- c(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0)#
-names(biolum)<-consensus$tip.label#
-biolum
-read.csv(file="character_states.csv")
+quit
+quit()
+install.packages("phangorn",repos="https://cloud.r-project.org",quiet=TRUE)
+install.packages("phangorn",repos="https://cloud.r-project.org",quiet=TRUE)
+require("phangorn")
+install.packages("phytools",repos="https://cloud.r-project.org",quiet=TRUE)
+require(phytools)#
+#laptop#
+setwd("~/Documents/GitHub/Cypridinid_phylogeny/ancestral_state_reconstruction/ttscm/")#
+#desktop#
+setwd("~/Documents/GitHub/Cypridinidae_phylogeny/ancestral_state_reconstruction/ttscm/")#
+#
+require(ape);#
+library(phytools)#
+library(ggplot2)#
+source(file="chronofunctions1.0.R")#
+read.nexus(file="../../mb_clock.tre") -> consensus#
+read.nexus(file="../../mcmctrees.tre") -> mcmc#
+#
+data.frame(read.csv(file="character_states.csv", header=FALSE), row.names=TRUE) -> chars#
+names(chars) <- c("biolum", "court")#
+biolum <-chars$biolum#
+names(biolum) <- row.names(chars)#
+#
+#Plot tree to check character states#
+plotTree(mcmc[[4500]],fsize=0.8,ftype="i")#
+cols<-setNames(palette()[1:length(unique(biolum))],sort(unique(biolum)))#
+tiplabels(pie=to.matrix(biolum,sort(unique(biolum))),piecol=cols,cex=0.3)#
+add.simmap.legend(colors=cols,prompt=FALSE,x=0.9*par()$usr[1],#
+    y=-max(nodeHeights(tree)),fsize=0.8)#
+#Set up character states#
+#
+rm(changedata)#
+rm(countdata)#
+firsttimethru <- 1#
+for(i in 4500:4510) {#
+ print("calculating tree:")#
+ print(i)#
+#
+simulation <- make.simmap(mcmc[[i]], biolum, model="SYM", nsim=100)#
+	treedepth <- rootdepth(simulation[[1]])#
+	print("  Tree Depth")#
+	print(treedepth)#
+#
+if(firsttimethru==1){#
+					changedata<-chronoSimmap(simulation, rev.order=TRUE,treedepth)#
+					countdata<-countLineages(simulation, treedepth)#
+					firsttimethru <- 2#
+				}else{#
+ 					changedata <- rbind(changedata,chronoSimmap(simulation, rev.order=TRUE,treedepth))#
+ 					countdata <- rbind(countdata,countLineages(simulation,treedepth))#
+ 				}#
+#
+}#
+branchtimehist <-hist(countdata$NewBranchTime) #
+cumhist<-branchtimehist #
+bth <- branchtimehist$counts#
+#make cumulative distribution for branches. This will be the denominator for changes/branch. #
+#***************** first, reverse order of branch times.#
+revbth <- rev(bth)#
+#next calculate cumulative sum to yield (backwards) total # of branches per bin.#
+crevbth <- cumsum(revbth)#
+#Now reverse the order to have yougest first, oldest last#
+cdist <- rev(crevbth) cumhist$counts <- cdist#
+#Not using density or intensity cumhist$density <- #
+#max(cumsum(branchtimehist$density))-cumsum(branchtimehist$density)+.1 cumhist$intensities <- #
+#cumsum(branchtimehist$intensity)#
+changedatahist <- hist(changedata$BeforePresent, breaks=cumhist$breaks)

@@ -23,9 +23,8 @@ while(<FH>){
 	chomp $link;
 
 	my $command = "gdown --id ".$link." -O ./pep/".$otu.".fa";
-#	my $command = "wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=".$link."' -O ./pep/".$otu.".pep";
 	system($command);
-#	print $command."\n";
+#	print $command."\n"; #for debugging, uncomment to see command
 	$count++;
 
 }

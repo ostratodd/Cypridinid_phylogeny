@@ -1,4 +1,9 @@
+require(phytools)
+#laptop
 setwd("~/Documents/GitHub/Cypridinid_phylogeny/ancestral_state_reconstruction/ttscm/")
+#desktop
+setwd("~/Documents/GitHub/Cypridinidae_phylogeny/ancestral_state_reconstruction/ttscm/")
+
 require(ape);
 library(phytools)
 library(ggplot2)
