@@ -1,5 +1,5 @@
 chronoSimmap<-function(simtree,rev.order=TRUE,depth) {
-	if(class(simtree)=="multiPhylo"){	
+	if(class(simtree)=="multiSimmap"){	
         for(treeno in 1:length(simtree)) {
  			if(rev.order){
 				curtree <- (chronoSimmap(simtree[[treeno]],rev.order=TRUE,depth))           
@@ -133,7 +133,7 @@ plotchanges <-function(simtree,rev.order=TRUE){
 
 #*************************************************
 countLineages<-function(simtree, depth) {
-	if(class(simtree)=="multiPhylo"){
+	if(class(simtree)=="multiSimmap"){
 		for(treeno in 1:length(simtree)) {
 			curtree <- (countLineages(simtree[[treeno]],depth))
 			if(!exists("firstthru")) {

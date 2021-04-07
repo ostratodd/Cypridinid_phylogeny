@@ -4,10 +4,7 @@ library(phytools)
 library(ggplot2)
 source(file="chronofunctions1.0.R")
 read.nexus(file="../../mb_clock.tre") -> consensus
-
-
-read.nexus(file="~/Documents/GitHub/Cypridinid_phylogeny/divergence_times/aauniclock.run1.t") -> run1
-read.nexus(file="~/Documents/GitHub/Cypridinid_phylogeny/divergence_times/aauniclock.run2.t") -> run2
+read.nexus(file="../../mcmctrees.tre") -> mcmc
 
 data.frame(read.csv(file="character_states.csv", header=FALSE), row.names=TRUE) -> chars
 names(chars) <- c("biolum", "court")
@@ -15,7 +12,7 @@ biolum <-chars$biolum
 names(biolum) <- row.names(chars)
 
 #Plot tree to check character states
-plotTree(consensus,fsize=0.8,ftype="i")
+plotTree(mcmc[[4500]],fsize=0.8,ftype="i")
 cols<-setNames(palette()[1:length(unique(biolum))],sort(unique(biolum)))
 tiplabels(pie=to.matrix(biolum,sort(unique(biolum))),piecol=cols,cex=0.3)
 add.simmap.legend(colors=cols,prompt=FALSE,x=0.9*par()$usr[1],
@@ -27,11 +24,11 @@ add.simmap.legend(colors=cols,prompt=FALSE,x=0.9*par()$usr[1],
 rm(changedata)
 rm(countdata)
 firsttimethru <- 1
-for(i in 4000:4010) {
+for(i in 4500:4510) {
  print("calculating tree:")
  print(i)
 
-simulation <- make.simmap(run1[[i]], biolum, model="SYM", nsim=100)
+simulation <- make.simmap(mcmc[[i]], biolum, model="SYM", nsim=100)
 	treedepth <- rootdepth(simulation[[1]])
 	print("  Tree Depth")
 	print(treedepth)
@@ -46,6 +43,20 @@ if(firsttimethru==1){
  				}
 
 }
+branchtimehist <-hist(countdata$NewBranchTime) 
+cumhist<-branchtimehist 
+bth <- branchtimehist$counts
+#make cumulative distribution for branches. This will be the denominator for changes/branch. 
+#***************** first, reverse order of branch times.
+revbth <- rev(bth)
+#next calculate cumulative sum to yield (backwards) total # of branches per bin.
+crevbth <- cumsum(revbth)
+#Now reverse the order to have yougest first, oldest last
+cdist <- rev(crevbth) cumhist$counts <- cdist
+#Not using density or intensity cumhist$density <- 
+#max(cumsum(branchtimehist$density))-cumsum(branchtimehist$density)+.1 cumhist$intensities <- 
+#cumsum(branchtimehist$intensity)
+changedatahist <- hist(changedata$BeforePresent, breaks=cumhist$breaks)
 
 
 
