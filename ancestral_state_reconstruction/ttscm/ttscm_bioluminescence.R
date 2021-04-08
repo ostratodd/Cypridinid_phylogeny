@@ -9,7 +9,7 @@ library(phytools)
 library(ggplot2)
 source(file="chronofunctions1.0.R")
 read.nexus(file="../../mb_clock.tre") -> consensus
-read.nexus(file="../../mcmctrees.tre") -> mcmc
+read.nexus(file="../../mcmctrees2.tre") -> mcmc
 read.table(file="../../mcmctrees.p", sep="\t", comment.char="[", header=TRUE) -> params
 data.frame(read.csv(file="character_states.csv", header=FALSE), row.names=TRUE) -> chars
 names(chars) <- c("biolum", "court")
