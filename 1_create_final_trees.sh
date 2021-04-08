@@ -95,3 +95,6 @@ echo "Bayes relaxed clock"
 ../scripts/searchrepsp.pl SSC.tab divergence_times/aauniclock.con.tre > mb_clock.tre
 cat mb_clock.tre
 
+#create an mcmc treefile to use for ttscm
+cp divergence_times/aauniclock.run1.p mcmctrees.p
+../scripts/searchrepsp.pl SSC.tab divergence_times/aauniclock.run1.t > mcmctrees.tre

@@ -10,6 +10,7 @@ library(ggplot2)
 source(file="chronofunctions1.0.R")
 read.nexus(file="../../mb_clock.tre") -> consensus
 read.nexus(file="../../mcmctrees.tre") -> mcmc
+read.table(file="../../mcmctrees.p", sep="\t", comment.char="[", header=TRUE) -> params
 data.frame(read.csv(file="character_states.csv", header=FALSE), row.names=TRUE) -> chars
 names(chars) <- c("biolum", "court")
 biolum <-chars$biolum
@@ -33,12 +34,14 @@ for(i in 4510:4610) {
  print(i)
 
    #MrBayes mcmc file does not have absolute branch lengths
-	clockrate <- 0.0007
+	clockrate <- params$clockrate[[i]]
 	mcmc[[i]]$edge.length = mcmc[[i]]$edge.length / clockrate
 
 
 simulation <- make.simmap(mcmc[[i]], biolum, model="SYM", nsim=100)
  	treedepth <- rootdepth(simulation[[1]])
+    print("  Clockrate")
+    print(clockrate)
 	print("  Tree Depth")
 	print(treedepth)
 
