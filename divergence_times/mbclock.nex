@@ -1,8 +1,15 @@
 execute clock_concat.nex
 execute clockgenes.partitions.nex
+prset aamodelpr=mixed
+lset rates=gamma
+
 prset clockratepr = lognorm(-7,0.6)
-prset clockvarpr = tk02
+
+[***************** TK model is an option different from IGR]
+[prset clockvarpr = tk02
 prset tk02varpr = exp(1)
+]
+
 prset clockvarpr = igr
 prset igrvarpr = exp(10)
 outgroup Dstev_ENA

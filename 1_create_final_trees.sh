@@ -74,10 +74,10 @@ cat concat_paralogs_fasttree.tre
 ##**********
 ##Step 10
 ##mrbayes divergence times
-#echo "running mr bayes for divergence time analysis"
-#cd divergence_times
-#./4_mrbayes.sh > mbclock.log
-#cd ..
+echo "running mr bayes for divergence time analysis"
+cd divergence_times
+./4_mrbayes.sh > mbclock.log
+cd ..
 
 
 ##final MrBayes tree with 8 sortadate genes and divergence times
