@@ -25,7 +25,15 @@
 #./3_genetrees.sh > ../genetrees.log
 #cd ..
 
-**************************
+#concatenated tree using IQTREE was analyzed elsewhere
+echo "****************Concatenated analysis with IQ-TREE"
+
+../scripts/searchrepsp.pl SSC.tab IQTREE/concat_iqtree.tre > concat_iqtree.tre
+cat concat_iqtree.tre
+
+echo "***********************************************"
+
+#**************************
 #.....Step 4 ---- Create astral tree from paralogs
 #
 #cd orthologs
@@ -37,7 +45,7 @@ echo "***********ASTRAL-PRO TREE********************"
 cat astral_pro.tre
 
 
-**************************
+#**************************
 #.....Step 5 ---- phylopypruner
 #
 #cd orthologs
@@ -74,23 +82,23 @@ cat concat_paralogs_fasttree.tre
 ##**********
 ##Step 10
 ##mrbayes divergence times
-echo "running mr bayes for divergence time analysis"
-cd divergence_times
-./4_mrbayes.sh > mbclock.log
-cd ..
+#echo "running mr bayes for divergence time analysis"
+#cd divergence_times
+#./4_mrbayes.sh > mbclock.log
+#cd ..
 
 
 ##final MrBayes tree with 8 sortadate genes and divergence times
-cd divergence_times
-rm aauniclock.con.tre
-rm aauniclock.trprobs	
-rm aauniclock.vstat
-rm aauniclock.parts	
-rm aauniclock.tstat
+#cd divergence_times
+#rm aauniclock.con.tre
+#rm aauniclock.trprobs	
+#rm aauniclock.vstat
+#rm aauniclock.parts	
+#rm aauniclock.tstat
 
 
-mb < check.nex
-cd ..
+#mb < check.nex
+#cd ..
 echo "Bayes relaxed clock"
 ../scripts/searchrepsp.pl SSC.tab divergence_times/aauniclock.con.tre > mb_clock.tre
 cat mb_clock.tre
