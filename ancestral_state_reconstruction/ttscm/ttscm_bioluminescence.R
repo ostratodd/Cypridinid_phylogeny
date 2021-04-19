@@ -23,20 +23,20 @@ court <- chars$court
 names(court) <- row.names(chars)
 
 
-
+##**************Optional
 ##Plot tree to check character states -- Uncomment to plot tree
 #plotTree(mcmc[[4500]],fsize=0.8,ftype="i")
 #cols<-setNames(palette()[1:length(unique(biolum))],sort(unique(biolum)))
 #tiplabels(pie=to.matrix(biolum,sort(unique(biolum))),piecol=cols,cex=0.3)
 #add.simmap.legend(colors=cols,prompt=FALSE,x=0.9*par()$usr[1],
 #   y=-max(nodeHeights(tree)),fsize=0.8)
+##**************Optional 
     
-    
 
 
 
-dataset <- biolum
-#dataset <- court
+#dataset <- biolum
+dataset <- court
  
 
 	rm(changedata)
@@ -96,7 +96,7 @@ dataset <- biolum
 	plot(chto1hist, main = "Total state changes to 1", xlab="Time Before Present")
 
 
-	plot(avehist1, ylim=c(0, 1.3), main = "State changes to Bioluminescence per branch", xlab="Time Before Present")
+	plot(avehist1, ylim=c(0, 1.3), main = "State changes to Courtship per branch", xlab="Time Before Present")
 	to1 <- subset(changedata,ChangeToState==1)
 	abline(v=median(to1$BeforePresent), col="purple")
 	label <- paste("Median: ", toString(round(median(to1$BeforePresent))), "MYA")
