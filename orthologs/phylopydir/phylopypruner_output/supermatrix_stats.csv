@@ -1,0 +1,3 @@
+id,alignments,sequences,otus,meanSequences,meanOtus,meanSeqLen,shortestSeq,longestSeq,pctMissingData,catAlignmentLen
+input,8485,484026,50,57,32,274,84,12246,69.0,7028456
+output,2675,72620,50,27,27,259,100,4865,64.4,1259038

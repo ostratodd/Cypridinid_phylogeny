@@ -14,7 +14,7 @@ begin taxa;
 		Maristella_JA_SVD
 		Maristella_JA_VAD
 		Maristella_chicoi
-		Paravargula_sp2
+		Paravargula_maculosa
 		Photeros_morini
 		Kornickeria_RO_CMU
 		Maristella_RO_ODH
@@ -27,20 +27,20 @@ begin taxa;
 		Euphilomedes_sp
 		Paradoloria_sp
 		Gigantocypris_sp
-		Skogsbergia_sp2
+		Skogsbergia_sp_BZG
 		Photeros_annecohenae
 		Harbansus_slatteryi
 		Maristella_JA_AU
 		Maristella_JA_WLU
 		Maristella_JA_WTF
 		Melavargula_japonica
-		Kornickeria_hastingsii_carriebowae
+		Kornickeria_hastingsi_carriebowae
 		Vargula_sp
 		Cypridina_sp
 		Paravargula_sp
 		Photeros_PA_NOL
 		PA_MFU
-		Skogsbergia_sp
+		Skogsbergia_sp_PA
 		Maristella_RO_AG
 		Photeros_RO_WLU
 		Maristella_RO_IR
@@ -66,7 +66,7 @@ begin trees;
 		10	Maristella_JA_SVD,
 		11	Maristella_JA_VAD,
 		12	Maristella_chicoi,
-		13	Paravargula_sp2,
+		13	Paravargula_maculosa,
 		14	Photeros_morini,
 		15	Kornickeria_RO_CMU,
 		16	Maristella_RO_ODH,
@@ -79,20 +79,20 @@ begin trees;
 		23	Euphilomedes_sp,
 		24	Paradoloria_sp,
 		25	Gigantocypris_sp,
-		26	Skogsbergia_sp2,
+		26	Skogsbergia_sp_BZG,
 		27	Photeros_annecohenae,
 		28	Harbansus_slatteryi,
 		29	Maristella_JA_AU,
 		30	Maristella_JA_WLU,
 		31	Maristella_JA_WTF,
 		32	Melavargula_japonica,
-		33	Kornickeria_hastingsii_carriebowae,
+		33	Kornickeria_hastingsi_carriebowae,
 		34	Vargula_sp,
 		35	Cypridina_sp,
 		36	Paravargula_sp,
 		37	Photeros_PA_NOL,
 		38	PA_MFU,
-		39	Skogsbergia_sp,
+		39	Skogsbergia_sp_PA,
 		40	Maristella_RO_AG,
 		41	Photeros_RO_WLU,
 		42	Maristella_RO_IR,

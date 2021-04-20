@@ -7,7 +7,7 @@ Vargula sp AUS	Australia	TOCC004F
 Chelicopia lorica	Australia	Chlorica
 Alternochelata lizardensis	Australia	AltLiz
 Pterocypridina sp	Australia	TOCC004I
-Paravargula sp2	Australia	BothPara_w
+Paravargula maculosa	Japan	BothPara_w
 Paravargula sp	Australia	TOCC003G
 Paradoloria sp	Australia	TOCC004H
 Maristella BZ_SVU	Belize	AllBzSVU
@@ -55,7 +55,7 @@ Maristella RO_ODH	Roatan Honduras	R-OHD_S65_L008
 Maristella JA_SVD	Jamaica	J_SVD
 Maristella JA_SVD	Jamaica	J-SVD_S53
 Photeros annecohenae	Belize	Gruber_Pannecohenae
-Kornickeria hastingsii carriebowae	Belize	Korn_hast_c
+Kornickeria hastingsi carriebowae	Belize	Korn_hast_c
 Jimmorinia gunnari	Jamaica	BothJaJimGun
 Jimmorinia gunnari	Jamaica	J_JimGun-43942958
 Jimmorinia gunnari	Jamaica	JAM_JIMMOR
@@ -63,8 +63,8 @@ Paravargula maculosa	Japan	3_S8_L001
 Paravargula maculosa	Japan	3-2_S9_L001
 Gigantocypris sp	California	Gigantocypris
 Melavargula japonica	Japan	Jp_Melavar22
-Skogsbergia sp	Panama	PSKO
-Skogsbergia sp2	GloversPanama	GlovSkog	
+Skogsbergia sp_PA	Panama	PSKO
+Skogsbergia sp_BZG	GloversPanama	GlovSkog	
 Vargula hilgendorfii	Japan	Vhilg
 Vargula hilgendorfii2	Shimoda Japan	BothVargula_hilgendorfii_shim
 Vargula tsujii	California USA	Vtsu

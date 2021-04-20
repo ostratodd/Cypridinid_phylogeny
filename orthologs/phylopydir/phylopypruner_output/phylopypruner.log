@@ -1,0 +1,32 @@
+PhyloPyPruner version 0.9.7
+Saturday, 03. April 2021 01:24PM
+--------------------------------
+
+
+Alignment statistics:
+  Description                        Input      Output  
+  No. of alignments                     8485       2675
+  No. of sequences                    484026      72620
+  No. of OTUs                             50         50
+  Avg no. of sequences / alignment        57         27
+  Avg no. of OTUs / alignment             32         27
+  Avg sequence length (ungapped)         274        259
+  Shortest sequence (ungapped)            84        100
+  Longest sequence (ungapped)          12246       4865
+  % missing data                       69.00      64.40
+  Concatenated alignment length      7028456    1259038
+
+Methods summary:
+  Description                   No. removed    % of input
+  Short sequences                4923             1.02
+  Long branches                 41779             8.63
+  Ultrashort distance pairs     25295             5.23
+  Divergent sequences          162437            33.56
+  Collapsed nodes               93146            19.24
+  OTUs < occupancy threshold        0             0.00
+  Genes < occupancy threshold       0             0.00
+
+Reuse these parameters:
+/Users/oakley/anaconda3/envs/phylopy/lib/python3.6/site-packages/phylopypruner/__main__.py --dir /Users/oakley/Documents/GitHub/Cypridinidae_phylogeny/orthologs/phylopydir --min-taxa 20 --min-support 0.7 --min-len 100 --mask pdist --trim-lb 3 --trim-divergent 0.75 --trim-freq-paralogs 7 --min-pdist 0.01 --prune LS --outgroup Dstev_ENA --no-plot --overwrite
+
+completed in 3038.98 seconds
