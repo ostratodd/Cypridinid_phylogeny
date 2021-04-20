@@ -8,14 +8,20 @@ library(corHMM)
 library(ape)
 library(phytools)
 
+setwd("~/Documents/GitHub/Cypridinid_phylogeny/ancestral_state_reconstruction/")
+
 ########## ASTRAL CONSTRAINED TREE ###################
-# Assign correct tree topology to the variable tree
-tree <- read.tree("FcC_smatrix.phy_concatmat_constrained_Astral-2.treefile")
-tree$tip.label <- gsub("*_clean.fasta.transdecoder.pep", "", tree$tip.label)
+# Assign correct tree topology to the variable tree this is the coalescent tree made with astral-pro
+tree <- read.tree("../astral_pro.tre")
+#tree$tip.label <- gsub("*_clean.fasta.transdecoder.pep", "", tree$tip.label)
+
+# This roots the tree at node
+tree <- root(tree, "Darwinula_stevensoni")
+
 
 # The following code is used to rotate particular branches so they are in
 # the order I choose.
-tree <- rotate(tree,48)
+#tree <- rotate(tree,48)
 
 # Create an ultrametric tree with correlated model, output of chronos 
 # needed to be rewritten using read.tree, then test for ultrametricity
@@ -28,8 +34,6 @@ is.ultrametric(ultratree)
 tree.concat <- read.tree("partition_modified.nex.treefile")
 tree.concat$tip.label <- gsub("*_clean.fasta.transdecoder.pep", "", tree.concat$tip.label)
 
-# This roots the tree at node
-tree.concat <- root(tree, "Cylindroleberidinae")
 
 # Create an ultrametric tree with correlated model, output of chronos 
 # needed to be rewritten using read.tree, then test for ultrametricity
